@@ -8,14 +8,16 @@ inum = userData.inum
 nicknameForm = RRF "nickname.ftlh" 
 // Default nickname to "My Passkey" if left blank
 nickname = nicknameForm.nickname
+When nickname is ""
+     nickname = "My Passkey"
 //  Get Instance FidoEnroller
 fidoEnroller = Call org.gluu.agama.passkey.enroll.FidoEnroller#new 
 // Invoke the method to save the nickname
 nickNamed = Call fidoEnroller nameIt inum nicknameForm.nickname key
 When nickNamed is false
      // Ends the flow by responding error
-     it_fated = {success:false, error: "Nickname passkey failed to save"}
-     Finish it_fated
+     it_slxys = {success:false, error: "Nickname passkey failed to save"}
+     Finish it_slxys
 // Successfully completes the flow
-it_tiqvm = {success:true, data: { userId: inum, message: "Nickname passkey saved"}}
-Finish it_tiqvm
+it_vxjqu = {success:true, data: { userId: inum, message: "Nickname passkey saved"}}
+Finish it_vxjqu
