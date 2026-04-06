@@ -6,13 +6,11 @@ import io.jans.fido2.client.Fido2ClientFactory;
 import io.jans.fido2.model.assertion.AssertionOptions;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.ws.rs.core.Response;
-import net.minidev.json.JSONObject;
 import org.gluu.agama.passkey.NetworkUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import io.jans.fido2.model.assertion.AssertionResult;
 import java.io.IOException;
-import java.util.Map;
 
 public class FidoValidator {
 
@@ -40,18 +38,13 @@ public class FidoValidator {
         logger.info("Building an assertion request for {}", uid);
         // Using assertionService as a private class field gives serialization trouble...
         AssertionService assertionService = Fido2ClientFactory.instance().createAssertionService(metadataConfiguration);
-        String content;
-        AssertionOptions assertionRequest = new AssertionOptions()
-        if (uid == null) {
-            content = JSONObject.toJSONString(Map.of("timeout", 90000));
-        } else {
-            content = JSONObject.toJSONString(Map.of("timeout", 90000, "username", uid));
+        AssertionOptions assertionRequest = new AssertionOptions();
+        if (uid != null) {
             assertionRequest.setUsername(uid);
         }
-        
-        
-        try (Response response = ( assertionService.authenticate(assertionRequest))) {
-            content = response.readEntity(String.class);
+
+        try (Response response = assertionService.authenticate(assertionRequest)) {
+            String content = response.readEntity(String.class);
             int status = response.getStatus();
 
             if (status != Response.Status.OK.getStatusCode()) {
@@ -80,7 +73,7 @@ public class FidoValidator {
         }
 
         String resString = response.readEntity(String.class);
-        logger.info("Response : "+resString)
+        logger.info("Response : "+resString);
         org.json.JSONObject jsonNode = new org.json.JSONObject(resString);
         logger.info("Status: {}, Response: {}", status, jsonNode);
         if (jsonNode.has("username")) {
