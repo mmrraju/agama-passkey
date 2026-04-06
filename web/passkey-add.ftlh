@@ -5,6 +5,9 @@
 	</title><link rel="icon" href="${webCtx.contextPath}/servlet/favicon" type="image/x-icon"></head>
 <body>
 
+
+
+
   
 	
 	
@@ -72,6 +75,9 @@
   
   
   
+
+
+
 </body>
 
 <script src="https://cdn.tailwindcss.com"></script><script src="${webCtx.contextPath}/auth/fido2/js/base64js.js"></script><script src="${webCtx.contextPath}/auth/fido2/js/base64url.js"></script><script src="${webCtx.contextPath}/auth/fido2/js/webauthn.js"></script><script>
@@ -93,7 +99,6 @@
 		  const dataObject = webauthn.responseToObject(data);
 		  const createCredentialJson = JSON.stringify(dataObject);
 		  console.log('Create credential response: ' + createCredentialJson);
-		  alert ('Create credential response: ' + createCredentialJson)
 		  document.getElementById("tokenResponse").value = createCredentialJson;
 		  document.forms[0].submit();
 		}
