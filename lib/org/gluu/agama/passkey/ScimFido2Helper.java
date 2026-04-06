@@ -50,9 +50,12 @@ public class ScimFido2Helper extends ScimWSBase {
                     result.put("id", item.getString("id"));
                     result.put("displayName", item.has("displayName") ? item.getString("displayName") : "Registered without name");
                     result.put("creationDate", item.getString("creationDate"));
-                    if (!item.has("deviceData")) {
-                        mapList.add(result);
+                    if (item.has("deviceData")) {
+                        JSONObject deviceData = item.getJSONObject("deviceData");
+                        if (deviceData.has("type")) result.put("deviceType", deviceData.getString("type"));
+                        if (deviceData.has("name")) result.put("deviceName", deviceData.getString("name"));
                     }
+                    mapList.add(result);
                     i++;
                 }
             }
