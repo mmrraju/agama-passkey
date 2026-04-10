@@ -263,8 +263,8 @@
 				"agamaData": {
 					"javaClassName": "",
 					"javaMethodName": "getMFAUserInfoByFido2",
-					"javaVariableName": "uid",
-					"exceptionVariableField": "",
+					"javaVariableName": "mfaInfo",
+					"exceptionVariableField": "E",
 					"callType": "Call method on instance",
 					"arguments": [
 						"uid"
@@ -414,8 +414,8 @@
 			"id": "finishNode-6b45e5f8-a912-408a-8d6d-a4c1acdef231",
 			"type": "finishNode",
 			"position": {
-				"x": 1780,
-				"y": 240
+				"x": 1715,
+				"y": 167
 			},
 			"data": {
 				"id": "finishNode-6b45e5f8-a912-408a-8d6d-a4c1acdef231",
@@ -443,7 +443,9 @@
 			"measured": {
 				"width": 170,
 				"height": 124
-			}
+			},
+			"selected": false,
+			"dragging": false
 		},
 		{
 			"id": "callNode-96560706-d3bd-4424-9924-0f14c83355d4",
@@ -1325,8 +1327,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1023,
-		"y": -110,
+		"x": -1083,
+		"y": -32,
 		"zoom": 1
 	}
 }
