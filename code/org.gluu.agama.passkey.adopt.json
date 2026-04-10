@@ -184,7 +184,7 @@
 					"javaMethodName": "Call",
 					"javaVariableName": "uid",
 					"exceptionVariableField": "",
-					"callType": "Get class object",
+					"callType": "Create an instance",
 					"arguments": [],
 					"nodeIcon": "material-symbols:code",
 					"nodeColor": "",
@@ -1325,8 +1325,8 @@
 		}
 	],
 	"viewport": {
-		"x": -593,
-		"y": 106,
+		"x": -79,
+		"y": 0,
 		"zoom": 1
 	}
 }
