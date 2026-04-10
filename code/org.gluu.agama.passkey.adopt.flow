@@ -14,7 +14,7 @@ passkeyCount = 0
 //  Check how many passkeys the user has enrolled.
 mfaInfo | E = Call org.gluu.agama.passkey.EnrollmentHelper#new 
 When E is null
-     mfaData = Call uid getMFAUserInfoByFido2 uid
+     mfaData | E = Call mfaInfo getMFAUserInfoByFido2 uid
      When E2 is null
           passkeyCount = mfaData.count
 //  If user already has passkeys, skip nudge entirely
