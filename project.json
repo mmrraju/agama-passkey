@@ -21,7 +21,8 @@
         "org.gluu.agama.passkey.nickname": {},
         "org.gluu.agama.passkey.list": {},
         "org.gluu.agama.passkey.main": {},
-        "org.gluu.agama.passkey.adopt": {}
+        "org.gluu.agama.passkey.adopt": {},
+        "code": {}
     },
     "name": "agama-passkey"
 }
