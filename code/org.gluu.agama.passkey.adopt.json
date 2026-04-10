@@ -201,7 +201,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "whenNode-03814172-8c93-45d5-b9f7-ddc83207a426",
@@ -248,8 +248,8 @@
 			"id": "callNode-139fed18-6b0f-4fdb-b346-8d4c38d2b21d",
 			"type": "callNode",
 			"position": {
-				"x": 1530,
-				"y": 310
+				"x": 1450,
+				"y": 356
 			},
 			"data": {
 				"id": "callNode-139fed18-6b0f-4fdb-b346-8d4c38d2b21d",
@@ -262,22 +262,20 @@
 				"branching": "success",
 				"agamaData": {
 					"javaClassName": "",
-					"javaMethodName": "Call",
-					"javaVariableName": "=",
+					"javaMethodName": "getMFAUserInfoByFido2",
+					"javaVariableName": "uid",
 					"exceptionVariableField": "",
 					"callType": "Call method on instance",
 					"arguments": [
-						"mfaInfo",
-						"getMFAUserInfoByFido2",
 						"uid"
 					],
 					"nodeIcon": "material-symbols:code",
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
-					"displayName": "CALL",
+					"displayName": "",
 					"hasComment": false,
-					"comment": "",
+					"comment": "Call",
 					"previousNodeId": "whenNode-03814172-8c93-45d5-b9f7-ddc83207a426",
 					"asssignedVariableName": "mfaData"
 				}
@@ -285,7 +283,9 @@
 			"measured": {
 				"width": 170,
 				"height": 124
-			}
+			},
+			"selected": true,
+			"dragging": false
 		},
 		{
 			"id": "whenNode-1dda636a-5e23-45f6-bc44-bcf18a96ed7b",
@@ -1325,8 +1325,8 @@
 		}
 	],
 	"viewport": {
-		"x": -79,
-		"y": 0,
+		"x": -1023,
+		"y": -110,
 		"zoom": 1
 	}
 }
