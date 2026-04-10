@@ -183,7 +183,7 @@
 					"javaClassName": "org.gluu.agama.passkey.EnrollmentHelper",
 					"javaMethodName": "Call",
 					"javaVariableName": "uid",
-					"exceptionVariableField": "",
+					"exceptionVariableField": "E",
 					"callType": "Create an instance",
 					"arguments": [],
 					"nodeIcon": "material-symbols:code",
