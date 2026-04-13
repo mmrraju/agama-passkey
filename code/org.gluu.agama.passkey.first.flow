@@ -21,10 +21,11 @@ Repeat 5 times max
           verifyResponse = Call = Call fidoValidator verify firstForm.tokenResponse
           When E is not null
                obj.showError = true
-               obj.errorTitle = Passkey sign-in failed.
+               obj.errorTitle = "Passkey sign-in failed"
                obj.errorMessage = E.message
           When E is null
-               Finish { userId: verifyResponse } 
+               it_meuio = {success:true, data: { userId: verifyResponse }}
+               Finish it_meuio
      //  Case 2: User clicked Continue with a username — go to password screen
      When firstForm.continueBtn is ""
           currentUsername = firstForm.username
@@ -57,5 +58,5 @@ Repeat 5 times max
                          pwdObj.errorTitle = Sign-in failed.
                          pwdObj.errorMessage = Incorrect password. Please try again.
 //  Exceeded max attempts
-it_wrigm = {success:false, error: ""Login attempt exceeded" "}
-Finish it_wrigm
+it_etqwr = {success:false, error: ""Login attempt exceeded" "}
+Finish it_etqwr
