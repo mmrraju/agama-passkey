@@ -837,7 +837,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "assignmentNode-3e6f1c60-6a90-4d66-bbd8-71fcc2f2f7bc",
@@ -903,7 +903,7 @@
 					"hasComment": true,
 					"comment": " Fallback finish (should not be reached)",
 					"flowfilename": "",
-					"returnVariable": "{ userId: uid } ",
+					"returnVariable": "{ userId: uid }",
 					"finishMode": "withSuccess",
 					"nodeIcon": "material-symbols:line-end-square-rounded",
 					"previousNodeId": "whenNode-a0798f27-0297-4266-a824-96df6732e0e5"
@@ -912,7 +912,8 @@
 			"measured": {
 				"width": 170,
 				"height": 124
-			}
+			},
+			"selected": true
 		}
 	],
 	"edges": [
