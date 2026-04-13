@@ -51,12 +51,12 @@ Repeat 5 times max
                               When adoptConf.snoozeDays is ""
                                    adoptConf.snoozeDays = 7
                               Trigger = Trigger org.gluu.agama.passkey.adopt userData adoptConf
-                         it_eiqdg = {success:true, data: { userId: currentUsername }}
-                         Finish it_eiqdg
+                         it_bistc = {success:true, data: { userId: currentUsername }}
+                         Finish it_bistc
                     When authOk is false
                          pwdObj.showError = true
                          pwdObj.errorTitle = "Sign-in failed"
                          pwdObj.errorMessage = "Incorrect password. Please try again"
 //  Exceeded max attempts
-it_cvnzb = {success:false, error: ""Login attempt exceeded" "}
-Finish it_cvnzb
+it_vblfs = {success:false, error: ""Login attempt exceeded" "}
+Finish it_vblfs
