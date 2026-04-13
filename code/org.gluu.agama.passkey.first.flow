@@ -11,7 +11,7 @@ fidoValidator = Call org.gluu.agama.passkey.authn.FidoValidator#new
 assertion = Call fidoValidator assertionRequest null
 //  State for the identifier-first screen
 obj = { assertion: assertion, showError: false, errorTitle: "", errorMessage: "" }
-currentUsername = __________
+currentUsername = ""
 //  Track the username across screens
 Repeat 5 times max
      //  --- Identifier-first screen ---
@@ -24,8 +24,7 @@ Repeat 5 times max
                obj.errorTitle = Passkey sign-in failed.
                obj.errorMessage = E.message
           When E is null
-               it_xeicr = {success:true, data: { userId: verifyResponse }}
-               Finish it_xeicr
+               Finish { userId: verifyResponse } 
      //  Case 2: User clicked Continue with a username — go to password screen
      When firstForm.continueBtn is ""
           currentUsername = firstForm.username
@@ -58,5 +57,5 @@ Repeat 5 times max
                          pwdObj.errorTitle = Sign-in failed.
                          pwdObj.errorMessage = Incorrect password. Please try again.
 //  Exceeded max attempts
-it_hafpm = {success:false, error: ""Login attempt exceeded" "}
-Finish it_hafpm
+it_wrigm = {success:false, error: ""Login attempt exceeded" "}
+Finish it_wrigm
