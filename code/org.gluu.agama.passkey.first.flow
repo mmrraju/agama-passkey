@@ -11,7 +11,7 @@ fidoValidator = Call org.gluu.agama.passkey.authn.FidoValidator#new
 assertion = Call fidoValidator assertionRequest null
 //  State for the identifier-first screen
 obj = { assertion: assertion, showError: false, errorTitle: "", errorMessage: "" }
-currentUsername = ""
+currentUsername = " "
 //  Track the username across screens
 Repeat 5 times max
      //  --- Identifier-first screen ---
@@ -21,11 +21,10 @@ Repeat 5 times max
           verifyResponse = Call = Call fidoValidator verify firstForm.tokenResponse
           When E is not null
                obj.showError = true
-               obj.errorTitle = "Passkey sign-in failed"
+               obj.errorTitle = Passkey sign-in failed.
                obj.errorMessage = E.message
           When E is null
-               it_meuio = {success:true, data: { userId: verifyResponse }}
-               Finish it_meuio
+               Finish { userId: verifyResponse } 
      //  Case 2: User clicked Continue with a username — go to password screen
      When firstForm.continueBtn is ""
           currentUsername = firstForm.username
@@ -51,12 +50,13 @@ Repeat 5 times max
                               adoptConf = { snoozeDays: conf.snoozeDays }
                               When adoptConf.snoozeDays is ""
                                    adoptConf.snoozeDays = 7
-                              Trigger = Trigger adoptConf 
-                         Finish { userId: currentUsername } 
+                              Trigger = Trigger org.gluu.agama.passkey.adopt userData adoptConf
+                         it_eiqdg = {success:true, data: { userId: currentUsername }}
+                         Finish it_eiqdg
                     When authOk is false
                          pwdObj.showError = true
-                         pwdObj.errorTitle = Sign-in failed.
-                         pwdObj.errorMessage = Incorrect password. Please try again.
+                         pwdObj.errorTitle = "Sign-in failed"
+                         pwdObj.errorMessage = "Incorrect password. Please try again"
 //  Exceeded max attempts
-it_etqwr = {success:false, error: ""Login attempt exceeded" "}
-Finish it_etqwr
+it_cvnzb = {success:false, error: ""Login attempt exceeded" "}
+Finish it_cvnzb
