@@ -19,11 +19,13 @@ When E is null
           passkeyCount = mfaData.count
 //  If user already has passkeys, skip nudge entirely
 When passkeyCount is not 0
-     Finish { userId: uid } 
+     it_yakjb = {success:true, data: { userId: uid }}
+     Finish it_yakjb
 //  Check if user has an active snooze
 snoozed = Call org.gluu.agama.passkey.NudgeHelper#isSnoozed uid snoozeDays
 When snoozed is true
-     Finish { userId: uid } 
+     it_pmdqw = {success:true, data: { userId: uid }}
+     Finish it_pmdqw
 //  Show the nudge screen
 nudgeForm = RRF "passkey-nudge.ftlh" 
 When nudgeForm.addPasskeyNowBtn is ""
