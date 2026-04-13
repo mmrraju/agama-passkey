@@ -22,7 +22,8 @@
         "org.gluu.agama.passkey.list": {},
         "org.gluu.agama.passkey.main": {},
         "org.gluu.agama.passkey.adopt": {},
-        "code": {}
+        "code": {},
+        "org.gluu.agama.passkey.first": {}
     },
     "name": "agama-passkey"
 }
