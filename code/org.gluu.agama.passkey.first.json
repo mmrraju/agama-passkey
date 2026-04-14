@@ -1050,7 +1050,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -1112,13 +1112,11 @@
 				"branching": "success",
 				"agamaData": {
 					"javaClassName": "",
-					"javaMethodName": "Call",
-					"javaVariableName": "=",
-					"exceptionVariableField": "",
+					"javaMethodName": "getMFAUserInfoByFido2",
+					"javaVariableName": "mfaHelper",
+					"exceptionVariableField": "E4",
 					"callType": "Call method on instance",
 					"arguments": [
-						"mfaHelper",
-						"getMFAUserInfoByFido2",
 						"currentUsername"
 					],
 					"nodeIcon": "material-symbols:code",
@@ -1136,7 +1134,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -2319,8 +2317,8 @@
 		}
 	],
 	"viewport": {
-		"x": -4049,
-		"y": -849,
+		"x": -4342,
+		"y": -1181,
 		"zoom": 1
 	}
 }
