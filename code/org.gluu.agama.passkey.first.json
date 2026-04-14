@@ -1424,7 +1424,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "finishNode-b8c09e10-2a0d-45c6-b812-8ff07fb7b3c9",
@@ -1580,7 +1580,7 @@
 					"hasComment": true,
 					"comment": " Exceeded max attempts",
 					"flowfilename": "",
-					"returnVariable": "\"Login attempt exceeded\" ",
+					"returnVariable": "\"Login attempt exceeded\"",
 					"finishMode": "withFailure",
 					"nodeIcon": "material-symbols:line-end-square-rounded",
 					"previousNodeId": "repeatNode-d26fe6e6-ac44-4463-9d5b-e85ad19cf736"
@@ -1589,7 +1589,8 @@
 			"measured": {
 				"width": 170,
 				"height": 124
-			}
+			},
+			"selected": true
 		}
 	],
 	"edges": [
@@ -2317,8 +2318,8 @@
 		}
 	],
 	"viewport": {
-		"x": -5193,
-		"y": -1244,
+		"x": -1440,
+		"y": 134,
 		"zoom": 1
 	}
 }
