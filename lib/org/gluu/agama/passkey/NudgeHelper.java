@@ -5,6 +5,7 @@ import io.jans.as.server.service.UserService;
 import io.jans.service.cdi.util.CdiUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import io.jans.agama.engine.script.LogUtils;
 
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
@@ -31,7 +32,7 @@ public class NudgeHelper {
             long snoozeUntil = Long.parseLong(val);
             return Instant.now().toEpochMilli() < snoozeUntil;
         } catch (Exception e) {
-            logger.warn("Could not read snooze attribute for {}: {}", uid, e.getMessage());
+            LogUtils.log("Could not read snooze attribute for %: %", uid, e.getMessage());
             return false;
         }
     }
@@ -44,15 +45,15 @@ public class NudgeHelper {
             UserService userService = CdiUtil.bean(UserService.class);
             User user = userService.getUser(uid, SNOOZE_ATTR);
             if (user == null) {
-                logger.warn("User not found for snooze: {}", uid);
+                LogUtils.log("User not found for snooze: %", uid);
                 return;
             }
             long until = Instant.now().plus(snoozeDays, ChronoUnit.DAYS).toEpochMilli();
             user.setAttribute(SNOOZE_ATTR, String.valueOf(until));
             userService.updateUser(user);
-            logger.info("Snoozed passkey nudge for {} until epoch {}", uid, until);
+            LogUtils.log("Snoozed passkey nudge for % until epoch %", uid, until);
         } catch (Exception e) {
-            logger.warn("Could not write snooze attribute for {}: {}", uid, e.getMessage());
+            LogUtils.log("Could not write snooze attribute for %: %", uid, e.getMessage());
         }
     }
 }
