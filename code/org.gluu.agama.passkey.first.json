@@ -1580,7 +1580,7 @@
 					"hasComment": true,
 					"comment": " Exceeded max attempts",
 					"flowfilename": "",
-					"returnVariable": "\"Login attempt exceeded\"",
+					"returnVariable": "Login attempt exceeded",
 					"finishMode": "withFailure",
 					"nodeIcon": "material-symbols:line-end-square-rounded",
 					"previousNodeId": "repeatNode-d26fe6e6-ac44-4463-9d5b-e85ad19cf736"
@@ -1590,7 +1590,8 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": true,
+			"dragging": false
 		}
 	],
 	"edges": [
