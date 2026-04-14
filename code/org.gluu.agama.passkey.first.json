@@ -476,7 +476,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -548,7 +548,7 @@
 					"hasComment": false,
 					"comment": "",
 					"flowfilename": "",
-					"returnVariable": "{ userId: verifyResponse } ",
+					"returnVariable": "{ userId: verifyResponse }",
 					"finishMode": "withSuccess",
 					"nodeIcon": "material-symbols:line-end-square-rounded",
 					"previousNodeId": "whenNode-4a57d4ce-67a2-4973-b7d9-634ffcc02c5c"
@@ -558,7 +558,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -2319,8 +2319,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1943,
-		"y": -613,
+		"x": -2421,
+		"y": -583,
 		"zoom": 1
 	}
 }
