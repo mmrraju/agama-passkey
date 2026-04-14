@@ -24,8 +24,8 @@ Repeat 5 times max
                obj.errorTitle = "Passkey sign-in failed"
                obj.errorMessage = E.message
           When E is null
-               it_hdxqr = {success:true, data: { userId: verifyResponse }}
-               Finish it_hdxqr
+               it_rwgjc = {success:true, data: { userId: verifyResponse }}
+               Finish it_rwgjc
      //  Case 2: User clicked Continue with a username — go to password screen
      When firstForm.continueBtn is ""
           currentUsername = firstForm.username
@@ -51,13 +51,13 @@ Repeat 5 times max
                               adoptConf = { snoozeDays: conf.snoozeDays }
                               When adoptConf.snoozeDays is ""
                                    adoptConf.snoozeDays = 7
-                              Trigger = Trigger org.gluu.agama.passkey.adopt userData adoptConf
-                         it_ttcfm = {success:true, data: { userId: currentUsername }}
-                         Finish it_ttcfm
+                              trigger = Trigger org.gluu.agama.passkey.adopt userData adoptConf
+                         it_omcqu = {success:true, data: { userId: currentUsername }}
+                         Finish it_omcqu
                     When authOk is false
                          pwdObj.showError = true
                          pwdObj.errorTitle = "Sign-in failed"
                          pwdObj.errorMessage = "Incorrect password. Please try again"
 //  Exceeded max attempts
-it_lafao = {success:false, error: ""Login attempt exceeded" "}
-Finish it_lafao
+it_czhci = {success:false, error: ""Login attempt exceeded" "}
+Finish it_czhci
