@@ -24,8 +24,8 @@ Repeat 5 times max
                obj.errorTitle = "Passkey sign-in failed"
                obj.errorMessage = E.message
           When E is null
-               it_ifkgj = {success:true, data: { userId: verifyResponse }}
-               Finish it_ifkgj
+               it_hdxqr = {success:true, data: { userId: verifyResponse }}
+               Finish it_hdxqr
      //  Case 2: User clicked Continue with a username — go to password screen
      When firstForm.continueBtn is ""
           currentUsername = firstForm.username
@@ -43,7 +43,7 @@ Repeat 5 times max
                          passkeyCount = 0
                          mfaHelper | E3 = Call org.gluu.agama.passkey.EnrollmentHelper#new 
                          When E3 is null
-                              mfaData = Call = Call mfaHelper getMFAUserInfoByFido2 currentUsername
+                              mfaData | E4 = Call mfaHelper getMFAUserInfoByFido2 currentUsername
                               When E4 is null
                                    passkeyCount = mfaData.count
                          When passkeyCount is 0
@@ -52,12 +52,12 @@ Repeat 5 times max
                               When adoptConf.snoozeDays is ""
                                    adoptConf.snoozeDays = 7
                               Trigger = Trigger org.gluu.agama.passkey.adopt userData adoptConf
-                         it_uzvko = {success:true, data: { userId: currentUsername }}
-                         Finish it_uzvko
+                         it_ttcfm = {success:true, data: { userId: currentUsername }}
+                         Finish it_ttcfm
                     When authOk is false
                          pwdObj.showError = true
                          pwdObj.errorTitle = "Sign-in failed"
                          pwdObj.errorMessage = "Incorrect password. Please try again"
 //  Exceeded max attempts
-it_uljpw = {success:false, error: ""Login attempt exceeded" "}
-Finish it_uljpw
+it_lafao = {success:false, error: ""Login attempt exceeded" "}
+Finish it_lafao
