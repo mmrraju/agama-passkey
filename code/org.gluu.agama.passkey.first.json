@@ -383,7 +383,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "whenNode-83c28a0f-179f-4e9b-aa0f-4e3e0d703fef",
@@ -453,7 +453,7 @@
 						},
 						{
 							"variableTypeCheck": true,
-							"assignmentExpression": "Passkey sign-in failed.",
+							"assignmentExpression": "\"Passkey sign-in failed\"",
 							"assignedVariableName": "obj.errorTitle"
 						},
 						{
@@ -476,7 +476,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -2319,8 +2319,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1857,
-		"y": -296,
+		"x": -1943,
+		"y": -613,
 		"zoom": 1
 	}
 }
