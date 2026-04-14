@@ -18,7 +18,7 @@ Repeat 5 times max
      firstForm = RRF "passkey-first.ftlh" obj
      //  Case 1: Conditional UI resolved — tokenResponse came back with the form
      When firstForm.tokenResponse is not ""
-          verifyResponse = Call = Call fidoValidator verify firstForm.tokenResponse
+          verifyResponse | E = Call fidoValidator verify firstForm.tokenResponse
           When E is not null
                obj.showError = true
                obj.errorTitle = Passkey sign-in failed.
@@ -51,12 +51,12 @@ Repeat 5 times max
                               When adoptConf.snoozeDays is ""
                                    adoptConf.snoozeDays = 7
                               Trigger = Trigger org.gluu.agama.passkey.adopt userData adoptConf
-                         it_gxafi = {success:true, data: { userId: currentUsername }}
-                         Finish it_gxafi
+                         it_gmomd = {success:true, data: { userId: currentUsername }}
+                         Finish it_gmomd
                     When authOk is false
                          pwdObj.showError = true
                          pwdObj.errorTitle = "Sign-in failed"
                          pwdObj.errorMessage = "Incorrect password. Please try again"
 //  Exceeded max attempts
-it_ekajn = {success:false, error: ""Login attempt exceeded" "}
-Finish it_ekajn
+it_dstda = {success:false, error: ""Login attempt exceeded" "}
+Finish it_dstda
