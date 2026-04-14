@@ -24,8 +24,8 @@ Repeat 5 times max
                obj.errorTitle = "Passkey sign-in failed"
                obj.errorMessage = E.message
           When E is null
-               it_ddoqc = {success:true, data: { userId: verifyResponse }}
-               Finish it_ddoqc
+               it_ifkgj = {success:true, data: { userId: verifyResponse }}
+               Finish it_ifkgj
      //  Case 2: User clicked Continue with a username — go to password screen
      When firstForm.continueBtn is ""
           currentUsername = firstForm.username
@@ -41,7 +41,7 @@ Repeat 5 times max
                          //  Password auth succeeded — check passkey count
                          userData = Call org.gluu.agama.passkey.IdentityProcessor#accountFromUid currentUsername
                          passkeyCount = 0
-                         mfaHelper = Call = Call org.gluu.agama.passkey.EnrollmentHelper#new
+                         mfaHelper | E3 = Call org.gluu.agama.passkey.EnrollmentHelper#new 
                          When E3 is null
                               mfaData = Call = Call mfaHelper getMFAUserInfoByFido2 currentUsername
                               When E4 is null
@@ -52,12 +52,12 @@ Repeat 5 times max
                               When adoptConf.snoozeDays is ""
                                    adoptConf.snoozeDays = 7
                               Trigger = Trigger org.gluu.agama.passkey.adopt userData adoptConf
-                         it_jcdys = {success:true, data: { userId: currentUsername }}
-                         Finish it_jcdys
+                         it_uzvko = {success:true, data: { userId: currentUsername }}
+                         Finish it_uzvko
                     When authOk is false
                          pwdObj.showError = true
                          pwdObj.errorTitle = "Sign-in failed"
                          pwdObj.errorMessage = "Incorrect password. Please try again"
 //  Exceeded max attempts
-it_ajwwp = {success:false, error: ""Login attempt exceeded" "}
-Finish it_ajwwp
+it_uljpw = {success:false, error: ""Login attempt exceeded" "}
+Finish it_uljpw
