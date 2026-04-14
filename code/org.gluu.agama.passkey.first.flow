@@ -21,7 +21,7 @@ Repeat 5 times max
           verifyResponse | E = Call fidoValidator verify firstForm.tokenResponse
           When E is not null
                obj.showError = true
-               obj.errorTitle = Passkey sign-in failed.
+               obj.errorTitle = "Passkey sign-in failed"
                obj.errorMessage = E.message
           When E is null
                Finish { userId: verifyResponse } 
@@ -51,12 +51,12 @@ Repeat 5 times max
                               When adoptConf.snoozeDays is ""
                                    adoptConf.snoozeDays = 7
                               Trigger = Trigger org.gluu.agama.passkey.adopt userData adoptConf
-                         it_gmomd = {success:true, data: { userId: currentUsername }}
-                         Finish it_gmomd
+                         it_ercnz = {success:true, data: { userId: currentUsername }}
+                         Finish it_ercnz
                     When authOk is false
                          pwdObj.showError = true
                          pwdObj.errorTitle = "Sign-in failed"
                          pwdObj.errorMessage = "Incorrect password. Please try again"
 //  Exceeded max attempts
-it_dstda = {success:false, error: ""Login attempt exceeded" "}
-Finish it_dstda
+it_sumgn = {success:false, error: ""Login attempt exceeded" "}
+Finish it_sumgn
