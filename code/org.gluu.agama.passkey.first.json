@@ -1134,7 +1134,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -1408,7 +1408,7 @@
 						"userData",
 						"adoptConf"
 					],
-					"asssignedVariableName": "Trigger",
+					"asssignedVariableName": "trigger",
 					"exceptionVariableField": "",
 					"nodeColor": "",
 					"titleColor": "",
@@ -1424,7 +1424,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"id": "finishNode-b8c09e10-2a0d-45c6-b812-8ff07fb7b3c9",
@@ -2317,8 +2317,8 @@
 		}
 	],
 	"viewport": {
-		"x": -4342,
-		"y": -1181,
+		"x": -5193,
+		"y": -1244,
 		"zoom": 1
 	}
 }
