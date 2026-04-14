@@ -558,7 +558,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -1018,8 +1018,8 @@
 			"id": "callNode-660d472b-49f1-49a7-a8b5-16eb8ac66758",
 			"type": "callNode",
 			"position": {
-				"x": 4780,
-				"y": 1210
+				"x": 4738,
+				"y": 1250
 			},
 			"data": {
 				"id": "callNode-660d472b-49f1-49a7-a8b5-16eb8ac66758",
@@ -1030,14 +1030,12 @@
 				},
 				"previousNodeId": "assignmentNode-35e0f6e4-cf98-4ba1-bd14-3c1189f50257",
 				"agamaData": {
-					"javaClassName": "",
-					"javaMethodName": "Call",
+					"javaClassName": "org.gluu.agama.passkey.EnrollmentHelper",
+					"javaMethodName": "",
 					"javaVariableName": "=",
-					"exceptionVariableField": "",
-					"callType": "Call method on instance",
-					"arguments": [
-						"org.gluu.agama.passkey.EnrollmentHelper#new"
-					],
+					"exceptionVariableField": "E3",
+					"callType": "Create an instance",
+					"arguments": [],
 					"nodeIcon": "material-symbols:code",
 					"nodeColor": "",
 					"titleColor": "",
@@ -1051,7 +1049,9 @@
 			"measured": {
 				"width": 170,
 				"height": 124
-			}
+			},
+			"selected": true,
+			"dragging": false
 		},
 		{
 			"id": "whenNode-a567d838-93fe-49b3-b12c-1bde23e24e46",
@@ -2319,8 +2319,8 @@
 		}
 	],
 	"viewport": {
-		"x": -2421,
-		"y": -583,
+		"x": -4049,
+		"y": -849,
 		"zoom": 1
 	}
 }
