@@ -5,8 +5,8 @@
 			"type": "startNode",
 			"sourcePosition": "right",
 			"position": {
-				"x": 30,
-				"y": 40
+				"x": -161,
+				"y": 59
 			},
 			"deletable": false,
 			"data": {
@@ -34,7 +34,9 @@
 			"measured": {
 				"width": 170,
 				"height": 124
-			}
+			},
+			"selected": false,
+			"dragging": false
 		},
 		{
 			"id": "assignmentNode-4cade643-e196-4670-a81f-0b0f55a6bb8c",
@@ -913,7 +915,41 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
+		},
+		{
+			"id": "logNode-cfeb8d8d-7241-4e47-a3c9-61d5441a6e6c",
+			"type": "logNode",
+			"position": {
+				"x": 75,
+				"y": 150
+			},
+			"data": {
+				"id": "logNode-cfeb8d8d-7241-4e47-a3c9-61d5441a6e6c",
+				"type": "logNode",
+				"position": {
+					"x": 280,
+					"y": 40
+				},
+				"previousNodeId": "startNode-a52ff125-cdee-470b-9a96-4938700e5b28",
+				"agamaData": {
+					"logMessage": "\"PassKey adopt Flow starting...\"",
+					"logLevel": "info",
+					"nodeIcon": "octicon:log-16",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": ""
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
+			"selected": true,
+			"dragging": false
 		}
 	],
 	"edges": [
@@ -1334,11 +1370,30 @@
 			},
 			"sourceHandle": "source_assignmentNode-3e6f1c60-6a90-4d66-bbd8-71fcc2f2f7bc",
 			"targetHandle": "target_callNode-08c3c18f-e487-44fb-93a0-ab7f1bb56da2"
+		},
+		{
+			"id": "startNode-a52ff125-cdee-470b-9a96-4938700e5b28-logNode-cfeb8d8d-7241-4e47-a3c9-61d5441a6e6c",
+			"type": "default",
+			"source": "startNode-a52ff125-cdee-470b-9a96-4938700e5b28",
+			"target": "logNode-cfeb8d8d-7241-4e47-a3c9-61d5441a6e6c",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_startNode-a52ff125-cdee-470b-9a96-4938700e5b28"
 		}
 	],
 	"viewport": {
-		"x": -2449,
-		"y": 140,
+		"x": 186,
+		"y": 167,
 		"zoom": 1
 	}
 }
