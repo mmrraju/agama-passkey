@@ -493,7 +493,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"id": "whenNode-d3c45ce8-17cd-4805-9da8-ccb4761478a3",
@@ -1341,8 +1341,8 @@
 		}
 	],
 	"viewport": {
-		"x": 317,
-		"y": 158,
+		"x": -1201,
+		"y": 90,
 		"zoom": 1
 	}
 }
