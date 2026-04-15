@@ -7,6 +7,7 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.net.URL;
 import java.util.*;
+import io.jans.agama.engine.script.LogUtils;
 
 import static jakarta.ws.rs.core.MediaType.APPLICATION_JSON;
 
@@ -33,11 +34,11 @@ public class ScimFido2Helper extends ScimWSBase {
             StringJoiner joiner = new StringJoiner("&");
             Map.of("userId", userInum).forEach((k, v) -> joiner.add(k + "=" + v));
             request.setQuery(joiner.toString());
-            log.info("userId:"+userInum)
-            log.info("request:"+request)
+            LogUtils.log("userId: %",userInum);
+            LogUtils.log("request: %",request);
             
             String response = sendRequest(request, true, true).getContentAsJSONObject().toJSONString();
-            log.info("Response scim fido2 devices: {}", response);
+            LogUtils.log("Response scim fido2 devices: %", response);
             JSONObject resObject = new JSONObject(response);
             int count = resObject.getInt("totalResults");
             List<Map<String, String>> mapList = new ArrayList<>();
@@ -73,11 +74,11 @@ public class ScimFido2Helper extends ScimWSBase {
             request.setAccept(APPLICATION_JSON);
             request.setContentType(APPLICATION_JSON);
             String body = net.minidev.json.JSONObject.toJSONString(Map.of("userId", userId, "displayName", displayName));
-            log.debug("Request updateDevice body: {}", body);
+            LogUtils.log("Request updateDevice body: %", body);
             request.setQuery(body);
 
             String response = sendRequest(request, true, true).getContentAsJSONObject().toJSONString();
-            log.debug("Response update device: {}", response);
+            LogUtils.log("Response update device: %", response);
             return "UPDATED";
 
         } catch (Exception e) {
