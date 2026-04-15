@@ -22,7 +22,7 @@ public class NudgeHelper {
     /**
      * Returns true if the user has an active snooze that has not yet expired.
      */
-    public static boolean isSnoozed(String uid, int snoozeDays) {
+    public static boolean checkSnoozed(String uid, int snoozeDays) {
         try {
             UserService userService = CdiUtil.bean(UserService.class);
             User user = userService.getUser(uid, SNOOZE_ATTR);
