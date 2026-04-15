@@ -203,7 +203,8 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false
+			"selected": false,
+			"dragging": false
 		},
 		{
 			"id": "whenNode-03814172-8c93-45d5-b9f7-ddc83207a426",
@@ -244,7 +245,8 @@
 			"measured": {
 				"width": 110,
 				"height": 60
-			}
+			},
+			"selected": false
 		},
 		{
 			"id": "callNode-139fed18-6b0f-4fdb-b346-8d4c38d2b21d",
@@ -266,7 +268,7 @@
 					"javaClassName": "",
 					"javaMethodName": "getMFAUserInfoByFido2",
 					"javaVariableName": "mfaInfo",
-					"exceptionVariableField": "E",
+					"exceptionVariableField": "E2",
 					"callType": "Call method on instance",
 					"arguments": [
 						"uid"
@@ -286,7 +288,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -948,7 +950,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		}
 	],
@@ -1392,8 +1394,8 @@
 		}
 	],
 	"viewport": {
-		"x": 186,
-		"y": 167,
+		"x": -920,
+		"y": 46,
 		"zoom": 1
 	}
 }
