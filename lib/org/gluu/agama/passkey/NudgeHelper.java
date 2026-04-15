@@ -19,6 +19,9 @@ public class NudgeHelper {
     private static final Logger logger = LoggerFactory.getLogger(NudgeHelper.class);
     private static final String SNOOZE_ATTR = "passkeyNudgeSnoozeUntil";
 
+    public NudgeHelper(){
+        
+    }
     /**
      * Returns true if the user has an active snooze that has not yet expired.
      */
