@@ -19,26 +19,26 @@ When E is null
           passkeyCount = mfaData.count
 //  If user already has passkeys, skip nudge entirely
 When passkeyCount is not 0
-     it_bhhil = {success:true, data: { userId: uid }}
-     Finish it_bhhil
+     it_pvajw = {success:true, data: { userId: uid }}
+     Finish it_pvajw
 //  Check if user has an active snooze
 snoozed = Call org.gluu.agama.passkey.NudgeHelper#isSnoozed uid snoozeDays
 When snoozed is true
-     it_lobyl = {success:true, data: { userId: uid }}
-     Finish it_lobyl
+     it_whvbl = {success:true, data: { userId: uid }}
+     Finish it_whvbl
 //  Show the nudge screen
 nudgeForm = RRF "passkey-nudge.ftlh" 
 When nudgeForm.addPasskeyNowBtn is ""
      //  User wants to add a passkey — trigger the add flow
      addTrigger = Trigger org.gluu.agama.passkey.add userData
-     it_rvkkr = {success:true, data: { userId: uid }}
-     Finish it_rvkkr
+     it_eevus = {success:true, data: { userId: uid }}
+     Finish it_eevus
 When nudgeForm.remindLaterBtn is ""
      //  User wants to be reminded later — record snooze and continue
      Call org.gluu.agama.passkey.NudgeHelper#snooze snoozeDays
-     it_qjsoi = {success:true, data: { userId: uid }}
-     Finish it_qjsoi
+     it_kntva = {success:true, data: { userId: uid }}
+     Finish it_kntva
 //  Fallback finish (should not be reached)
-it_ojdzk = {success:true, data: { userId: uid }}
-Finish it_ojdzk
+it_gtmyp = {success:true, data: { userId: uid }}
+Finish it_gtmyp
 Log "@info PassKey adopt Flow starting..."
