@@ -125,7 +125,7 @@
 				"width": 110,
 				"height": 60
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "assignmentNode-911280e5-a3ea-4325-a880-0e5ab9ba602e",
@@ -472,7 +472,7 @@
 				"branching": "continue",
 				"agamaData": {
 					"javaClassName": "org.gluu.agama.passkey.NudgeHelper",
-					"javaMethodName": "isSnoozed",
+					"javaMethodName": "checkSnoozed",
 					"javaVariableName": "",
 					"exceptionVariableField": "",
 					"callType": "Call static method",
@@ -495,7 +495,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"id": "whenNode-d3c45ce8-17cd-4805-9da8-ccb4761478a3",
@@ -1344,8 +1344,8 @@
 		}
 	],
 	"viewport": {
-		"x": -36,
-		"y": 108,
+		"x": -1501,
+		"y": 239,
 		"zoom": 1
 	}
 }
