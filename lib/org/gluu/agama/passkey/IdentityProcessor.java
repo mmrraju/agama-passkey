@@ -6,6 +6,7 @@ import io.jans.as.model.exception.InvalidClaimException;
 import io.jans.service.cdi.util.CdiUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import io.jans.agama.engine.script.LogUtils;
 
 import java.util.Map;
 
@@ -22,7 +23,7 @@ public class IdentityProcessor {
     public static Map<String, String> accountFromUid(String uid) throws InvalidClaimException {
         User user = getUser(UID, uid);
         boolean local = user != null;
-        log.debug("There is {} local account for {}", local ? "a" : "no", uid);
+        LogUtils.log("There is % local account for %", local ? "a" : "no", uid);
 
         if (local) {
             String inum = getSingleValuedAttr(user, INUM_ATTR);
