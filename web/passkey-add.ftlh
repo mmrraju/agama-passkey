@@ -5,9 +5,6 @@
 	</title><link rel="icon" href="${webCtx.contextPath}/servlet/favicon" type="image/x-icon"></head>
 <body>
 
-
-
-
   
 	
 	
@@ -39,7 +36,6 @@
 			<input type="hidden" id="tokenResponse" name="tokenResponse">
 			<input type="hidden" id="skipped" name="skipped">
 			<input type="hidden" id="errorMessage" name="errorMessage">
-			&lt;#if showError == true&gt;
 			<div id="alert-message" role="alert" class="p-4 mb-4 text-red-800 border border-red-300 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400 dark:border-red-800">
 			  <div class="flex items-center">
 				<svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="flex-shrink-0 w-4 h-4 me-2 fill-red-700">
@@ -75,9 +71,6 @@
   
   
   
-
-
-
 </body>
 
 <script src="https://cdn.tailwindcss.com"></script><script src="${webCtx.contextPath}/auth/fido2/js/base64js.js"></script><script src="${webCtx.contextPath}/auth/fido2/js/base64url.js"></script><script src="${webCtx.contextPath}/auth/fido2/js/webauthn.js"></script><script>
