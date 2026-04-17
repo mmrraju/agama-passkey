@@ -52,7 +52,7 @@
 			<input type="hidden" id="tokenResponse" name="tokenResponse">
 			<input type="hidden" id="skipped" name="skipped">
 			<input type="hidden" id="errorMessage" name="errorMessage">
-			&lt;#if showError == true&gt;
+			[#if showError? has_true]
 			<div id="alert-message" role="alert" class="p-4 mb-4 text-red-800 border border-red-300 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400 dark:border-red-800">
 			  <div class="flex items-center">
 				<svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="flex-shrink-0 w-4 h-4 me-2 fill-red-700">
@@ -68,7 +68,7 @@
 				${errorMessage}
 			  </div>
 			</div>
-			<!--#if-->
+			[/#if]
 			<button type="submit" name="loginWithPasskeyBtn" formnovalidate="" class="w-full text-black bg-gray-50 border border-gray-300 hover:bg-gray-100 font-medium rounded-lg text-sm px-5 py-2-5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
 			  Sign in with a passkey
 			</button>
