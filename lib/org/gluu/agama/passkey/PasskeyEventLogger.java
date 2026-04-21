@@ -17,13 +17,7 @@ public class PasskeyEventLogger {
 
     private PasskeyEventLogger() {}
 
-    /**
-     * Logs a structured passkey audit event.
-     *
-     * @param eventType one of the supported event type constants
-     * @param uid       the user's login identifier (may be null)
-     * @param extra     additional key/value pairs to include (may be null or empty)
-     */
+
     public static void log(String eventType, String uid, Map<String, String> extra) {
         try {
             StringBuilder sb = new StringBuilder();
