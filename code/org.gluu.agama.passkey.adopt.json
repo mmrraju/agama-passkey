@@ -1193,7 +1193,8 @@
 					"callType": "Call static method",
 					"arguments": [
 						"\"PASSKEY_NUDGE_SHOWN\"",
-						"ui"
+						"ui",
+						"\"{}\""
 					],
 					"nodeIcon": "material-symbols:code",
 					"nodeColor": "",
