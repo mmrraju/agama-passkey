@@ -872,7 +872,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "whenNode-985439e8-451c-49da-8876-af35896503b6",
@@ -985,7 +985,7 @@
 					"hasComment": true,
 					"comment": " Exceeded max attempts",
 					"flowfilename": "",
-					"returnVariable": "\"Step-up failed\"",
+					"returnVariable": "Step-up failed",
 					"finishMode": "withFailure",
 					"nodeIcon": "material-symbols:line-end-square-rounded",
 					"previousNodeId": "repeatNode-73ac3571-4213-4763-bf6d-4c6fc4b7f6c3"
@@ -995,7 +995,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false
+			"selected": true
 		}
 	],
 	"edges": [
@@ -1457,8 +1457,8 @@
 		}
 	],
 	"viewport": {
-		"x": -2842,
-		"y": -233,
+		"x": -2006,
+		"y": 146,
 		"zoom": 1
 	}
 }
