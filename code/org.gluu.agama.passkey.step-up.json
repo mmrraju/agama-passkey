@@ -510,7 +510,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "assignmentNode-785afd3d-f793-4423-b46c-d1d5ca07965e",
@@ -668,8 +668,8 @@
 			"id": "callNode-6fae8d0b-0909-4d01-8ef5-5e66509cb3c1",
 			"type": "callNode",
 			"position": {
-				"x": 3030,
-				"y": 490
+				"x": 2931,
+				"y": 545
 			},
 			"data": {
 				"id": "callNode-6fae8d0b-0909-4d01-8ef5-5e66509cb3c1",
@@ -682,13 +682,11 @@
 				"branching": "success",
 				"agamaData": {
 					"javaClassName": "",
-					"javaMethodName": "Call",
-					"javaVariableName": "=",
-					"exceptionVariableField": "",
+					"javaMethodName": "verify",
+					"javaVariableName": "fidoValidator",
+					"exceptionVariableField": "Ev",
 					"callType": "Call method on instance",
 					"arguments": [
-						"fidoValidator",
-						"verify",
 						"stepUpForm.tokenResponse"
 					],
 					"nodeIcon": "material-symbols:code",
@@ -705,14 +703,16 @@
 			"measured": {
 				"width": 170,
 				"height": 124
-			}
+			},
+			"selected": false,
+			"dragging": false
 		},
 		{
 			"id": "whenNode-9ce7bb2b-3e6f-4d24-843a-c946bc4b75ac",
 			"type": "whenNode",
 			"position": {
-				"x": 3280,
-				"y": 560
+				"x": 3211,
+				"y": 690
 			},
 			"data": {
 				"id": "whenNode-9ce7bb2b-3e6f-4d24-843a-c946bc4b75ac",
@@ -746,7 +746,9 @@
 			"measured": {
 				"width": 110,
 				"height": 60
-			}
+			},
+			"selected": false,
+			"dragging": false
 		},
 		{
 			"id": "assignmentNode-7cda71c8-43e7-41e7-a211-83649347fff3",
@@ -790,7 +792,8 @@
 			"measured": {
 				"width": 170,
 				"height": 124
-			}
+			},
+			"selected": false
 		},
 		{
 			"id": "whenNode-d6db0714-273a-47de-985b-1368a25fd3a7",
@@ -859,7 +862,7 @@
 					"hasComment": false,
 					"comment": "",
 					"flowfilename": "",
-					"returnVariable": "{ userId: uid } ",
+					"returnVariable": "{ userId: uid }",
 					"finishMode": "withSuccess",
 					"nodeIcon": "material-symbols:line-end-square-rounded",
 					"previousNodeId": "whenNode-d6db0714-273a-47de-985b-1368a25fd3a7"
@@ -868,7 +871,8 @@
 			"measured": {
 				"width": 170,
 				"height": 124
-			}
+			},
+			"selected": true
 		},
 		{
 			"id": "whenNode-985439e8-451c-49da-8876-af35896503b6",
@@ -1453,8 +1457,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1371,
-		"y": 200,
+		"x": -2842,
+		"y": -233,
 		"zoom": 1
 	}
 }
