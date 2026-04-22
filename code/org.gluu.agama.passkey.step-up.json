@@ -109,7 +109,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "whenNode-4198528b-b281-479e-a629-77325c89f511",
@@ -156,8 +156,8 @@
 			"id": "callNode-95fcef3c-5907-4d02-b5dc-f4056420ea24",
 			"type": "callNode",
 			"position": {
-				"x": 1030,
-				"y": 310
+				"x": 858,
+				"y": 347
 			},
 			"data": {
 				"id": "callNode-95fcef3c-5907-4d02-b5dc-f4056420ea24",
@@ -170,13 +170,11 @@
 				"branching": "success",
 				"agamaData": {
 					"javaClassName": "",
-					"javaMethodName": "Call",
-					"javaVariableName": "=",
+					"javaMethodName": "getMFAUserInfoByFido2",
+					"javaVariableName": "mfaInfo",
 					"exceptionVariableField": "",
 					"callType": "Call method on instance",
 					"arguments": [
-						"mfaInfo",
-						"getMFAUserInfoByFido2",
 						"uid"
 					],
 					"nodeIcon": "material-symbols:code",
@@ -193,7 +191,9 @@
 			"measured": {
 				"width": 170,
 				"height": 124
-			}
+			},
+			"selected": true,
+			"dragging": false
 		},
 		{
 			"id": "whenNode-84fa15f6-dbc9-4e05-aec0-9dfb1af07f6b",
@@ -1447,8 +1447,8 @@
 		}
 	],
 	"viewport": {
-		"x": -126,
-		"y": 26,
+		"x": -419,
+		"y": -20,
 		"zoom": 1
 	}
 }
