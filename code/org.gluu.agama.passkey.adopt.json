@@ -664,8 +664,8 @@
 			"id": "triggerNode-a6bd00b8-5421-4ac3-b2b1-1e99b93fb91c",
 			"type": "triggerNode",
 			"position": {
-				"x": 3262,
-				"y": 331
+				"x": 3231,
+				"y": 305
 			},
 			"data": {
 				"id": "triggerNode-a6bd00b8-5421-4ac3-b2b1-1e99b93fb91c",
@@ -703,8 +703,8 @@
 			"id": "finishNode-d328d5ba-d289-4a14-b0da-1c387602fc64",
 			"type": "finishNode",
 			"position": {
-				"x": 3540,
-				"y": 345
+				"x": 3456,
+				"y": 308
 			},
 			"data": {
 				"id": "finishNode-d328d5ba-d289-4a14-b0da-1c387602fc64",
