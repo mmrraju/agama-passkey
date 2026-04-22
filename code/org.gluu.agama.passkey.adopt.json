@@ -131,8 +131,8 @@
 			"id": "assignmentNode-911280e5-a3ea-4325-a880-0e5ab9ba602e",
 			"type": "assignmentNode",
 			"position": {
-				"x": 780,
-				"y": 310
+				"x": 421,
+				"y": 283
 			},
 			"data": {
 				"id": "assignmentNode-911280e5-a3ea-4325-a880-0e5ab9ba602e",
@@ -165,14 +165,15 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false
+			"selected": false,
+			"dragging": false
 		},
 		{
 			"id": "callNode-08c3c18f-e487-44fb-93a0-ab7f1bb56da2",
 			"type": "callNode",
 			"position": {
-				"x": 1030,
-				"y": 40
+				"x": 1351,
+				"y": 74
 			},
 			"data": {
 				"id": "callNode-08c3c18f-e487-44fb-93a0-ab7f1bb56da2",
@@ -211,8 +212,8 @@
 			"id": "whenNode-03814172-8c93-45d5-b9f7-ddc83207a426",
 			"type": "whenNode",
 			"position": {
-				"x": 1280,
-				"y": 110
+				"x": 1589,
+				"y": 84
 			},
 			"data": {
 				"id": "whenNode-03814172-8c93-45d5-b9f7-ddc83207a426",
@@ -247,13 +248,14 @@
 				"width": 110,
 				"height": 60
 			},
-			"selected": false
+			"selected": false,
+			"dragging": false
 		},
 		{
 			"id": "callNode-139fed18-6b0f-4fdb-b346-8d4c38d2b21d",
 			"type": "callNode",
 			"position": {
-				"x": 1450,
+				"x": 1700,
 				"y": 356
 			},
 			"data": {
@@ -296,7 +298,7 @@
 			"id": "whenNode-1dda636a-5e23-45f6-bc44-bcf18a96ed7b",
 			"type": "whenNode",
 			"position": {
-				"x": 1780,
+				"x": 2030,
 				"y": 380
 			},
 			"data": {
@@ -338,7 +340,7 @@
 			"id": "assignmentNode-3de2ba95-05be-419e-9329-fe957d2e8833",
 			"type": "assignmentNode",
 			"position": {
-				"x": 2030,
+				"x": 2280,
 				"y": 580
 			},
 			"data": {
@@ -377,7 +379,7 @@
 			"id": "whenNode-4da43be0-85b0-402e-970a-e51f782e72b7",
 			"type": "whenNode",
 			"position": {
-				"x": 1530,
+				"x": 1780,
 				"y": 40
 			},
 			"data": {
@@ -421,7 +423,7 @@
 			"id": "finishNode-6b45e5f8-a912-408a-8d6d-a4c1acdef231",
 			"type": "finishNode",
 			"position": {
-				"x": 1715,
+				"x": 1965,
 				"y": 167
 			},
 			"data": {
@@ -458,7 +460,7 @@
 			"id": "callNode-96560706-d3bd-4424-9924-0f14c83355d4",
 			"type": "callNode",
 			"position": {
-				"x": 1780,
+				"x": 2030,
 				"y": -30
 			},
 			"data": {
@@ -501,7 +503,7 @@
 			"id": "whenNode-d3c45ce8-17cd-4805-9da8-ccb4761478a3",
 			"type": "whenNode",
 			"position": {
-				"x": 2030,
+				"x": 2280,
 				"y": 40
 			},
 			"data": {
@@ -543,7 +545,7 @@
 			"id": "finishNode-c3eed09e-bd0e-47ce-a296-3085ef9eb848",
 			"type": "finishNode",
 			"position": {
-				"x": 2280,
+				"x": 2530,
 				"y": 240
 			},
 			"data": {
@@ -579,7 +581,7 @@
 			"id": "rrfNode-687b1fd4-3de1-4b6c-a69c-df1ce6524d28",
 			"type": "rrfNode",
 			"position": {
-				"x": 2280,
+				"x": 2530,
 				"y": -30
 			},
 			"data": {
@@ -615,7 +617,7 @@
 			"id": "whenNode-87c2bf9c-5f3b-44e4-a5cf-e45e5c27006d",
 			"type": "whenNode",
 			"position": {
-				"x": 2530,
+				"x": 2780,
 				"y": 40
 			},
 			"data": {
@@ -657,7 +659,7 @@
 			"id": "triggerNode-a6bd00b8-5421-4ac3-b2b1-1e99b93fb91c",
 			"type": "triggerNode",
 			"position": {
-				"x": 2729,
+				"x": 2979,
 				"y": 291
 			},
 			"data": {
@@ -697,7 +699,7 @@
 			"id": "finishNode-d328d5ba-d289-4a14-b0da-1c387602fc64",
 			"type": "finishNode",
 			"position": {
-				"x": 3026,
+				"x": 3276,
 				"y": 320
 			},
 			"data": {
@@ -732,7 +734,7 @@
 			"id": "whenNode-a0798f27-0297-4266-a824-96df6732e0e5",
 			"type": "whenNode",
 			"position": {
-				"x": 2780,
+				"x": 3030,
 				"y": -30
 			},
 			"data": {
@@ -775,7 +777,7 @@
 			"id": "callNode-dff5fb1d-1bd0-41bb-acad-44d5ef237515",
 			"type": "callNode",
 			"position": {
-				"x": 3030,
+				"x": 3280,
 				"y": 170
 			},
 			"data": {
@@ -812,13 +814,13 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "finishNode-88900b8f-caed-4d9c-a600-b8244ff8af16",
 			"type": "finishNode",
 			"position": {
-				"x": 3280,
+				"x": 3530,
 				"y": 170
 			},
 			"data": {
@@ -852,8 +854,8 @@
 			"id": "assignmentNode-3e6f1c60-6a90-4d66-bbd8-71fcc2f2f7bc",
 			"type": "assignmentNode",
 			"position": {
-				"x": 762,
-				"y": 65
+				"x": 1055,
+				"y": 79
 			},
 			"data": {
 				"id": "assignmentNode-3e6f1c60-6a90-4d66-bbd8-71fcc2f2f7bc",
@@ -862,8 +864,7 @@
 					"x": 780,
 					"y": 110
 				},
-				"previousNodeId": "whenNode-f64faca7-c8fb-4f48-8598-a00d9058f671",
-				"branching": "continue",
+				"previousNodeId": "callNode-04cf84b8-09d3-48cc-8b88-f1956f200a2d",
 				"agamaData": {
 					"assignments": [
 						{
@@ -889,10 +890,84 @@
 			"dragging": false
 		},
 		{
+			"id": "logNode-267eddab-371a-4738-b9d8-e3325f80a3ff",
+			"type": "logNode",
+			"position": {
+				"x": 641,
+				"y": 420
+			},
+			"data": {
+				"id": "logNode-267eddab-371a-4738-b9d8-e3325f80a3ff",
+				"type": "logNode",
+				"position": {
+					"x": 780,
+					"y": 110
+				},
+				"previousNodeId": "whenNode-f64faca7-c8fb-4f48-8598-a00d9058f671",
+				"branching": "continue",
+				"agamaData": {
+					"logMessage": "\"PassKey adopt Flow starting...\"",
+					"logLevel": "info",
+					"nodeIcon": "octicon:log-16",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Adoption flow"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
+			"selected": true,
+			"dragging": false
+		},
+		{
+			"id": "callNode-04cf84b8-09d3-48cc-8b88-f1956f200a2d",
+			"type": "callNode",
+			"position": {
+				"x": 872,
+				"y": 421
+			},
+			"data": {
+				"id": "callNode-04cf84b8-09d3-48cc-8b88-f1956f200a2d",
+				"type": "callNode",
+				"position": {
+					"x": 979,
+					"y": 58
+				},
+				"previousNodeId": "logNode-267eddab-371a-4738-b9d8-e3325f80a3ff",
+				"agamaData": {
+					"javaClassName": "org.gluu.agama.passkey.PasskeyRolloutConfig",
+					"javaMethodName": "",
+					"javaVariableName": "",
+					"exceptionVariableField": "Ecfg",
+					"callType": "Create an instance",
+					"arguments": [],
+					"nodeIcon": "material-symbols:code",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Check rollout config — skip nudge entirely if nudgeEnabled is false",
+					"asssignedVariableName": "rolloutConfig"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
+			"selected": false,
+			"dragging": false
+		},
+		{
 			"id": "finishNode-b730706a-23a2-4994-bd2c-2c87425496d2",
 			"type": "finishNode",
 			"position": {
-				"x": 3030,
+				"x": 3280,
 				"y": -100
 			},
 			"data": {
@@ -1307,25 +1382,6 @@
 			"sourceHandle": "source_whenNode-a0798f27-0297-4266-a824-96df6732e0e5_continue"
 		},
 		{
-			"id": "whenNode-f64faca7-c8fb-4f48-8598-a00d9058f671-assignmentNode-3e6f1c60-6a90-4d66-bbd8-71fcc2f2f7bc",
-			"type": "default",
-			"source": "whenNode-f64faca7-c8fb-4f48-8598-a00d9058f671",
-			"target": "assignmentNode-3e6f1c60-6a90-4d66-bbd8-71fcc2f2f7bc",
-			"labelBgPadding": [
-				8,
-				4
-			],
-			"labelBgBorderRadius": 4,
-			"label": "continue",
-			"labelBgStyle": {
-				"fill": "#009688",
-				"color": "#ffffff",
-				"fillOpacity": 0.7
-			},
-			"labelShowBg": true,
-			"sourceHandle": "source_whenNode-f64faca7-c8fb-4f48-8598-a00d9058f671_continue"
-		},
-		{
 			"id": "assignmentNode-3e6f1c60-6a90-4d66-bbd8-71fcc2f2f7bc-callNode-08c3c18f-e487-44fb-93a0-ab7f1bb56da2",
 			"type": "default",
 			"source": "assignmentNode-3e6f1c60-6a90-4d66-bbd8-71fcc2f2f7bc",
@@ -1343,11 +1399,68 @@
 			},
 			"sourceHandle": "source_assignmentNode-3e6f1c60-6a90-4d66-bbd8-71fcc2f2f7bc",
 			"targetHandle": "target_callNode-08c3c18f-e487-44fb-93a0-ab7f1bb56da2"
+		},
+		{
+			"id": "whenNode-f64faca7-c8fb-4f48-8598-a00d9058f671-logNode-267eddab-371a-4738-b9d8-e3325f80a3ff",
+			"type": "default",
+			"source": "whenNode-f64faca7-c8fb-4f48-8598-a00d9058f671",
+			"target": "logNode-267eddab-371a-4738-b9d8-e3325f80a3ff",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "continue",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_whenNode-f64faca7-c8fb-4f48-8598-a00d9058f671_continue"
+		},
+		{
+			"id": "logNode-267eddab-371a-4738-b9d8-e3325f80a3ff-callNode-04cf84b8-09d3-48cc-8b88-f1956f200a2d",
+			"type": "default",
+			"source": "logNode-267eddab-371a-4738-b9d8-e3325f80a3ff",
+			"target": "callNode-04cf84b8-09d3-48cc-8b88-f1956f200a2d",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_logNode-267eddab-371a-4738-b9d8-e3325f80a3ff"
+		},
+		{
+			"id": "callNode-04cf84b8-09d3-48cc-8b88-f1956f200a2d-assignmentNode-3e6f1c60-6a90-4d66-bbd8-71fcc2f2f7bc",
+			"type": "default",
+			"source": "callNode-04cf84b8-09d3-48cc-8b88-f1956f200a2d",
+			"target": "assignmentNode-3e6f1c60-6a90-4d66-bbd8-71fcc2f2f7bc",
+			"label": "",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"sourceHandle": "source_callNode-04cf84b8-09d3-48cc-8b88-f1956f200a2d",
+			"targetHandle": "target_assignmentNode-3e6f1c60-6a90-4d66-bbd8-71fcc2f2f7bc"
 		}
 	],
 	"viewport": {
-		"x": -2590,
-		"y": 147,
+		"x": -461,
+		"y": -91,
 		"zoom": 1
 	}
 }
