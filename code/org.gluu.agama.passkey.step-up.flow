@@ -10,14 +10,14 @@ When E is null
      When E2 is null
           passkeyCount = mfaData.count
 When passkeyCount is 0
-     it_tcnrx = {success:false, error: "No passkeys enrolled"}
-     Finish it_tcnrx
+     it_pyiex = {success:false, error: "No passkeys enrolled"}
+     Finish it_pyiex
 //  Build a scoped assertion request for this specific user
 fidoValidator = Call org.gluu.agama.passkey.authn.FidoValidator#new 
 assertion | Ea = Call fidoValidator assertionRequest uid
 When Ea is not null
-     it_dtbvg = {success:false, error: "Could not build assertion request"}
-     Finish it_dtbvg
+     it_bjqhn = {success:false, error: "Could not build assertion request"}
+     Finish it_bjqhn
 //  Show step-up screen — allow up to 3 attempts
 obj = { assertion: assertion, showError: false, errorMessage: "" }
 Repeat 3 times max
@@ -28,11 +28,11 @@ Repeat 3 times max
                obj.showError = true
                obj.errorMessage = Ev.message
           When Ev is null
-               it_jwuuq = {success:true, data: { userId: uid }}
-               Finish it_jwuuq
+               it_yytwe = {success:true, data: { userId: uid }}
+               Finish it_yytwe
      When stepUpForm.skipped is "skipped"
           obj.showError = true
           obj.errorMessage = stepUpForm.errorMessage
 //  Exceeded max attempts
-it_uekif = {success:false, error: "Step-up failed"}
-Finish it_uekif
+it_qsivy = {success:false, error: "Step-up failed"}
+Finish it_qsivy
