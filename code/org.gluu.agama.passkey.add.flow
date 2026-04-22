@@ -1,50 +1,37 @@
-// Flow that takes care of registering a new Passkey
-Flow org.gluu.agama.passkey.add
+//  Requires passkey re-assertion for an already-authenticated user before a sensitive action.
+Flow org.gluu.agama.passkey.step-up
      Basepath ""
-     Inputs userData
-// Set "inum" obtained from userData
-inum = userData.inum
-// Get Instance FidoEnroller
-fidoEnroller = Call org.gluu.agama.passkey.enroll.FidoEnroller#new 
-// Declaration of the variable "obj" with initial data
-obj = { attestation: "{}", isAttestation: false, showError: false, errorTitle: "", errorMessage: "" }
-Repeat 5 times max
-     // Load passkey-add.ftlh page
-     addDeviceForm = RRF "passkey-add.ftlh" obj
-     When addDeviceForm.addPasskeyBtn is ""
-          // Invoke the method to initiate passkey registration
-          detestable = Call fidoEnroller getAttestationMessage inum
-          // Show registration flow
-          obj.isAttestation = true
-          obj.attestation = detestable
-          obj.showError = false
-     When addDeviceForm.skipped is "skipped"
-          // Process cancellation error displayed
-          obj.isAttestation = false
-          obj.showError = true
-          obj.errorTitle = "Passkey registration failed."
-          obj.errorMessage = addDeviceForm.errorMessage
-     When addDeviceForm.tokenResponse is not ""
-          // Invoke method to verify passkey registration
-          key | E = Call fidoEnroller verifyRegistration inum addDeviceForm.tokenResponse
-          When E is null and key is not null
-               // Flow to assign a nickname to the registered passkey
-               nicknameTrigger = Trigger org.gluu.agama.passkey.nickname key userData
-               // If there is an active registration flow, it will be canceled
-               obj.isAttestation = false
-               // Ends the flow by replying to the user's inum
-               it_satjm = {success:true, data: { userId: inum, response: nicknameTrigger }}
-               Finish it_satjm
-          When E is not null
-               // Show error with detail obtained from verify method
-               obj.isAttestation = false
+     Inputs uid conf
+//  Check that the user has at least one passkey enrolled
+passkeyCount = 0
+mfaInfo = Call = Call org.gluu.agama.passkey.EnrollmentHelper#new
+When E is null
+     mfaData = Call = Call mfaInfo getMFAUserInfoByFido2 uid
+     When E2 is null
+          passkeyCount = mfaData.count
+When passkeyCount is 0
+     it_qlpng = {success:false, error: ""No passkeys enrolled" "}
+     Finish it_qlpng
+//  Build a scoped assertion request for this specific user
+fidoValidator = Call org.gluu.agama.passkey.authn.FidoValidator#new 
+assertion = Call = Call fidoValidator assertionRequest uid
+When Ea is not null
+     it_xifry = {success:false, error: ""Could not build assertion request" "}
+     Finish it_xifry
+//  Show step-up screen — allow up to 3 attempts
+obj = { assertion: assertion, showError: false, errorMessage: "" }
+Repeat 3 times max
+     stepUpForm = RRF "passkey-step-up.ftlh" obj
+     When stepUpForm.tokenResponse is not ""
+          verifyResponse = Call = Call fidoValidator verify stepUpForm.tokenResponse
+          When Ev is not null
                obj.showError = true
-               obj.errorTitle = "Passkey registration failed."
-               obj.errorMessage = E.message
-     When addDeviceForm.cancelBtn is ""
-          // Ends the flow because the user cancels it
-          it_ltlxb = {success:false, error: "Cancel event"}
-          Finish it_ltlxb
-// Finish with error, because the limit of attempts was exceeded.
-it_qvsge = {success:false, error: "Passkey registration attempt exceeded."}
-Finish it_qvsge
+               obj.errorMessage = Ev.message
+          When Ev is null
+               Finish { userId: uid } 
+     When stepUpForm.skipped is "skipped"
+          obj.showError = true
+          obj.errorMessage = stepUpForm.errorMessage
+//  Exceeded max attempts
+it_nonqv = {success:false, error: ""Step-up failed" "}
+Finish it_nonqv
