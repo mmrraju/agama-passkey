@@ -5,8 +5,8 @@
 			"type": "startNode",
 			"sourcePosition": "right",
 			"position": {
-				"x": -161,
-				"y": 59
+				"x": -316,
+				"y": 10
 			},
 			"deletable": false,
 			"data": {
@@ -42,8 +42,8 @@
 			"id": "assignmentNode-4cade643-e196-4670-a81f-0b0f55a6bb8c",
 			"type": "assignmentNode",
 			"position": {
-				"x": 280,
-				"y": 40
+				"x": -70,
+				"y": 15
 			},
 			"data": {
 				"id": "assignmentNode-4cade643-e196-4670-a81f-0b0f55a6bb8c",
@@ -83,14 +83,16 @@
 			"measured": {
 				"width": 170,
 				"height": 124
-			}
+			},
+			"selected": false,
+			"dragging": false
 		},
 		{
 			"id": "whenNode-f64faca7-c8fb-4f48-8598-a00d9058f671",
 			"type": "whenNode",
 			"position": {
-				"x": 530,
-				"y": 110
+				"x": 169,
+				"y": 91
 			},
 			"data": {
 				"id": "whenNode-f64faca7-c8fb-4f48-8598-a00d9058f671",
@@ -125,14 +127,15 @@
 				"width": 110,
 				"height": 60
 			},
-			"selected": false
+			"selected": false,
+			"dragging": false
 		},
 		{
 			"id": "assignmentNode-911280e5-a3ea-4325-a880-0e5ab9ba602e",
 			"type": "assignmentNode",
 			"position": {
-				"x": 421,
-				"y": 283
+				"x": 147,
+				"y": 267
 			},
 			"data": {
 				"id": "assignmentNode-911280e5-a3ea-4325-a880-0e5ab9ba602e",
@@ -460,8 +463,8 @@
 			"id": "callNode-96560706-d3bd-4424-9924-0f14c83355d4",
 			"type": "callNode",
 			"position": {
-				"x": 1650,
-				"y": -242
+				"x": 1990,
+				"y": -193
 			},
 			"data": {
 				"id": "callNode-96560706-d3bd-4424-9924-0f14c83355d4",
@@ -582,8 +585,8 @@
 			"id": "rrfNode-687b1fd4-3de1-4b6c-a69c-df1ce6524d28",
 			"type": "rrfNode",
 			"position": {
-				"x": 2530,
-				"y": -30
+				"x": 2767,
+				"y": -304
 			},
 			"data": {
 				"id": "rrfNode-687b1fd4-3de1-4b6c-a69c-df1ce6524d28",
@@ -592,8 +595,7 @@
 					"x": 2030,
 					"y": -30
 				},
-				"previousNodeId": "whenNode-d3c45ce8-17cd-4805-9da8-ccb4761478a3",
-				"branching": "continue",
+				"previousNodeId": "callNode-764b10e2-a3d8-4a12-9fc9-f2db3fbb2157",
 				"agamaData": {
 					"assignments": [],
 					"nodeIcon": "ph:globe-simple",
@@ -612,13 +614,15 @@
 			"measured": {
 				"width": 170,
 				"height": 124
-			}
+			},
+			"selected": false,
+			"dragging": false
 		},
 		{
 			"id": "whenNode-87c2bf9c-5f3b-44e4-a5cf-e45e5c27006d",
 			"type": "whenNode",
 			"position": {
-				"x": 2780,
+				"x": 3030,
 				"y": 40
 			},
 			"data": {
@@ -660,7 +664,7 @@
 			"id": "triggerNode-a6bd00b8-5421-4ac3-b2b1-1e99b93fb91c",
 			"type": "triggerNode",
 			"position": {
-				"x": 2979,
+				"x": 3229,
 				"y": 291
 			},
 			"data": {
@@ -700,7 +704,7 @@
 			"id": "finishNode-d328d5ba-d289-4a14-b0da-1c387602fc64",
 			"type": "finishNode",
 			"position": {
-				"x": 3276,
+				"x": 3526,
 				"y": 320
 			},
 			"data": {
@@ -735,7 +739,7 @@
 			"id": "whenNode-a0798f27-0297-4266-a824-96df6732e0e5",
 			"type": "whenNode",
 			"position": {
-				"x": 3030,
+				"x": 3280,
 				"y": -30
 			},
 			"data": {
@@ -778,7 +782,7 @@
 			"id": "callNode-dff5fb1d-1bd0-41bb-acad-44d5ef237515",
 			"type": "callNode",
 			"position": {
-				"x": 3280,
+				"x": 3530,
 				"y": 170
 			},
 			"data": {
@@ -821,7 +825,7 @@
 			"id": "finishNode-88900b8f-caed-4d9c-a600-b8244ff8af16",
 			"type": "finishNode",
 			"position": {
-				"x": 3530,
+				"x": 3780,
 				"y": 170
 			},
 			"data": {
@@ -895,8 +899,8 @@
 			"id": "logNode-267eddab-371a-4738-b9d8-e3325f80a3ff",
 			"type": "logNode",
 			"position": {
-				"x": 578,
-				"y": -207
+				"x": 336,
+				"y": 32
 			},
 			"data": {
 				"id": "logNode-267eddab-371a-4738-b9d8-e3325f80a3ff",
@@ -930,8 +934,8 @@
 			"id": "callNode-04cf84b8-09d3-48cc-8b88-f1956f200a2d",
 			"type": "callNode",
 			"position": {
-				"x": 792,
-				"y": -217.875
+				"x": 559,
+				"y": 28.125
 			},
 			"data": {
 				"id": "callNode-04cf84b8-09d3-48cc-8b88-f1956f200a2d",
@@ -969,8 +973,8 @@
 			"id": "callNode-3a51c492-181b-454c-8b7e-92f1cf7d57ae",
 			"type": "callNode",
 			"position": {
-				"x": 998,
-				"y": -227.625
+				"x": 785,
+				"y": 29.375
 			},
 			"data": {
 				"id": "callNode-3a51c492-181b-454c-8b7e-92f1cf7d57ae",
@@ -1008,8 +1012,8 @@
 			"id": "whenNode-a05210e1-86a7-436e-87fb-774545edd54d",
 			"type": "whenNode",
 			"position": {
-				"x": 1038,
-				"y": 103.375
+				"x": 980,
+				"y": 114.375
 			},
 			"data": {
 				"id": "whenNode-a05210e1-86a7-436e-87fb-774545edd54d",
@@ -1051,7 +1055,7 @@
 			"id": "finishNode-b730706a-23a2-4994-bd2c-2c87425496d2",
 			"type": "finishNode",
 			"position": {
-				"x": 3280,
+				"x": 3530,
 				"y": -100
 			},
 			"data": {
@@ -1166,6 +1170,49 @@
 			"selected": false
 		},
 		{
+			"id": "callNode-764b10e2-a3d8-4a12-9fc9-f2db3fbb2157",
+			"type": "callNode",
+			"position": {
+				"x": 2461,
+				"y": -92
+			},
+			"data": {
+				"id": "callNode-764b10e2-a3d8-4a12-9fc9-f2db3fbb2157",
+				"type": "callNode",
+				"position": {
+					"x": 2530,
+					"y": 40
+				},
+				"previousNodeId": "whenNode-d3c45ce8-17cd-4805-9da8-ccb4761478a3",
+				"branching": "continue",
+				"agamaData": {
+					"javaClassName": "org.gluu.agama.passkey.PasskeyEventLogger",
+					"javaMethodName": "log",
+					"javaVariableName": "",
+					"exceptionVariableField": "",
+					"callType": "Call static method",
+					"arguments": [
+						"\"PASSKEY_NUDGE_SHOWN\"",
+						"ui",
+						"{}"
+					],
+					"nodeIcon": "material-symbols:code",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Log nudge shown event"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
+			"selected": true,
+			"dragging": false
+		},
+		{
 			"id": "finishNode-5ac1635e-3526-4b10-9a37-5414368993b3",
 			"type": "finishNode",
 			"position": {
@@ -1198,7 +1245,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		}
 	],
 	"edges": [
@@ -1429,25 +1476,6 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_whenNode-d3c45ce8-17cd-4805-9da8-ccb4761478a3_success"
-		},
-		{
-			"id": "whenNode-d3c45ce8-17cd-4805-9da8-ccb4761478a3-rrfNode-687b1fd4-3de1-4b6c-a69c-df1ce6524d28",
-			"type": "default",
-			"source": "whenNode-d3c45ce8-17cd-4805-9da8-ccb4761478a3",
-			"target": "rrfNode-687b1fd4-3de1-4b6c-a69c-df1ce6524d28",
-			"labelBgPadding": [
-				8,
-				4
-			],
-			"labelBgBorderRadius": 4,
-			"label": "continue",
-			"labelBgStyle": {
-				"fill": "#009688",
-				"color": "#ffffff",
-				"fillOpacity": 0.7
-			},
-			"labelShowBg": true,
-			"sourceHandle": "source_whenNode-d3c45ce8-17cd-4805-9da8-ccb4761478a3_continue"
 		},
 		{
 			"id": "rrfNode-687b1fd4-3de1-4b6c-a69c-df1ce6524d28-whenNode-87c2bf9c-5f3b-44e4-a5cf-e45e5c27006d",
@@ -1752,11 +1780,49 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_whenNode-2b0c2292-a0d9-47dc-90cd-edca5beecbbd_success"
+		},
+		{
+			"id": "whenNode-d3c45ce8-17cd-4805-9da8-ccb4761478a3-callNode-764b10e2-a3d8-4a12-9fc9-f2db3fbb2157",
+			"type": "default",
+			"source": "whenNode-d3c45ce8-17cd-4805-9da8-ccb4761478a3",
+			"target": "callNode-764b10e2-a3d8-4a12-9fc9-f2db3fbb2157",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "continue",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_whenNode-d3c45ce8-17cd-4805-9da8-ccb4761478a3_continue"
+		},
+		{
+			"id": "callNode-764b10e2-a3d8-4a12-9fc9-f2db3fbb2157-rrfNode-687b1fd4-3de1-4b6c-a69c-df1ce6524d28",
+			"type": "default",
+			"source": "callNode-764b10e2-a3d8-4a12-9fc9-f2db3fbb2157",
+			"target": "rrfNode-687b1fd4-3de1-4b6c-a69c-df1ce6524d28",
+			"label": "",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"sourceHandle": "source_callNode-764b10e2-a3d8-4a12-9fc9-f2db3fbb2157",
+			"targetHandle": "target_rrfNode-687b1fd4-3de1-4b6c-a69c-df1ce6524d28"
 		}
 	],
 	"viewport": {
-		"x": -873,
-		"y": -72.5,
+		"x": -1889,
+		"y": 385,
 		"zoom": 1
 	}
 }
