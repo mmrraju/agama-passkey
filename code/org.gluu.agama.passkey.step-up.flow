@@ -6,18 +6,18 @@ Flow org.gluu.agama.passkey.step-up
 passkeyCount = 0
 mfaInfo | E = Call org.gluu.agama.passkey.EnrollmentHelper#new 
 When E is null
-     mfaData = Call = Call mfaInfo getMFAUserInfoByFido2 uid
+     mfaData = Call mfaInfo getMFAUserInfoByFido2 uid
      When E2 is null
           passkeyCount = mfaData.count
 When passkeyCount is 0
-     it_czhlj = {success:false, error: ""No passkeys enrolled" "}
-     Finish it_czhlj
+     it_doyqc = {success:false, error: ""No passkeys enrolled" "}
+     Finish it_doyqc
 //  Build a scoped assertion request for this specific user
 fidoValidator = Call org.gluu.agama.passkey.authn.FidoValidator#new 
 assertion = Call = Call fidoValidator assertionRequest uid
 When Ea is not null
-     it_higfc = {success:false, error: ""Could not build assertion request" "}
-     Finish it_higfc
+     it_iunwe = {success:false, error: ""Could not build assertion request" "}
+     Finish it_iunwe
 //  Show step-up screen — allow up to 3 attempts
 obj = { assertion: assertion, showError: false, errorMessage: "" }
 Repeat 3 times max
@@ -33,5 +33,5 @@ Repeat 3 times max
           obj.showError = true
           obj.errorMessage = stepUpForm.errorMessage
 //  Exceeded max attempts
-it_apbmq = {success:false, error: ""Step-up failed" "}
-Finish it_apbmq
+it_zxlre = {success:false, error: ""Step-up failed" "}
+Finish it_zxlre
