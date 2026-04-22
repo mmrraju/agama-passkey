@@ -192,7 +192,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -411,13 +411,11 @@
 				"previousNodeId": "callNode-fba0e141-e74b-4ae4-8f77-cb36bf6834c1",
 				"agamaData": {
 					"javaClassName": "",
-					"javaMethodName": "Call",
-					"javaVariableName": "=",
-					"exceptionVariableField": "",
+					"javaMethodName": "assertionRequest",
+					"javaVariableName": "fidoValidator",
+					"exceptionVariableField": "Ea",
 					"callType": "Call method on instance",
 					"arguments": [
-						"fidoValidator",
-						"assertionRequest",
 						"uid"
 					],
 					"nodeIcon": "material-symbols:code",
@@ -433,7 +431,8 @@
 			"measured": {
 				"width": 170,
 				"height": 124
-			}
+			},
+			"selected": true
 		},
 		{
 			"id": "whenNode-fa1452f5-a829-4673-bf6d-d366e4129049",
@@ -1449,8 +1448,8 @@
 		}
 	],
 	"viewport": {
-		"x": -601,
-		"y": 34,
+		"x": -755,
+		"y": 172,
 		"zoom": 1
 	}
 }
