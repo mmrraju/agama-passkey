@@ -344,7 +344,7 @@
 					"hasComment": false,
 					"comment": "",
 					"flowfilename": "",
-					"returnVariable": "\"No passkeys enrolled\"",
+					"returnVariable": "No passkeys enrolled",
 					"finishMode": "withFailure",
 					"nodeIcon": "material-symbols:line-end-square-rounded",
 					"previousNodeId": "whenNode-48147a49-1b77-4735-a08f-63f7b9c3b1cd"
@@ -872,7 +872,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"id": "whenNode-985439e8-451c-49da-8876-af35896503b6",
@@ -995,7 +995,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		}
 	],
 	"edges": [
@@ -1457,8 +1457,8 @@
 		}
 	],
 	"viewport": {
-		"x": -2006,
-		"y": 146,
+		"x": -2849,
+		"y": -260,
 		"zoom": 1
 	}
 }
