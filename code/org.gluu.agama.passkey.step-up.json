@@ -344,7 +344,7 @@
 					"hasComment": false,
 					"comment": "",
 					"flowfilename": "",
-					"returnVariable": "\"No passkeys enrolled\" ",
+					"returnVariable": "\"No passkeys enrolled\"",
 					"finishMode": "withFailure",
 					"nodeIcon": "material-symbols:line-end-square-rounded",
 					"previousNodeId": "whenNode-48147a49-1b77-4735-a08f-63f7b9c3b1cd"
@@ -353,7 +353,8 @@
 			"measured": {
 				"width": 170,
 				"height": 124
-			}
+			},
+			"selected": false
 		},
 		{
 			"id": "callNode-fba0e141-e74b-4ae4-8f77-cb36bf6834c1",
@@ -432,7 +433,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "whenNode-fa1452f5-a829-4673-bf6d-d366e4129049",
@@ -499,7 +500,7 @@
 					"hasComment": false,
 					"comment": "",
 					"flowfilename": "",
-					"returnVariable": "\"Could not build assertion request\" ",
+					"returnVariable": "\"Could not build assertion request\"",
 					"finishMode": "withFailure",
 					"nodeIcon": "material-symbols:line-end-square-rounded",
 					"previousNodeId": "whenNode-fa1452f5-a829-4673-bf6d-d366e4129049"
@@ -508,7 +509,8 @@
 			"measured": {
 				"width": 170,
 				"height": 124
-			}
+			},
+			"selected": false
 		},
 		{
 			"id": "assignmentNode-785afd3d-f793-4423-b46c-d1d5ca07965e",
@@ -547,7 +549,8 @@
 			"measured": {
 				"width": 170,
 				"height": 124
-			}
+			},
+			"selected": false
 		},
 		{
 			"id": "repeatNode-73ac3571-4213-4763-bf6d-4c6fc4b7f6c3",
@@ -977,7 +980,7 @@
 					"hasComment": true,
 					"comment": " Exceeded max attempts",
 					"flowfilename": "",
-					"returnVariable": "\"Step-up failed\" ",
+					"returnVariable": "\"Step-up failed\"",
 					"finishMode": "withFailure",
 					"nodeIcon": "material-symbols:line-end-square-rounded",
 					"previousNodeId": "repeatNode-73ac3571-4213-4763-bf6d-4c6fc4b7f6c3"
@@ -986,7 +989,8 @@
 			"measured": {
 				"width": 170,
 				"height": 124
-			}
+			},
+			"selected": true
 		}
 	],
 	"edges": [
@@ -1448,8 +1452,8 @@
 		}
 	],
 	"viewport": {
-		"x": -755,
-		"y": 172,
+		"x": -1671,
+		"y": 102,
 		"zoom": 1
 	}
 }
