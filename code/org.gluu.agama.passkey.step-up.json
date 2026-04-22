@@ -500,7 +500,7 @@
 					"hasComment": false,
 					"comment": "",
 					"flowfilename": "",
-					"returnVariable": "\"Could not build assertion request\"",
+					"returnVariable": "Could not build assertion request",
 					"finishMode": "withFailure",
 					"nodeIcon": "material-symbols:line-end-square-rounded",
 					"previousNodeId": "whenNode-fa1452f5-a829-4673-bf6d-d366e4129049"
@@ -510,7 +510,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"id": "assignmentNode-785afd3d-f793-4423-b46c-d1d5ca07965e",
@@ -620,7 +620,8 @@
 			"measured": {
 				"width": 170,
 				"height": 124
-			}
+			},
+			"selected": false
 		},
 		{
 			"id": "whenNode-363b1ef1-9be4-4459-86e2-a4315f8bdbac",
@@ -990,7 +991,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		}
 	],
 	"edges": [
@@ -1452,8 +1453,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1671,
-		"y": 102,
+		"x": -1371,
+		"y": 200,
 		"zoom": 1
 	}
 }
