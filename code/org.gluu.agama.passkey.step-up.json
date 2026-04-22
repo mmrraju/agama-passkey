@@ -172,7 +172,7 @@
 					"javaClassName": "",
 					"javaMethodName": "getMFAUserInfoByFido2",
 					"javaVariableName": "mfaInfo",
-					"exceptionVariableField": "",
+					"exceptionVariableField": "E2",
 					"callType": "Call method on instance",
 					"arguments": [
 						"uid"
@@ -199,8 +199,8 @@
 			"id": "whenNode-84fa15f6-dbc9-4e05-aec0-9dfb1af07f6b",
 			"type": "whenNode",
 			"position": {
-				"x": 1280,
-				"y": 380
+				"x": 1114,
+				"y": 467
 			},
 			"data": {
 				"id": "whenNode-84fa15f6-dbc9-4e05-aec0-9dfb1af07f6b",
@@ -234,7 +234,9 @@
 			"measured": {
 				"width": 110,
 				"height": 60
-			}
+			},
+			"selected": false,
+			"dragging": false
 		},
 		{
 			"id": "assignmentNode-cc88ec3c-c999-4352-9ea3-682fb313575a",
@@ -1447,8 +1449,8 @@
 		}
 	],
 	"viewport": {
-		"x": -419,
-		"y": -20,
+		"x": -601,
+		"y": 34,
 		"zoom": 1
 	}
 }
