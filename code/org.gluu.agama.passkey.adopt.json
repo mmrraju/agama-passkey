@@ -1194,7 +1194,7 @@
 					"arguments": [
 						"\"PASSKEY_NUDGE_SHOWN\"",
 						"ui",
-						"\"{}\""
+						"{}"
 					],
 					"nodeIcon": "material-symbols:code",
 					"nodeColor": "",
