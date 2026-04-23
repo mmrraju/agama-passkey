@@ -19,10 +19,10 @@
 				"agamaData": {
 					"isTopLevelFlow": true,
 					"basepath": "",
-					"configParams": "{}",
+					"configParams": {},
 					"nodeIcon": "material-symbols:line-start-square",
 					"timeout": "",
-					"inputs": "uid conf",
+					"inputs": "uid",
 					"configs": "",
 					"displayName": "Generated Node",
 					"hasComment": true,
@@ -32,9 +32,10 @@
 				}
 			},
 			"measured": {
-				"width": 168,
-				"height": 120
-			}
+				"width": 170,
+				"height": 124
+			},
+			"selected": true
 		},
 		{
 			"id": "assignmentNode-667025c7-8402-4fb6-95f6-317a5552df25",
@@ -872,7 +873,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "whenNode-985439e8-451c-49da-8876-af35896503b6",
