@@ -424,7 +424,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -688,7 +688,7 @@
 						},
 						{
 							"variableTypeCheck": true,
-							"assignmentExpression": "Passkey registration failed.",
+							"assignmentExpression": "\"Passkey registration failed.\"",
 							"assignedVariableName": "obj.errorTitle"
 						},
 						{
@@ -717,7 +717,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -1189,8 +1189,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1083.1594781455974,
-		"y": -261.6393544748382,
-		"zoom": 0.8235910172675729
+		"x": -2176.644255883588,
+		"y": -466.87971578639326,
+		"zoom": 0.9726549474122852
 	}
 }
