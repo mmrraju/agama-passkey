@@ -73,6 +73,108 @@
 				"width": 170,
 				"height": 124
 			},
+			"selected": false
+		},
+		{
+			"id": "repeatNode-a416fb9b-b156-49a6-8209-cd9d5763b085",
+			"type": "repeatNode",
+			"position": {
+				"x": 530,
+				"y": 30
+			},
+			"data": {
+				"id": "repeatNode-a416fb9b-b156-49a6-8209-cd9d5763b085",
+				"type": "repeatNode",
+				"position": {
+					"x": 530,
+					"y": 30
+				},
+				"previousNodeId": "assignmentNode-273de2d5-5386-4319-9113-c005dbca2e05",
+				"agamaData": {
+					"nodeIcon": "material-symbols:event-repeat-outline-rounded",
+					"maxIteration": "3",
+					"maxIterationVariableName": "",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Max tries"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
+			"selected": false
+		},
+		{
+			"id": "rrfNode-4838d3b1-f0b1-4cbb-b054-d7943fb1cc0b",
+			"type": "rrfNode",
+			"position": {
+				"x": 780,
+				"y": 280
+			},
+			"data": {
+				"id": "rrfNode-4838d3b1-f0b1-4cbb-b054-d7943fb1cc0b",
+				"type": "rrfNode",
+				"position": {
+					"x": 780,
+					"y": 280
+				},
+				"previousNodeId": "repeatNode-a416fb9b-b156-49a6-8209-cd9d5763b085",
+				"branching": "repeat",
+				"agamaData": {
+					"assignments": [],
+					"nodeIcon": "ph:globe-simple",
+					"templatePath": "",
+					"asssignedVariableName": "",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": ""
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			}
+		},
+		{
+			"id": "finishNode-d8c7981e-df86-4a5e-84fd-5c9dcc5857a2",
+			"type": "finishNode",
+			"position": {
+				"x": 780,
+				"y": 30
+			},
+			"data": {
+				"id": "finishNode-d8c7981e-df86-4a5e-84fd-5c9dcc5857a2",
+				"type": "finishNode",
+				"position": {
+					"x": 780,
+					"y": 30
+				},
+				"previousNodeId": "repeatNode-a416fb9b-b156-49a6-8209-cd9d5763b085",
+				"branching": "continue",
+				"agamaData": {
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Exceeded max attempts",
+					"flowfilename": "",
+					"returnVariable": "Recovery attempt exceeded",
+					"finishMode": "withFailure",
+					"nodeIcon": "material-symbols:line-end-square-rounded"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
 			"selected": true
 		}
 	],
@@ -95,6 +197,63 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_startNode-d4218ee2-bdc8-4fc3-ba05-1da0e02ed56d"
+		},
+		{
+			"id": "assignmentNode-273de2d5-5386-4319-9113-c005dbca2e05-repeatNode-a416fb9b-b156-49a6-8209-cd9d5763b085",
+			"type": "default",
+			"source": "assignmentNode-273de2d5-5386-4319-9113-c005dbca2e05",
+			"target": "repeatNode-a416fb9b-b156-49a6-8209-cd9d5763b085",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_assignmentNode-273de2d5-5386-4319-9113-c005dbca2e05"
+		},
+		{
+			"id": "repeatNode-a416fb9b-b156-49a6-8209-cd9d5763b085-rrfNode-4838d3b1-f0b1-4cbb-b054-d7943fb1cc0b",
+			"type": "default",
+			"source": "repeatNode-a416fb9b-b156-49a6-8209-cd9d5763b085",
+			"target": "rrfNode-4838d3b1-f0b1-4cbb-b054-d7943fb1cc0b",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "repeat",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_repeatNode-a416fb9b-b156-49a6-8209-cd9d5763b085_repeat"
+		},
+		{
+			"id": "repeatNode-a416fb9b-b156-49a6-8209-cd9d5763b085-finishNode-d8c7981e-df86-4a5e-84fd-5c9dcc5857a2",
+			"type": "default",
+			"source": "repeatNode-a416fb9b-b156-49a6-8209-cd9d5763b085",
+			"target": "finishNode-d8c7981e-df86-4a5e-84fd-5c9dcc5857a2",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "continue",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_repeatNode-a416fb9b-b156-49a6-8209-cd9d5763b085_continue"
 		}
 	],
 	"viewport": {
