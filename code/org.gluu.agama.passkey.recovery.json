@@ -239,7 +239,7 @@
 					"descColor": "",
 					"displayName": "",
 					"hasComment": true,
-					"comment": "",
+					"comment": "Flow finish",
 					"flowfilename": "",
 					"returnVariable": "{ userId: addResult.userId}",
 					"finishMode": "withSuccess",
@@ -370,8 +370,8 @@
 		}
 	],
 	"viewport": {
-		"x": -417,
-		"y": 45,
+		"x": -691,
+		"y": -32,
 		"zoom": 1
 	}
 }
