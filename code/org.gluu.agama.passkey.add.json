@@ -395,7 +395,7 @@
 						},
 						{
 							"variableTypeCheck": true,
-							"assignmentExpression": "Passkey registration failed.",
+							"assignmentExpression": "\"Passkey registration failed\"",
 							"assignedVariableName": "obj.errorTitle"
 						},
 						{
@@ -424,7 +424,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -1189,8 +1189,8 @@
 		}
 	],
 	"viewport": {
-		"x": 40.31946158268079,
-		"y": -64.07500555363612,
-		"zoom": 0.5
+		"x": -1083.1594781455974,
+		"y": -261.6393544748382,
+		"zoom": 0.8235910172675729
 	}
 }
