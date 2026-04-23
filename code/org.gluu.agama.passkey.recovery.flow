@@ -7,8 +7,9 @@ Repeat 3 times max
      userData = Trigger org.gluu.agama.smtp.main 
      // Trigger passkey enrollment
      addResult = Trigger org.gluu.agama.passkey.add userData
-     it_szhne = {success:true, data: { userId: addResult.userId}}
-     Finish it_szhne
+     // Flow finish
+     it_jzfth = {success:true, data: { userId: addResult.userId}}
+     Finish it_jzfth
 // Exceeded max attempts
-it_ansnj = {success:false, error: "Recovery attempt exceeded"}
-Finish it_ansnj
+it_ewocl = {success:false, error: "Recovery attempt exceeded"}
+Finish it_ewocl
