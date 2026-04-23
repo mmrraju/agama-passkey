@@ -5,7 +5,8 @@ startObj = { username: "", showError: false, errorMessage: "" }
 Repeat 3 times max
      // Call agama-smtp flow.
      userData = Trigger org.gluu.agama.smtp.main 
-     Trigger __________ 
+     // Trigger passkey enrollment
+     addResult = Trigger org.gluu.agama.passkey.add userData
 // Exceeded max attempts
-it_snxls = {success:false, error: "Recovery attempt exceeded"}
-Finish it_snxls
+it_fnxle = {success:false, error: "Recovery attempt exceeded"}
+Finish it_fnxle
