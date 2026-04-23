@@ -3,6 +3,7 @@ Flow org.gluu.agama.passkey.recovery
 startObj = { username: "", showError: false, errorMessage: "" }
 // Max tries
 Repeat 3 times max
+     userData = Trigger org.gluu.agama.smtp.main 
 // Exceeded max attempts
-it_jgxmj = {success:false, error: "Recovery attempt exceeded"}
-Finish it_jgxmj
+it_rmolx = {success:false, error: "Recovery attempt exceeded"}
+Finish it_rmolx
