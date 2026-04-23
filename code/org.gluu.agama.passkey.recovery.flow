@@ -1,3 +1,9 @@
 Flow org.gluu.agama.passkey.recovery
      Basepath ""
 startObj = { username: "", showError: false, errorMessage: "" }
+// Max tries
+Repeat 3 times max
+     RRF "__________" 
+// Exceeded max attempts
+it_mjbzt = {success:false, error: "Recovery attempt exceeded"}
+Finish it_mjbzt
