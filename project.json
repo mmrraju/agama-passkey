@@ -24,7 +24,6 @@
         "org.gluu.agama.passkey.adopt": {},
         "code": {},
         "org.gluu.agama.passkey.first": {},
-        "org.gluu.agama.passkey.step-up": {},
         "org.gluu.agama.passkey.recovery": {},
         "org.gluu.agama.passkey.stepup": {}
     },
