@@ -62,11 +62,6 @@
 						},
 						{
 							"variableTypeCheck": false,
-							"assignmentExpression": "userData.inum",
-							"assignedVariableName": "inum"
-						},
-						{
-							"variableTypeCheck": false,
 							"assignmentExpression": "conf.snoozeDays",
 							"assignedVariableName": "snoozeDays"
 						}
@@ -84,7 +79,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -1293,7 +1288,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "finishNode-5ac1635e-3526-4b10-9a37-5414368993b3",
@@ -1942,8 +1937,8 @@
 		}
 	],
 	"viewport": {
-		"x": -2849,
-		"y": 111,
+		"x": 605,
+		"y": 101,
 		"zoom": 1
 	}
 }
