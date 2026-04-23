@@ -178,7 +178,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "triggerNode-e2e8d782-4644-4ed7-9a8f-21e2e40c95fb",
@@ -197,22 +197,26 @@
 				"previousNodeId": "triggerNode-88b40b3b-d692-48c1-93c8-37efdaa2b4a1",
 				"agamaData": {
 					"nodeIcon": "fluent-mdl2:trigger-approval",
-					"flowFileName": "",
-					"arguments": [],
-					"asssignedVariableName": "",
+					"flowFileName": "org.gluu.agama.passkey.add",
+					"arguments": [
+						"userData"
+					],
+					"asssignedVariableName": "addResult",
 					"exceptionVariableField": "",
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
 					"displayName": "",
 					"hasComment": true,
-					"comment": ""
+					"comment": "Trigger passkey enrollment",
+					"overrides": []
 				}
 			},
 			"measured": {
 				"width": 170,
 				"height": 124
-			}
+			},
+			"selected": true
 		}
 	],
 	"edges": [
