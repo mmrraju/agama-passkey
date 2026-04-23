@@ -1,36 +1,105 @@
 {
-  "nodes": [
-    {
-      "id": "startNode-d4218ee2-bdc8-4fc3-ba05-1da0e02ed56d",
-      "type": "startNode",
-      "sourcePosition": "right",
-      "position": {
-        "x": 30,
-        "y": 30
-      },
-      "deletable": false,
-      "data": {
-        "id": "startNode-d4218ee2-bdc8-4fc3-ba05-1da0e02ed56d",
-        "type": "startNode",
-        "position": {
-          "x": 30,
-          "y": 40
-        },
-        "agamaData": {
-          "isTopLevelFlow": true,
-          "basepath": "",
-          "configParams": "{}",
-          "nodeIcon": "material-symbols:line-start-square",
-          "timeout": "",
-          "inputs": "",
-          "configs": "",
-          "flowname": "org.gluu.agama.passkey.recovery",
-          "displayName": "Recovery flow",
-          "creationDate": "23/04/2026",
-          "hasComment": true,
-          "comment": ""
-        }
-      }
-    }
-  ]
+	"nodes": [
+		{
+			"id": "startNode-d4218ee2-bdc8-4fc3-ba05-1da0e02ed56d",
+			"type": "startNode",
+			"sourcePosition": "right",
+			"position": {
+				"x": 30,
+				"y": 30
+			},
+			"deletable": false,
+			"data": {
+				"id": "startNode-d4218ee2-bdc8-4fc3-ba05-1da0e02ed56d",
+				"type": "startNode",
+				"position": {
+					"x": 30,
+					"y": 40
+				},
+				"agamaData": {
+					"isTopLevelFlow": true,
+					"basepath": "",
+					"configParams": "{}",
+					"nodeIcon": "material-symbols:line-start-square",
+					"timeout": "",
+					"inputs": "",
+					"configs": "",
+					"flowname": "org.gluu.agama.passkey.recovery",
+					"displayName": "Recovery flow",
+					"creationDate": "23/04/2026",
+					"hasComment": true,
+					"comment": ""
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
+			"selected": false
+		},
+		{
+			"id": "assignmentNode-273de2d5-5386-4319-9113-c005dbca2e05",
+			"type": "assignmentNode",
+			"position": {
+				"x": 280,
+				"y": 30
+			},
+			"data": {
+				"id": "assignmentNode-273de2d5-5386-4319-9113-c005dbca2e05",
+				"type": "assignmentNode",
+				"position": {
+					"x": 280,
+					"y": 30
+				},
+				"previousNodeId": "startNode-d4218ee2-bdc8-4fc3-ba05-1da0e02ed56d",
+				"agamaData": {
+					"assignments": [
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "{ username: \"\", showError: false, errorMessage: \"\" }",
+							"assignedVariableName": "startObj"
+						}
+					],
+					"nodeIcon": "material-symbols:equal",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": ""
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
+			"selected": true
+		}
+	],
+	"edges": [
+		{
+			"id": "startNode-d4218ee2-bdc8-4fc3-ba05-1da0e02ed56d-assignmentNode-273de2d5-5386-4319-9113-c005dbca2e05",
+			"type": "default",
+			"source": "startNode-d4218ee2-bdc8-4fc3-ba05-1da0e02ed56d",
+			"target": "assignmentNode-273de2d5-5386-4319-9113-c005dbca2e05",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_startNode-d4218ee2-bdc8-4fc3-ba05-1da0e02ed56d"
+		}
+	],
+	"viewport": {
+		"x": 0,
+		"y": 49.125,
+		"zoom": 1
+	}
 }
