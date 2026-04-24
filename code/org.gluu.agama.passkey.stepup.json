@@ -701,7 +701,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "whenNode-5d5ed211-7625-4054-87ab-88a79af03ab4",
@@ -977,7 +977,7 @@
 					"hasComment": true,
 					"comment": "  Exceeded max attempts",
 					"flowfilename": "",
-					"returnVariable": "\"Step-up failed\"",
+					"returnVariable": "Step-up failed",
 					"finishMode": "withFailure",
 					"nodeIcon": "material-symbols:line-end-square-rounded",
 					"previousNodeId": "repeatNode-2518dd61-7ad3-412c-b68c-2581e53809c8"
@@ -986,7 +986,8 @@
 			"measured": {
 				"width": 170,
 				"height": 124
-			}
+			},
+			"selected": true
 		}
 	],
 	"edges": [
@@ -1448,8 +1449,8 @@
 		}
 	],
 	"viewport": {
-		"x": -2199,
-		"y": -2,
+		"x": -2228,
+		"y": 109,
 		"zoom": 1
 	}
 }
