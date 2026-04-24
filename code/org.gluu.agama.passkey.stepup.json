@@ -192,7 +192,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "whenNode-440744d3-b344-41fc-bb42-66cb25f7265b",
@@ -341,7 +341,7 @@
 					"hasComment": false,
 					"comment": "",
 					"flowfilename": "",
-					"returnVariable": "\"No passkeys enrolled\"",
+					"returnVariable": "No passkeys enrolled",
 					"finishMode": "withFailure",
 					"nodeIcon": "material-symbols:line-end-square-rounded",
 					"previousNodeId": "whenNode-a5b11d7a-0d25-4647-8226-9be7196ba248"
@@ -350,7 +350,8 @@
 			"measured": {
 				"width": 170,
 				"height": 124
-			}
+			},
+			"selected": true
 		},
 		{
 			"id": "callNode-e4a32dee-82bc-4882-8397-c35ab177e7d9",
