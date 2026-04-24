@@ -509,7 +509,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "assignmentNode-f2e7bee6-2890-4f6a-b8b3-3fd910744085",
@@ -679,13 +679,11 @@
 				"branching": "success",
 				"agamaData": {
 					"javaClassName": "",
-					"javaMethodName": "Call",
-					"javaVariableName": "=",
-					"exceptionVariableField": "",
+					"javaMethodName": "verify",
+					"javaVariableName": "fidoValidator",
+					"exceptionVariableField": "Ev",
 					"callType": "Call method on instance",
 					"arguments": [
-						"fidoValidator",
-						"verify",
 						"stepUpForm.tokenResponse"
 					],
 					"nodeIcon": "material-symbols:code",
@@ -702,7 +700,8 @@
 			"measured": {
 				"width": 170,
 				"height": 124
-			}
+			},
+			"selected": true
 		},
 		{
 			"id": "whenNode-5d5ed211-7625-4054-87ab-88a79af03ab4",
@@ -1449,8 +1448,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1128,
-		"y": 127,
+		"x": -2199,
+		"y": -2,
 		"zoom": 1
 	}
 }
