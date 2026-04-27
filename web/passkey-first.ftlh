@@ -11,7 +11,12 @@
 	
   
   
-<div class="w-full max-w-md bg-white rounded-2xl shadow-xl dark:bg-gray-800 p-8 space-y-6">
+	<section class="bg-gray-100 dark:bg-gray-900">
+	  <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+		<div class="flex items-center mb-6">
+		  <img src="https://gluu.org/wp-content/uploads/2021/02/janssen-project-transparent-630px-182px-300x86.png" alt="logo" class="w-40">
+		</div>
+		<div class="w-full max-w-md bg-white rounded-2xl shadow-xl dark:bg-gray-800 p-8 space-y-6">
 
   <h1 class="text-2xl font-semibold text-center text-gray-900 dark:text-white">
     Sign in
@@ -62,6 +67,8 @@
   </button>
 
 </div>
+	  </div>
+	</section>
   
   
   
