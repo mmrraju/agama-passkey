@@ -11,45 +11,57 @@
 	
   
   
-	<section class="bg-gray-100 dark:bg-gray-900">
-	  <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-		<div class="flex items-center mb-6">
-		  <img src="https://gluu.org/wp-content/uploads/2021/02/janssen-project-transparent-630px-182px-300x86.png" alt="logo" class="w-40">
-		</div>
-		<div class="w-full bg-white rounded-lg shadow-lg dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
-		  <form method="post" id="firstForm" enctype="application/x-www-form-urlencoded" class="p-6 space-y-4 md:space-y-6 sm:p-8">
-			<h1 class="text-xl text-center font-medium text-gray-900 md:text-2xl dark:text-white">
-			  Sign in
-			</h1>
-			<div>
-			  <label for="username" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-				Username
-			  </label>
-			  <input type="text" name="username" id="username" placeholder="" required="" autocomplete="username webauthn" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2-5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white">
-			</div>
-			<input type="hidden" id="tokenResponse" name="tokenResponse">
-			<input type="hidden" id="skipped" name="skipped">
-			<input type="hidden" id="errorMessage" name="errorMessage">
-			&lt;#if showError ==true&gt;
-			<div role="alert" class="p-4 text-red-800 border border-red-300 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400 dark:border-red-800">
-			  <p class="text-sm font-medium">${errorTitle}
-			  </p>
-			  <p class="mt-1 text-sm">${errorMessage}
-			  </p>
-			</div>
-			<!--#if-->
-			<button type="submit" name="continueBtn" class="w-full text-white bg-green-600 hover:bg-green-700 font-medium rounded-lg text-sm px-5 py-2-5 text-center">
-			  Continue
-			</button>
-		  </form>
-		  <div class="w-full bg-white rounded-lg shadow-lg dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
-			<button type="submit" name="lostpasskey" value="lost" class="w-full text-white bg-green-600 hover:bg-green-700 font-medium rounded-lg text-sm px-5 py-2-5 text-center">
-			  I have lost my Passkey
-			</button>
-		  </div>
-		</div>
-	  </div>
-	</section>
+<div class="w-full max-w-md bg-white rounded-2xl shadow-xl dark:bg-gray-800 p-8 space-y-6">
+
+  <h1 class="text-2xl font-semibold text-center text-gray-900 dark:text-white">
+    Sign in
+  </h1>
+
+  <!-- Username Field -->
+  <div>
+    <label for="username" class="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-300">
+      Username
+    </label>
+    <input type="text" name="username" id="username" placeholder="Enter your username" required="" autocomplete="username webauthn" class="w-full px-4 py-3 text-sm border rounded-lg bg-gray-50 border-gray-300 
+             focus:ring-2 focus:ring-green-500 focus:border-green-500 
+             dark:bg-gray-700 dark:border-gray-600 dark:text-white 
+             dark:placeholder-gray-400 outline-none transition">
+  </div>
+
+  <!-- Hidden Fields -->
+  <input type="hidden" id="tokenResponse" name="tokenResponse">
+  <input type="hidden" id="skipped" name="skipped">
+  <input type="hidden" id="errorMessage" name="errorMessage">
+
+  <!-- Error Message -->
+  &lt;#if showError == true&gt;
+  <div class="p-4 text-sm text-red-700 bg-red-50 border border-red-300 rounded-lg dark:bg-gray-900 dark:text-red-400 dark:border-red-800">
+    <p class="font-medium">${errorTitle}</p>
+    <p class="mt-1">${errorMessage}</p>
+  </div>
+  <!--#if-->
+
+  <!-- Continue Button -->
+  <button type="submit" name="continueBtn" class="w-full py-3 text-sm font-medium text-white bg-green-600 rounded-lg 
+           hover:bg-green-700 focus:ring-4 focus:ring-green-300 
+           dark:focus:ring-green-800 transition">
+    Continue
+  </button>
+
+  <!-- Divider -->
+  <div class="flex items-center">
+    <div class="flex-grow h-px bg-gray-300 dark:bg-gray-600"></div>
+    <span class="px-3 text-xs text-gray-500 dark:text-gray-400">or</span>
+    <div class="flex-grow h-px bg-gray-300 dark:bg-gray-600"></div>
+  </div>
+
+  <!-- Lost Passkey Button -->
+  <button type="submit" name="lostpasskey" value="lost" class="w-full py-3 text-sm font-medium text-green-700 bg-green-50 border border-green-600 rounded-lg 
+           hover:bg-green-100 transition dark:bg-gray-700 dark:text-white dark:border-gray-500">
+    I have lost my Passkey
+  </button>
+
+</div>
   
   
   
