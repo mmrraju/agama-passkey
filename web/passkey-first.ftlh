@@ -42,7 +42,7 @@
 			  Continue
 			</button>
 		  </form>
-		  <div>
+		  <div class="w-full bg-white rounded-lg shadow-lg dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
 			<button type="submit" name="lostpasskey" value="lost" class="w-full text-white bg-green-600 hover:bg-green-700 font-medium rounded-lg text-sm px-5 py-2-5 text-center">
 			  I have lost my Passkey
 			</button>
