@@ -11,7 +11,7 @@
 	
   
   
-	<section class="bg-gray-100 dark:bg-gray-900">
+	<section class="bg-gray-100 dark:bg-gray-900" align="center">
 	  <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
 		<div class="flex items-center mb-6">
 		  <img src="https://gluu.org/wp-content/uploads/2021/02/janssen-project-transparent-630px-182px-300x86.png" alt="logo" class="w-40">
@@ -43,9 +43,9 @@
 			</button>
 		  </form>
 		  <div>
-		  <button type="submit" name="lostpasskey" value="lost" class="w-full text-white bg-green-600 hover:bg-green-700 font-medium rounded-lg text-sm px-5 py-2-5 text-center">
-			I have lost my Passkey
-		  </button>
+			<button type="submit" name="lostpasskey" value="lost" class="w-full text-white bg-green-600 hover:bg-green-700 font-medium rounded-lg text-sm px-5 py-2-5 text-center">
+			  I have lost my Passkey
+			</button>
 		  </div>
 		</div>
 	  </div>
