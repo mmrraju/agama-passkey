@@ -30,13 +30,13 @@
 			<input type="hidden" id="tokenResponse" name="tokenResponse">
 			<input type="hidden" id="skipped" name="skipped">
 			<input type="hidden" id="errorMessage" name="errorMessage">
-			&lt;#if showError == true&gt;
-			<div role="alert" class="p-4 text-red-800 border border-red-300 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400 dark:border-red-800">
-			  <p class="text-sm font-medium">${errorTitle}
-			  </p>
-			  <p class="mt-1 text-sm">${errorMessage}
-			  </p>
-			</div>
+			&lt;#if showError ==true&gt;
+			  <div role="alert" class="p-4 text-red-800 border border-red-300 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400 dark:border-red-800">
+				<p class="text-sm font-medium">${errorTitle}
+				</p>
+				<p class="mt-1 text-sm">${errorMessage}
+				</p>
+			  </div>
 			&lt;#if&gt;
 			<button type="submit" name="continueBtn" class="w-full text-white bg-green-600 hover:bg-green-700 font-medium rounded-lg text-sm px-5 py-2-5 text-center">
 			  Continue
