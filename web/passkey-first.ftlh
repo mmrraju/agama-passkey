@@ -37,7 +37,7 @@
 			  <p class="mt-1 text-sm">${errorMessage}
 			  </p>
 			</div>
-			&lt;#/if&gt;
+			<!--#if-->
 			<button type="submit" name="continueBtn" class="w-full text-white bg-green-600 hover:bg-green-700 font-medium rounded-lg text-sm px-5 py-2-5 text-center">
 			  Continue
 			</button>
