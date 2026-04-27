@@ -1590,8 +1590,89 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
+		},
+		{
+			"id": "whenNode-1bcab02c-991d-475d-bd14-6a0ab0e46eca",
+			"type": "whenNode",
+			"position": {
+				"x": 2483,
+				"y": -111
+			},
+			"data": {
+				"id": "whenNode-1bcab02c-991d-475d-bd14-6a0ab0e46eca",
+				"type": "whenNode",
+				"position": {
+					"x": 2530,
+					"y": 290
+				},
+				"previousNodeId": "whenNode-8d42419f-e5f0-4a5f-84ad-f92e42d63cca",
+				"branching": "continue",
+				"agamaData": {
+					"variableField": "",
+					"valueField": "",
+					"conditionInputField": "",
+					"conditions": [
+						{
+							"variable": "firstForm.lostpasskey",
+							"operator": "is",
+							"dataValue": "\"lost\"",
+							"combinator": "none"
+						}
+					],
+					"nodeIcon": "ph:swap",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": ""
+				}
+			},
+			"measured": {
+				"width": 110,
+				"height": 60
+			},
+			"selected": false,
+			"dragging": false
+		},
+		{
+			"id": "triggerNode-a994bab8-ec24-410a-94c8-2973e4133fdc",
+			"type": "triggerNode",
+			"position": {
+				"x": 2733,
+				"y": 89
+			},
+			"data": {
+				"id": "triggerNode-a994bab8-ec24-410a-94c8-2973e4133fdc",
+				"type": "triggerNode",
+				"position": {
+					"x": 2733,
+					"y": 89
+				},
+				"previousNodeId": "whenNode-1bcab02c-991d-475d-bd14-6a0ab0e46eca",
+				"branching": "success",
+				"agamaData": {
+					"nodeIcon": "fluent-mdl2:trigger-approval",
+					"flowFileName": "org.gluu.agama.passkey.recovery",
+					"arguments": [],
+					"asssignedVariableName": "recoveryResult",
+					"exceptionVariableField": "",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Trigger recovery flow",
+					"overrides": []
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
+			"selected": true
 		}
 	],
 	"edges": [
@@ -2316,11 +2397,49 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_repeatNode-d26fe6e6-ac44-4463-9d5b-e85ad19cf736_continue"
+		},
+		{
+			"id": "whenNode-8d42419f-e5f0-4a5f-84ad-f92e42d63cca-whenNode-1bcab02c-991d-475d-bd14-6a0ab0e46eca",
+			"type": "default",
+			"source": "whenNode-8d42419f-e5f0-4a5f-84ad-f92e42d63cca",
+			"target": "whenNode-1bcab02c-991d-475d-bd14-6a0ab0e46eca",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "continue",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_whenNode-8d42419f-e5f0-4a5f-84ad-f92e42d63cca_continue"
+		},
+		{
+			"id": "whenNode-1bcab02c-991d-475d-bd14-6a0ab0e46eca-triggerNode-a994bab8-ec24-410a-94c8-2973e4133fdc",
+			"type": "default",
+			"source": "whenNode-1bcab02c-991d-475d-bd14-6a0ab0e46eca",
+			"target": "triggerNode-a994bab8-ec24-410a-94c8-2973e4133fdc",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "Condition met",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_whenNode-1bcab02c-991d-475d-bd14-6a0ab0e46eca_success"
 		}
 	],
 	"viewport": {
-		"x": -786.735711739391,
-		"y": 171.0759312549633,
-		"zoom": 0.7169776240079136
+		"x": -2158,
+		"y": 353,
+		"zoom": 1
 	}
 }
