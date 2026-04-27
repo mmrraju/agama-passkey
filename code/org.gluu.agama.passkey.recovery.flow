@@ -9,8 +9,8 @@ Repeat 3 times max
      // Trigger passkey enrollment
      addResult = Trigger org.gluu.agama.passkey.add userData
      // Flow finish
-     it_dapcl = {success:true, data: { userId: addResult.userId}}
-     Finish it_dapcl
+     it_negyk = {success:true, data: { userId: addResult.userId}}
+     Finish it_negyk
 // Exceeded max attempts
-it_fyiil = {success:false, error: "Recovery attempt exceeded"}
-Finish it_fyiil
+it_wxyfz = {success:false, error: "Recovery attempt exceeded"}
+Finish it_wxyfz
