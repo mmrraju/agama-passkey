@@ -43,7 +43,7 @@
 			</button>
 		  </form>
 		  <button type="submit" name="lostpasskey" value="lost" class="w-full text-white bg-green-600 hover:bg-green-700 font-medium rounded-lg text-sm px-5 py-2-5 text-center">
-			  I have lost my Passkey
+			I have lost my Passkey
 		  </button>
 		</div>
 	  </div>
