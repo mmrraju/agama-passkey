@@ -24,8 +24,8 @@ Repeat 5 times max
                obj.errorTitle = "Passkey sign-in failed"
                obj.errorMessage = E.message
           When E is null
-               it_aqnwe = {success:true, data: { userId: verifyResponse }}
-               Finish it_aqnwe
+               it_wtqja = {success:true, data: { userId: verifyResponse }}
+               Finish it_wtqja
      //  Case 2: User clicked Continue with a username — go to password screen
      When firstForm.continueBtn is ""
           currentUsername = firstForm.username
@@ -52,22 +52,22 @@ Repeat 5 times max
                               When adoptConf.snoozeDays is ""
                                    adoptConf.snoozeDays = 7
                               trigger = Trigger org.gluu.agama.passkey.adopt userData adoptConf
-                         it_eefuo = {success:true, data: { userId: currentUsername }}
-                         Finish it_eefuo
+                         it_pmqgr = {success:true, data: { userId: currentUsername }}
+                         Finish it_pmqgr
                     When authOk is false
                          pwdObj.showError = true
                          pwdObj.errorTitle = "Sign-in failed"
                          pwdObj.errorMessage = "Incorrect password. Please try again"
      When firstForm.lostpasskey is "lost"
           // Trigger recovery flow
-          recoveryResult = Trigger org.gluu.agama.passkey.recovery 
+          recoveryResult | Er = Trigger org.gluu.agama.passkey.recovery 
           When recoveryResult.success is true
-               it_denzk = {success:true, data: { userId: recoveryResult.userId}}
-               Finish it_denzk
+               it_qsqwj = {success:true, data: { userId: recoveryResult.userId}}
+               Finish it_qsqwj
           Otherwise
                obj.showError = true
                obj.errorTitle = "Passkey recovery failed"
                obj.errorMessage = "Passkey recovery failed"
 //  Exceeded max attempts
-it_ewxix = {success:false, error: "Login attempt exceeded"}
-Finish it_ewxix
+it_jddsq = {success:false, error: "Login attempt exceeded"}
+Finish it_jddsq
