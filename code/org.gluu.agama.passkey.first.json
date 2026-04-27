@@ -1658,7 +1658,7 @@
 					"flowFileName": "org.gluu.agama.passkey.recovery",
 					"arguments": [],
 					"asssignedVariableName": "recoveryResult",
-					"exceptionVariableField": "",
+					"exceptionVariableField": "Er",
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
@@ -1672,7 +1672,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"id": "whenNode-843f78f8-4e91-4c72-a324-4ebc9de5dccb",
@@ -1798,7 +1798,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		}
 	],
 	"edges": [
@@ -2621,8 +2621,8 @@
 		}
 	],
 	"viewport": {
-		"x": -2585,
-		"y": 260,
+		"x": -2469,
+		"y": 211,
 		"zoom": 1
 	}
 }
