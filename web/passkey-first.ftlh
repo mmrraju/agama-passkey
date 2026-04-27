@@ -40,12 +40,11 @@
 			<!--#if-->
 			<button type="submit" name="continueBtn" class="w-full text-white bg-green-600 hover:bg-green-700 font-medium rounded-lg text-sm px-5 py-2-5 text-center">
 			  Continue
-			</button> 
-			<br>
-			<button type="submit" name="lostpasskey" value="lost" class="w-full text-white bg-green-600 hover:bg-green-700 font-medium rounded-lg text-sm px-5 py-2-5 text-center">
-			  I have lost my Passkey
 			</button>
 		  </form>
+		  <button type="submit" name="lostpasskey" value="lost" class="w-full text-white bg-green-600 hover:bg-green-700 font-medium rounded-lg text-sm px-5 py-2-5 text-center">
+			  I have lost my Passkey
+		  </button>
 		</div>
 	  </div>
 	</section>
