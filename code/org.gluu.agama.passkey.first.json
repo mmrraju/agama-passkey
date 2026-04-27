@@ -1672,7 +1672,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "whenNode-843f78f8-4e91-4c72-a324-4ebc9de5dccb",
@@ -1781,7 +1781,7 @@
 						},
 						{
 							"variableTypeCheck": true,
-							"assignmentExpression": "\"Passkey recovery failed\"",
+							"assignmentExpression": "Er.message",
 							"assignedVariableName": "obj.errorMessage"
 						}
 					],
@@ -1798,7 +1798,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false
+			"selected": true
 		}
 	],
 	"edges": [
