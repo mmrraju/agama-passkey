@@ -178,13 +178,13 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "triggerNode-e2e8d782-4644-4ed7-9a8f-21e2e40c95fb",
 			"type": "triggerNode",
 			"position": {
-				"x": 1030,
+				"x": 1280,
 				"y": 280
 			},
 			"data": {
@@ -194,7 +194,7 @@
 					"x": 1030,
 					"y": 280
 				},
-				"previousNodeId": "triggerNode-88b40b3b-d692-48c1-93c8-37efdaa2b4a1",
+				"previousNodeId": "callNode-278904f6-2e3d-4d96-8ebf-0a926d284df3",
 				"agamaData": {
 					"nodeIcon": "fluent-mdl2:trigger-approval",
 					"flowFileName": "org.gluu.agama.passkey.add",
@@ -219,10 +219,50 @@
 			"selected": false
 		},
 		{
+			"id": "callNode-278904f6-2e3d-4d96-8ebf-0a926d284df3",
+			"type": "callNode",
+			"position": {
+				"x": 1030,
+				"y": 280
+			},
+			"data": {
+				"id": "callNode-278904f6-2e3d-4d96-8ebf-0a926d284df3",
+				"type": "callNode",
+				"position": {
+					"x": 1030,
+					"y": 280
+				},
+				"previousNodeId": "triggerNode-88b40b3b-d692-48c1-93c8-37efdaa2b4a1",
+				"agamaData": {
+					"javaClassName": "org.gluu.agama.passkey.IdentityProcessor",
+					"javaMethodName": "accountFromUid",
+					"javaVariableName": "",
+					"exceptionVariableField": "",
+					"callType": "Call static method",
+					"arguments": [
+						"smtpResult.userId"
+					],
+					"nodeIcon": "material-symbols:code",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "",
+					"asssignedVariableName": "userData"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
+			"selected": true
+		},
+		{
 			"id": "finishNode-423d01b5-6a4d-4a3e-a694-f9f07047f6bb",
 			"type": "finishNode",
 			"position": {
-				"x": 1280,
+				"x": 1530,
 				"y": 280
 			},
 			"data": {
@@ -331,25 +371,6 @@
 			"sourceHandle": "source_repeatNode-a416fb9b-b156-49a6-8209-cd9d5763b085_repeat"
 		},
 		{
-			"id": "triggerNode-88b40b3b-d692-48c1-93c8-37efdaa2b4a1-triggerNode-e2e8d782-4644-4ed7-9a8f-21e2e40c95fb",
-			"type": "default",
-			"source": "triggerNode-88b40b3b-d692-48c1-93c8-37efdaa2b4a1",
-			"target": "triggerNode-e2e8d782-4644-4ed7-9a8f-21e2e40c95fb",
-			"labelBgPadding": [
-				8,
-				4
-			],
-			"labelBgBorderRadius": 4,
-			"label": "",
-			"labelBgStyle": {
-				"fill": "#009688",
-				"color": "#ffffff",
-				"fillOpacity": 0.7
-			},
-			"labelShowBg": true,
-			"sourceHandle": "source_triggerNode-88b40b3b-d692-48c1-93c8-37efdaa2b4a1"
-		},
-		{
 			"id": "triggerNode-e2e8d782-4644-4ed7-9a8f-21e2e40c95fb-finishNode-423d01b5-6a4d-4a3e-a694-f9f07047f6bb",
 			"type": "default",
 			"source": "triggerNode-e2e8d782-4644-4ed7-9a8f-21e2e40c95fb",
@@ -367,10 +388,48 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_triggerNode-e2e8d782-4644-4ed7-9a8f-21e2e40c95fb"
+		},
+		{
+			"id": "triggerNode-88b40b3b-d692-48c1-93c8-37efdaa2b4a1-callNode-278904f6-2e3d-4d96-8ebf-0a926d284df3",
+			"type": "default",
+			"source": "triggerNode-88b40b3b-d692-48c1-93c8-37efdaa2b4a1",
+			"target": "callNode-278904f6-2e3d-4d96-8ebf-0a926d284df3",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_triggerNode-88b40b3b-d692-48c1-93c8-37efdaa2b4a1"
+		},
+		{
+			"id": "callNode-278904f6-2e3d-4d96-8ebf-0a926d284df3-triggerNode-e2e8d782-4644-4ed7-9a8f-21e2e40c95fb",
+			"type": "default",
+			"source": "callNode-278904f6-2e3d-4d96-8ebf-0a926d284df3",
+			"target": "triggerNode-e2e8d782-4644-4ed7-9a8f-21e2e40c95fb",
+			"label": "",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"sourceHandle": "source_callNode-278904f6-2e3d-4d96-8ebf-0a926d284df3",
+			"targetHandle": "target_triggerNode-e2e8d782-4644-4ed7-9a8f-21e2e40c95fb"
 		}
 	],
 	"viewport": {
-		"x": -177,
+		"x": -497,
 		"y": -19,
 		"zoom": 1
 	}
