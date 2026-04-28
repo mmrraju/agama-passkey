@@ -12,15 +12,16 @@ Repeat 3 times max
           // SMTP flow getting error
           Log "@info SMTP flow getting error"
           // Error in recovery
-          it_oqkbh = {success:false, error: "Getting error while recovering."}
-          Finish it_oqkbh
+          it_bsyat = {success:false, error: "Getting error while recovering."}
+          Finish it_bsyat
      userId = smtpResult.data.userId
      userData | Eu = Call org.gluu.agama.passkey.IdentityProcessor#accountFromUid userId
+     When Eu is not null
      // Trigger passkey enrollment
      addResult = Trigger org.gluu.agama.passkey.add userData
      // Flow finish
-     it_qknvq = {success:true, data: { userId: addResult.userId}}
-     Finish it_qknvq
+     it_ylyeg = {success:true, data: { userId: addResult.userId}}
+     Finish it_ylyeg
 // Exceeded max attempts
-it_qolzu = {success:false, error: "Recovery attempt exceeded"}
-Finish it_qolzu
+it_nacvp = {success:false, error: "Recovery attempt exceeded"}
+Finish it_nacvp
