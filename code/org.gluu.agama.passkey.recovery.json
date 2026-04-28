@@ -184,7 +184,7 @@
 			"id": "triggerNode-e2e8d782-4644-4ed7-9a8f-21e2e40c95fb",
 			"type": "triggerNode",
 			"position": {
-				"x": 1705,
+				"x": 1955,
 				"y": 280
 			},
 			"data": {
@@ -194,7 +194,7 @@
 					"x": 1030,
 					"y": 280
 				},
-				"previousNodeId": "callNode-278904f6-2e3d-4d96-8ebf-0a926d284df3",
+				"previousNodeId": "assignmentNode-8607de1c-e135-4016-838c-3478e29af212",
 				"agamaData": {
 					"nodeIcon": "fluent-mdl2:trigger-approval",
 					"flowFileName": "org.gluu.agama.passkey.add",
@@ -341,7 +341,7 @@
 			"id": "finishNode-423d01b5-6a4d-4a3e-a694-f9f07047f6bb",
 			"type": "finishNode",
 			"position": {
-				"x": 2016,
+				"x": 2266,
 				"y": 280
 			},
 			"data": {
@@ -425,6 +425,44 @@
 					"logMessage": "\"SMTP result %\" smtpResult",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": ""
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
+			"selected": false
+		},
+		{
+			"id": "assignmentNode-8607de1c-e135-4016-838c-3478e29af212",
+			"type": "assignmentNode",
+			"position": {
+				"x": 1723,
+				"y": 280
+			},
+			"data": {
+				"id": "assignmentNode-8607de1c-e135-4016-838c-3478e29af212",
+				"type": "assignmentNode",
+				"position": {
+					"x": 1723,
+					"y": 280
+				},
+				"previousNodeId": "callNode-278904f6-2e3d-4d96-8ebf-0a926d284df3",
+				"agamaData": {
+					"assignments": [
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "smtpResult.data.userId",
+							"assignedVariableName": "userId"
+						}
+					],
+					"nodeIcon": "material-symbols:equal",
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
@@ -550,25 +588,6 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_triggerNode-e2e8d782-4644-4ed7-9a8f-21e2e40c95fb"
-		},
-		{
-			"id": "callNode-278904f6-2e3d-4d96-8ebf-0a926d284df3-triggerNode-e2e8d782-4644-4ed7-9a8f-21e2e40c95fb",
-			"type": "default",
-			"source": "callNode-278904f6-2e3d-4d96-8ebf-0a926d284df3",
-			"target": "triggerNode-e2e8d782-4644-4ed7-9a8f-21e2e40c95fb",
-			"label": "",
-			"labelBgPadding": [
-				8,
-				4
-			],
-			"labelBgBorderRadius": 4,
-			"labelBgStyle": {
-				"fill": "#009688",
-				"color": "#ffffff",
-				"fillOpacity": 0.7
-			},
-			"sourceHandle": "source_callNode-278904f6-2e3d-4d96-8ebf-0a926d284df3",
-			"targetHandle": "target_triggerNode-e2e8d782-4644-4ed7-9a8f-21e2e40c95fb"
 		},
 		{
 			"id": "startNode-d4218ee2-bdc8-4fc3-ba05-1da0e02ed56d-logNode-704f8c4a-a495-4fff-9ac1-bcf3561db03a",
@@ -702,11 +721,49 @@
 			},
 			"sourceHandle": "source_logNode-bb05bcdb-120e-4a41-933c-714792b76993",
 			"targetHandle": "target_whenNode-1f5c41df-6b44-4d88-985f-43846fa187c8"
+		},
+		{
+			"id": "callNode-278904f6-2e3d-4d96-8ebf-0a926d284df3-assignmentNode-8607de1c-e135-4016-838c-3478e29af212",
+			"type": "default",
+			"source": "callNode-278904f6-2e3d-4d96-8ebf-0a926d284df3",
+			"target": "assignmentNode-8607de1c-e135-4016-838c-3478e29af212",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_callNode-278904f6-2e3d-4d96-8ebf-0a926d284df3"
+		},
+		{
+			"id": "assignmentNode-8607de1c-e135-4016-838c-3478e29af212-triggerNode-e2e8d782-4644-4ed7-9a8f-21e2e40c95fb",
+			"type": "default",
+			"source": "assignmentNode-8607de1c-e135-4016-838c-3478e29af212",
+			"target": "triggerNode-e2e8d782-4644-4ed7-9a8f-21e2e40c95fb",
+			"label": "",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"sourceHandle": "source_assignmentNode-8607de1c-e135-4016-838c-3478e29af212",
+			"targetHandle": "target_triggerNode-e2e8d782-4644-4ed7-9a8f-21e2e40c95fb"
 		}
 	],
 	"viewport": {
-		"x": -716,
-		"y": -99,
+		"x": -817,
+		"y": -53,
 		"zoom": 1
 	}
 }
