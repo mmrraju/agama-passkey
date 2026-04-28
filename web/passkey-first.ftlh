@@ -32,7 +32,6 @@
 		  <input type="hidden" id="skipped" name="skipped">
 		  <input type="hidden" id="errorMessage" name="errorMessage">
 		  <!-- Error -->
-		  &lt;#if showError == true&gt;
 		  <div class="p-4 text-sm text-red-700 bg-red-50 border border-red-300 rounded-lg">
 			<p class="font-medium">${errorTitle}
 			</p>
