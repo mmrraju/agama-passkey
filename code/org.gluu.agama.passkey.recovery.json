@@ -274,7 +274,7 @@
 				},
 				"previousNodeId": "startNode-d4218ee2-bdc8-4fc3-ba05-1da0e02ed56d",
 				"agamaData": {
-					"logMessage": "Recovery flow has been called...",
+					"logMessage": "\"Recovery flow has been called...\"",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16",
 					"nodeColor": "",
@@ -286,8 +286,8 @@
 				}
 			},
 			"measured": {
-				"width": 170,
-				"height": 124
+				"width": 168,
+				"height": 120
 			},
 			"selected": true
 		},
