@@ -164,7 +164,7 @@
 					"flowFileName": "org.gluu.agama.smtp.main",
 					"arguments": [],
 					"asssignedVariableName": "smtpResult",
-					"exceptionVariableField": "",
+					"exceptionVariableField": "Esr",
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
@@ -184,7 +184,7 @@
 			"id": "triggerNode-e2e8d782-4644-4ed7-9a8f-21e2e40c95fb",
 			"type": "triggerNode",
 			"position": {
-				"x": 1280,
+				"x": 1530,
 				"y": 280
 			},
 			"data": {
@@ -222,7 +222,7 @@
 			"id": "callNode-278904f6-2e3d-4d96-8ebf-0a926d284df3",
 			"type": "callNode",
 			"position": {
-				"x": 1030,
+				"x": 1280,
 				"y": 280
 			},
 			"data": {
@@ -232,7 +232,7 @@
 					"x": 1030,
 					"y": 280
 				},
-				"previousNodeId": "triggerNode-88b40b3b-d692-48c1-93c8-37efdaa2b4a1",
+				"previousNodeId": "whenNode-1f5c41df-6b44-4d88-985f-43846fa187c8",
 				"agamaData": {
 					"javaClassName": "org.gluu.agama.passkey.IdentityProcessor",
 					"javaMethodName": "accountFromUid",
@@ -250,7 +250,8 @@
 					"hasComment": true,
 					"comment": "",
 					"asssignedVariableName": "userData"
-				}
+				},
+				"branching": "continue"
 			},
 			"measured": {
 				"width": 170,
@@ -286,16 +287,58 @@
 				}
 			},
 			"measured": {
-				"width": 168,
-				"height": 120
+				"width": 170,
+				"height": 124
 			},
-			"selected": true
+			"selected": false
+		},
+		{
+			"id": "whenNode-1f5c41df-6b44-4d88-985f-43846fa187c8",
+			"type": "whenNode",
+			"position": {
+				"x": 1030,
+				"y": 338
+			},
+			"data": {
+				"id": "whenNode-1f5c41df-6b44-4d88-985f-43846fa187c8",
+				"type": "whenNode",
+				"position": {
+					"x": 1030,
+					"y": 338
+				},
+				"previousNodeId": "triggerNode-88b40b3b-d692-48c1-93c8-37efdaa2b4a1",
+				"agamaData": {
+					"variableField": "",
+					"valueField": "",
+					"conditionInputField": "",
+					"conditions": [
+						{
+							"variable": "Esr",
+							"operator": "is not",
+							"dataValue": "null",
+							"combinator": "none"
+						}
+					],
+					"nodeIcon": "ph:swap",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": ""
+				}
+			},
+			"measured": {
+				"width": 110,
+				"height": 60
+			},
+			"selected": false
 		},
 		{
 			"id": "finishNode-423d01b5-6a4d-4a3e-a694-f9f07047f6bb",
 			"type": "finishNode",
 			"position": {
-				"x": 1530,
+				"x": 1780,
 				"y": 280
 			},
 			"data": {
@@ -324,6 +367,40 @@
 				"height": 124
 			},
 			"selected": false
+		},
+		{
+			"id": "logNode-f0a721d3-3fc3-49f3-a281-592bc6fc1294",
+			"type": "logNode",
+			"position": {
+				"x": 1280,
+				"y": 538
+			},
+			"data": {
+				"id": "logNode-f0a721d3-3fc3-49f3-a281-592bc6fc1294",
+				"type": "logNode",
+				"position": {
+					"x": 1280,
+					"y": 538
+				},
+				"previousNodeId": "whenNode-1f5c41df-6b44-4d88-985f-43846fa187c8",
+				"branching": "success",
+				"agamaData": {
+					"logMessage": "\"SMTP flow getting error\"",
+					"logLevel": "info",
+					"nodeIcon": "octicon:log-16",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "SMTP flow getting error"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
+			"selected": true
 		}
 	],
 	"edges": [
@@ -404,25 +481,6 @@
 			"sourceHandle": "source_triggerNode-e2e8d782-4644-4ed7-9a8f-21e2e40c95fb"
 		},
 		{
-			"id": "triggerNode-88b40b3b-d692-48c1-93c8-37efdaa2b4a1-callNode-278904f6-2e3d-4d96-8ebf-0a926d284df3",
-			"type": "default",
-			"source": "triggerNode-88b40b3b-d692-48c1-93c8-37efdaa2b4a1",
-			"target": "callNode-278904f6-2e3d-4d96-8ebf-0a926d284df3",
-			"labelBgPadding": [
-				8,
-				4
-			],
-			"labelBgBorderRadius": 4,
-			"label": "",
-			"labelBgStyle": {
-				"fill": "#009688",
-				"color": "#ffffff",
-				"fillOpacity": 0.7
-			},
-			"labelShowBg": true,
-			"sourceHandle": "source_triggerNode-88b40b3b-d692-48c1-93c8-37efdaa2b4a1"
-		},
-		{
 			"id": "callNode-278904f6-2e3d-4d96-8ebf-0a926d284df3-triggerNode-e2e8d782-4644-4ed7-9a8f-21e2e40c95fb",
 			"type": "default",
 			"source": "callNode-278904f6-2e3d-4d96-8ebf-0a926d284df3",
@@ -478,11 +536,68 @@
 			},
 			"sourceHandle": "source_logNode-704f8c4a-a495-4fff-9ac1-bcf3561db03a",
 			"targetHandle": "target_assignmentNode-273de2d5-5386-4319-9113-c005dbca2e05"
+		},
+		{
+			"id": "triggerNode-88b40b3b-d692-48c1-93c8-37efdaa2b4a1-whenNode-1f5c41df-6b44-4d88-985f-43846fa187c8",
+			"type": "default",
+			"source": "triggerNode-88b40b3b-d692-48c1-93c8-37efdaa2b4a1",
+			"target": "whenNode-1f5c41df-6b44-4d88-985f-43846fa187c8",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_triggerNode-88b40b3b-d692-48c1-93c8-37efdaa2b4a1"
+		},
+		{
+			"id": "whenNode-1f5c41df-6b44-4d88-985f-43846fa187c8-callNode-278904f6-2e3d-4d96-8ebf-0a926d284df3",
+			"type": "default",
+			"source": "whenNode-1f5c41df-6b44-4d88-985f-43846fa187c8",
+			"target": "callNode-278904f6-2e3d-4d96-8ebf-0a926d284df3",
+			"label": "continue",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"sourceHandle": "source_whenNode-1f5c41df-6b44-4d88-985f-43846fa187c8_continue",
+			"targetHandle": "target_callNode-278904f6-2e3d-4d96-8ebf-0a926d284df3"
+		},
+		{
+			"id": "whenNode-1f5c41df-6b44-4d88-985f-43846fa187c8-logNode-f0a721d3-3fc3-49f3-a281-592bc6fc1294",
+			"type": "default",
+			"source": "whenNode-1f5c41df-6b44-4d88-985f-43846fa187c8",
+			"target": "logNode-f0a721d3-3fc3-49f3-a281-592bc6fc1294",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "Condition met",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_whenNode-1f5c41df-6b44-4d88-985f-43846fa187c8_success"
 		}
 	],
 	"viewport": {
-		"x": 57,
-		"y": 104,
+		"x": -600,
+		"y": -39,
 		"zoom": 1
 	}
 }
