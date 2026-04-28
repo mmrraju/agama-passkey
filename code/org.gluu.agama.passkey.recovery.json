@@ -519,7 +519,7 @@
 				"width": 110,
 				"height": 60
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "finishNode-d35c0f07-2da7-4faa-8337-98359205ecee",
@@ -554,6 +554,40 @@
 				"height": 124
 			},
 			"selected": false
+		},
+		{
+			"id": "logNode-ca46f384-1bf6-49ac-93fe-c27d6eaf7143",
+			"type": "logNode",
+			"position": {
+				"x": 2223,
+				"y": 538
+			},
+			"data": {
+				"id": "logNode-ca46f384-1bf6-49ac-93fe-c27d6eaf7143",
+				"type": "logNode",
+				"position": {
+					"x": 2223,
+					"y": 538
+				},
+				"previousNodeId": "whenNode-d333a6e5-88fa-4ce2-b499-db3270ab1ea1",
+				"branching": "success",
+				"agamaData": {
+					"logMessage": "\"Getting error in identity processor: %\" Eu",
+					"logLevel": "info",
+					"nodeIcon": "octicon:log-16",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Getting error in identity processo"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
+			"selected": true
 		}
 	],
 	"edges": [
@@ -840,11 +874,30 @@
 			},
 			"sourceHandle": "source_whenNode-d333a6e5-88fa-4ce2-b499-db3270ab1ea1_continue",
 			"targetHandle": "target_triggerNode-e2e8d782-4644-4ed7-9a8f-21e2e40c95fb"
+		},
+		{
+			"id": "whenNode-d333a6e5-88fa-4ce2-b499-db3270ab1ea1-logNode-ca46f384-1bf6-49ac-93fe-c27d6eaf7143",
+			"type": "default",
+			"source": "whenNode-d333a6e5-88fa-4ce2-b499-db3270ab1ea1",
+			"target": "logNode-ca46f384-1bf6-49ac-93fe-c27d6eaf7143",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "Condition met",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_whenNode-d333a6e5-88fa-4ce2-b499-db3270ab1ea1_success"
 		}
 	],
 	"viewport": {
-		"x": -1291,
-		"y": -57,
+		"x": -1414,
+		"y": -181,
 		"zoom": 1
 	}
 }
