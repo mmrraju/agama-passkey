@@ -360,7 +360,7 @@
 					"hasComment": true,
 					"comment": "Flow finish",
 					"flowfilename": "",
-					"returnVariable": "{ userId: addResult.userId}",
+					"returnVariable": "{ userId: addResult.data.userId}",
 					"finishMode": "withSuccess",
 					"nodeIcon": "material-symbols:line-end-square-rounded"
 				}
@@ -369,7 +369,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -587,7 +587,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		}
 	],
 	"edges": [
@@ -896,8 +896,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1414,
-		"y": -181,
+		"x": -1489,
+		"y": -164,
 		"zoom": 1
 	}
 }
