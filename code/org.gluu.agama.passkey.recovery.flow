@@ -1,5 +1,7 @@
 Flow org.gluu.agama.passkey.recovery
      Basepath ""
+// Recovery flow has been called
+Log "@info " Recovery flow has been called...
 startObj = { username: "", showError: false, errorMessage: "" }
 // Max tries
 Repeat 3 times max
@@ -9,8 +11,8 @@ Repeat 3 times max
      // Trigger passkey enrollment
      addResult = Trigger org.gluu.agama.passkey.add userData
      // Flow finish
-     it_negyk = {success:true, data: { userId: addResult.userId}}
-     Finish it_negyk
+     it_eqfia = {success:true, data: { userId: addResult.userId}}
+     Finish it_eqfia
 // Exceeded max attempts
-it_wxyfz = {success:false, error: "Recovery attempt exceeded"}
-Finish it_wxyfz
+it_bdwpy = {success:false, error: "Recovery attempt exceeded"}
+Finish it_bdwpy
