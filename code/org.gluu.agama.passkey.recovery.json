@@ -41,7 +41,7 @@
 			"id": "assignmentNode-273de2d5-5386-4319-9113-c005dbca2e05",
 			"type": "assignmentNode",
 			"position": {
-				"x": 280,
+				"x": 530,
 				"y": 30
 			},
 			"data": {
@@ -51,7 +51,7 @@
 					"x": 280,
 					"y": 30
 				},
-				"previousNodeId": "startNode-d4218ee2-bdc8-4fc3-ba05-1da0e02ed56d",
+				"previousNodeId": "logNode-704f8c4a-a495-4fff-9ac1-bcf3561db03a",
 				"agamaData": {
 					"assignments": [
 						{
@@ -79,7 +79,7 @@
 			"id": "repeatNode-a416fb9b-b156-49a6-8209-cd9d5763b085",
 			"type": "repeatNode",
 			"position": {
-				"x": 530,
+				"x": 780,
 				"y": 30
 			},
 			"data": {
@@ -256,6 +256,39 @@
 				"width": 170,
 				"height": 124
 			},
+			"selected": false
+		},
+		{
+			"id": "logNode-704f8c4a-a495-4fff-9ac1-bcf3561db03a",
+			"type": "logNode",
+			"position": {
+				"x": 280,
+				"y": 30
+			},
+			"data": {
+				"id": "logNode-704f8c4a-a495-4fff-9ac1-bcf3561db03a",
+				"type": "logNode",
+				"position": {
+					"x": 280,
+					"y": 30
+				},
+				"previousNodeId": "startNode-d4218ee2-bdc8-4fc3-ba05-1da0e02ed56d",
+				"agamaData": {
+					"logMessage": "Recovery flow has been called...",
+					"logLevel": "info",
+					"nodeIcon": "octicon:log-16",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Recovery flow has been called"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
 			"selected": true
 		},
 		{
@@ -294,25 +327,6 @@
 		}
 	],
 	"edges": [
-		{
-			"id": "startNode-d4218ee2-bdc8-4fc3-ba05-1da0e02ed56d-assignmentNode-273de2d5-5386-4319-9113-c005dbca2e05",
-			"type": "default",
-			"source": "startNode-d4218ee2-bdc8-4fc3-ba05-1da0e02ed56d",
-			"target": "assignmentNode-273de2d5-5386-4319-9113-c005dbca2e05",
-			"labelBgPadding": [
-				8,
-				4
-			],
-			"labelBgBorderRadius": 4,
-			"label": "",
-			"labelBgStyle": {
-				"fill": "#009688",
-				"color": "#ffffff",
-				"fillOpacity": 0.7
-			},
-			"labelShowBg": true,
-			"sourceHandle": "source_startNode-d4218ee2-bdc8-4fc3-ba05-1da0e02ed56d"
-		},
 		{
 			"id": "assignmentNode-273de2d5-5386-4319-9113-c005dbca2e05-repeatNode-a416fb9b-b156-49a6-8209-cd9d5763b085",
 			"type": "default",
@@ -426,11 +440,49 @@
 			},
 			"sourceHandle": "source_callNode-278904f6-2e3d-4d96-8ebf-0a926d284df3",
 			"targetHandle": "target_triggerNode-e2e8d782-4644-4ed7-9a8f-21e2e40c95fb"
+		},
+		{
+			"id": "startNode-d4218ee2-bdc8-4fc3-ba05-1da0e02ed56d-logNode-704f8c4a-a495-4fff-9ac1-bcf3561db03a",
+			"type": "default",
+			"source": "startNode-d4218ee2-bdc8-4fc3-ba05-1da0e02ed56d",
+			"target": "logNode-704f8c4a-a495-4fff-9ac1-bcf3561db03a",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_startNode-d4218ee2-bdc8-4fc3-ba05-1da0e02ed56d"
+		},
+		{
+			"id": "logNode-704f8c4a-a495-4fff-9ac1-bcf3561db03a-assignmentNode-273de2d5-5386-4319-9113-c005dbca2e05",
+			"type": "default",
+			"source": "logNode-704f8c4a-a495-4fff-9ac1-bcf3561db03a",
+			"target": "assignmentNode-273de2d5-5386-4319-9113-c005dbca2e05",
+			"label": "",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"sourceHandle": "source_logNode-704f8c4a-a495-4fff-9ac1-bcf3561db03a",
+			"targetHandle": "target_assignmentNode-273de2d5-5386-4319-9113-c005dbca2e05"
 		}
 	],
 	"viewport": {
-		"x": -497,
-		"y": -19,
+		"x": 57,
+		"y": 104,
 		"zoom": 1
 	}
 }
