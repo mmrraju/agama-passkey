@@ -6,13 +6,16 @@ startObj = { username: "", showError: false, errorMessage: "" }
 // Max tries
 Repeat 3 times max
      // Call agama-smtp flow.
-     smtpResult = Trigger org.gluu.agama.smtp.main 
+     smtpResult | Esr = Trigger org.gluu.agama.smtp.main 
+     When Esr is not null
+          // SMTP flow getting error
+          Log "@info SMTP flow getting error"
      userData = Call org.gluu.agama.passkey.IdentityProcessor#accountFromUid smtpResult.userId
      // Trigger passkey enrollment
      addResult = Trigger org.gluu.agama.passkey.add userData
      // Flow finish
-     it_cdvai = {success:true, data: { userId: addResult.userId}}
-     Finish it_cdvai
+     it_svdgb = {success:true, data: { userId: addResult.userId}}
+     Finish it_svdgb
 // Exceeded max attempts
-it_nsgft = {success:false, error: "Recovery attempt exceeded"}
-Finish it_nsgft
+it_lgqud = {success:false, error: "Recovery attempt exceeded"}
+Finish it_lgqud
