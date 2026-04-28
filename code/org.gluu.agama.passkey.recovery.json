@@ -238,7 +238,7 @@
 					"javaClassName": "org.gluu.agama.passkey.IdentityProcessor",
 					"javaMethodName": "accountFromUid",
 					"javaVariableName": "",
-					"exceptionVariableField": "",
+					"exceptionVariableField": "Eu",
 					"callType": "Call static method",
 					"arguments": [
 						"userId"
@@ -257,7 +257,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -475,7 +475,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -762,8 +762,8 @@
 		}
 	],
 	"viewport": {
-		"x": -927,
-		"y": -120,
+		"x": -1010,
+		"y": -34,
 		"zoom": 1
 	}
 }
