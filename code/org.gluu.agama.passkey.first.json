@@ -1740,7 +1740,7 @@
 					"hasComment": true,
 					"comment": "",
 					"flowfilename": "",
-					"returnVariable": "{ userId: currentUsername}",
+					"returnVariable": "{ userId: recoveryResult.data.userId}",
 					"finishMode": "withSuccess",
 					"nodeIcon": "material-symbols:line-end-square-rounded"
 				}
@@ -2621,8 +2621,8 @@
 		}
 	],
 	"viewport": {
-		"x": -2603,
-		"y": 64,
+		"x": -2701,
+		"y": 79,
 		"zoom": 1
 	}
 }
