@@ -10,12 +10,15 @@ Repeat 3 times max
      When Esr is not null
           // SMTP flow getting error
           Log "@info SMTP flow getting error"
+          // Error in recovery
+          it_ytnxq = {success:false, error: "Getting error while recovering."}
+          Finish it_ytnxq
      userData = Call org.gluu.agama.passkey.IdentityProcessor#accountFromUid smtpResult.userId
      // Trigger passkey enrollment
      addResult = Trigger org.gluu.agama.passkey.add userData
      // Flow finish
-     it_svdgb = {success:true, data: { userId: addResult.userId}}
-     Finish it_svdgb
+     it_mbhhn = {success:true, data: { userId: addResult.userId}}
+     Finish it_mbhhn
 // Exceeded max attempts
-it_lgqud = {success:false, error: "Recovery attempt exceeded"}
-Finish it_lgqud
+it_mfsrn = {success:false, error: "Recovery attempt exceeded"}
+Finish it_mfsrn
