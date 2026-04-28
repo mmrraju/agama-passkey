@@ -1740,7 +1740,7 @@
 					"hasComment": true,
 					"comment": "",
 					"flowfilename": "",
-					"returnVariable": "{ userId: recoveryResult.userId}",
+					"returnVariable": "{ userId: recoveryResult.data.userId}",
 					"finishMode": "withSuccess",
 					"nodeIcon": "material-symbols:line-end-square-rounded"
 				}
@@ -1749,7 +1749,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"id": "assignmentNode-132f0aaf-8457-4799-a022-1179d581ce34",
@@ -1798,7 +1798,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		}
 	],
 	"edges": [
@@ -2621,8 +2621,8 @@
 		}
 	],
 	"viewport": {
-		"x": -2469,
-		"y": 211,
+		"x": -2467,
+		"y": 88,
 		"zoom": 1
 	}
 }
