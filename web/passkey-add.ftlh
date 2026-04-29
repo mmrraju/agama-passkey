@@ -3,7 +3,11 @@
 <html lang="en">
 <head><meta name="viewport" content="width=device-width, initial-scale=1"><title>Passkey add
 	</title><link rel="icon" href="${webCtx.contextPath}/servlet/favicon" type="image/x-icon"></head>
-<body>
+<body>[#ftl output_format="HTML"]
+
+
+
+
 
   
 	
@@ -45,10 +49,13 @@
 			</div>
 			<!--#if-->
 			<div class="space-y-2">
-			  <button type="submit" name="addPasskeyBtn" class="w-full text-white bg-green-600 hover:bg-green-700 font-medium rounded-lg text-sm px-5 py-2-5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+			  <button type="submit" name="addPasskeyBtn" class="w-full h-10 text-white bg-green-600 hover:bg-green-700 font-medium rounded-lg text-sm px-5 text-center">
 				Add passkey
 			  </button>
-			  <button type="submit" name="cancelBtn" class="w-full text-black bg-gray-50 border border-gray-300 hover:bg-gray-100 font-medium rounded-lg text-sm px-5 py-2-5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+
+			  <br>
+
+			  <button type="submit" name="cancelBtn" class="w-full h-10 text-black bg-gray-50 border border-gray-300 hover:bg-gray-100 font-medium rounded-lg text-sm px-5 text-center">
 				Cancel
 			  </button>
 			</div>
@@ -63,6 +70,9 @@
   
   
   
+
+
+
 </body>
 
 <script src="https://cdn.tailwindcss.com"></script><script src="${webCtx.contextPath}/auth/fido2/js/base64js.js"></script><script src="${webCtx.contextPath}/auth/fido2/js/base64url.js"></script><script src="${webCtx.contextPath}/auth/fido2/js/webauthn.js"></script><script>
