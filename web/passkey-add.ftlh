@@ -3,18 +3,14 @@
 <html lang="en">
 <head><meta name="viewport" content="width=device-width, initial-scale=1"><title>Passkey add
 	</title><link rel="icon" href="${webCtx.contextPath}/servlet/favicon" type="image/x-icon"></head>
-<body>[#ftl output_format="HTML"]
-
-
-
-
+<body>
 
   
 	
 	
 	
   
-  
+  [#ftl output_format="HTML"]
 	<section class="bg-gray-100 dark:bg-gray-900">
 	  <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
 		<div class="flex flex-col items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
@@ -52,9 +48,7 @@
 			  <button type="submit" name="addPasskeyBtn" class="w-full h-10 text-white bg-green-600 hover:bg-green-700 font-medium rounded-lg text-sm px-5 text-center">
 				Add passkey
 			  </button>
-
 			  <br>
-
 			  <button type="submit" name="cancelBtn" class="w-full h-10 text-black bg-gray-50 border border-gray-300 hover:bg-gray-100 font-medium rounded-lg text-sm px-5 text-center">
 				Cancel
 			  </button>
@@ -70,9 +64,6 @@
   
   
   
-
-
-
 </body>
 
 <script src="https://cdn.tailwindcss.com"></script><script src="${webCtx.contextPath}/auth/fido2/js/base64js.js"></script><script src="${webCtx.contextPath}/auth/fido2/js/base64url.js"></script><script src="${webCtx.contextPath}/auth/fido2/js/webauthn.js"></script><script>
