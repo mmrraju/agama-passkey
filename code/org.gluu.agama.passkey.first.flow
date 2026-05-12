@@ -24,8 +24,8 @@ Repeat 5 times max
                obj.errorTitle = "Passkey sign-in failed"
                obj.errorMessage = E.message
           When E is null
-               it_loisa = {success:true, data: { userId: verifyResponse }}
-               Finish it_loisa
+               it_dayys = {success:true, data: { userId: verifyResponse }}
+               Finish it_dayys
      //  Case 2: User clicked Continue with a username — go to password screen
      When firstForm.continueBtn is ""
           currentUsername = firstForm.username
@@ -53,8 +53,9 @@ Repeat 5 times max
                               When adoptConf.snoozeDays is ""
                                    adoptConf.snoozeDays = 7
                               trigger = Trigger org.gluu.agama.passkey.adopt userData adoptConf
-                         it_lfvcf = {success:true, data: { userId: currentUsername }}
-                         Finish it_lfvcf
+                         it_feujk = {success:true, data: { userId: currentUsername }}
+                         Finish it_feujk
+Log "@info Create instance of EnrollmentHelper calls"
                     When authOk is false
                          pwdObj.showError = true
                          pwdObj.errorTitle = "Sign-in failed"
@@ -63,12 +64,12 @@ Repeat 5 times max
           // Trigger recovery flow
           recoveryResult | Er = Trigger org.gluu.agama.passkey.recovery 
           When recoveryResult.success is true
-               it_mtncq = {success:true, data: { userId: recoveryResult.data.userId}}
-               Finish it_mtncq
+               it_rhzmu = {success:true, data: { userId: recoveryResult.data.userId}}
+               Finish it_rhzmu
           Otherwise
                obj.showError = true
                obj.errorTitle = "Passkey recovery failed"
                obj.errorMessage = Er.message
 //  Exceeded max attempts
-it_qbobz = {success:false, error: "Login attempt exceeded"}
-Finish it_qbobz
+it_uqjtz = {success:false, error: "Login attempt exceeded"}
+Finish it_uqjtz
