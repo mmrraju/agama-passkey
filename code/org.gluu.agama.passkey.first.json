@@ -1840,8 +1840,8 @@
 			"id": "logNode-30c6cfa8-e0ea-4d7f-bd1d-e25d001a34ba",
 			"type": "logNode",
 			"position": {
-				"x": 4314,
-				"y": 1420
+				"x": 4345,
+				"y": 1434
 			},
 			"data": {
 				"id": "logNode-30c6cfa8-e0ea-4d7f-bd1d-e25d001a34ba",
@@ -1852,7 +1852,7 @@
 				},
 				"previousNodeId": "assignmentNode-35e0f6e4-cf98-4ba1-bd14-3c1189f50257",
 				"agamaData": {
-					"logMessage": "\"Create instance of EnrollmentHelper calls\"",
+					"logMessage": "Create instance of EnrollmentHelper calls",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16",
 					"nodeColor": "",
@@ -1864,8 +1864,8 @@
 				}
 			},
 			"measured": {
-				"width": 170,
-				"height": 124
+				"width": 168,
+				"height": 120
 			},
 			"selected": true,
 			"dragging": false
