@@ -29,7 +29,7 @@ public class EnrollmentHelper extends CasaWSBase {
             request.setQuery(joiner.toString());
             Map<String, Object> response = sendRequest(request, true, true).getContentAsJSONObject();
             ObjectMapper mapper = new ObjectMapper();
-            LogUtils.log("MFAUserInfo : % ", response);
+            LogUtils.log("MFAUserInfo : % ",response);
             return mapper.convertValue(response, MFAUserInfo.class);
 
         } catch (Exception e) {
