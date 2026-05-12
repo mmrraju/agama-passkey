@@ -9,6 +9,7 @@ import java.util.Collections;
 import java.util.Map;
 import java.util.Set;
 import java.util.StringJoiner;
+import io.jans.agama.engine.script.LogUtils;
 
 public class EnrollmentHelper extends CasaWSBase {
 
@@ -28,6 +29,7 @@ public class EnrollmentHelper extends CasaWSBase {
             request.setQuery(joiner.toString());
             Map<String, Object> response = sendRequest(request, true, true).getContentAsJSONObject();
             ObjectMapper mapper = new ObjectMapper();
+            LogUtils.log("MFAUserInfo : % ", response);
             return mapper.convertValue(response, MFAUserInfo.class);
 
         } catch (Exception e) {
