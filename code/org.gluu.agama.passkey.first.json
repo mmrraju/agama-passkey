@@ -1761,7 +1761,7 @@
 				},
 				"previousNodeId": "callNode-fcefb2ba-3470-41f3-ae7b-291aa1bfc2c6",
 				"agamaData": {
-					"logMessage": "\"MFADATA is : %\" mfadata",
+					"logMessage": "\"MFADATA is : %\" mfaData",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16",
 					"nodeColor": "",
@@ -2727,8 +2727,8 @@
 		}
 	],
 	"viewport": {
-		"x": -4698,
-		"y": -1432,
+		"x": -4746,
+		"y": -1472,
 		"zoom": 1
 	}
 }
