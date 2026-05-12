@@ -980,8 +980,8 @@
 			"id": "assignmentNode-35e0f6e4-cf98-4ba1-bd14-3c1189f50257",
 			"type": "assignmentNode",
 			"position": {
-				"x": 4097,
-				"y": 1460
+				"x": 4139,
+				"y": 1499
 			},
 			"data": {
 				"id": "assignmentNode-35e0f6e4-cf98-4ba1-bd14-3c1189f50257",
@@ -1835,40 +1835,6 @@
 				"height": 124
 			},
 			"selected": false
-		},
-		{
-			"id": "logNode-30c6cfa8-e0ea-4d7f-bd1d-e25d001a34ba",
-			"type": "logNode",
-			"position": {
-				"x": 4345,
-				"y": 1434
-			},
-			"data": {
-				"id": "logNode-30c6cfa8-e0ea-4d7f-bd1d-e25d001a34ba",
-				"type": "logNode",
-				"position": {
-					"x": 4347,
-					"y": 1460
-				},
-				"previousNodeId": "assignmentNode-35e0f6e4-cf98-4ba1-bd14-3c1189f50257",
-				"agamaData": {
-					"logMessage": "Create instance of EnrollmentHelper calls",
-					"logLevel": "info",
-					"nodeIcon": "octicon:log-16",
-					"nodeColor": "",
-					"titleColor": "",
-					"descColor": "",
-					"displayName": "",
-					"hasComment": true,
-					"comment": ""
-				}
-			},
-			"measured": {
-				"width": 168,
-				"height": 120
-			},
-			"selected": true,
-			"dragging": false
 		}
 	],
 	"edges": [
@@ -2707,25 +2673,6 @@
 			},
 			"sourceHandle": "source_logNode-e73171fc-dff7-4a99-92d1-e5a090ff6221",
 			"targetHandle": "target_callNode-a80165dd-0d2d-4d52-a214-cc77d62d5502"
-		},
-		{
-			"id": "assignmentNode-35e0f6e4-cf98-4ba1-bd14-3c1189f50257-logNode-30c6cfa8-e0ea-4d7f-bd1d-e25d001a34ba",
-			"type": "default",
-			"source": "assignmentNode-35e0f6e4-cf98-4ba1-bd14-3c1189f50257",
-			"target": "logNode-30c6cfa8-e0ea-4d7f-bd1d-e25d001a34ba",
-			"labelBgPadding": [
-				8,
-				4
-			],
-			"labelBgBorderRadius": 4,
-			"label": "",
-			"labelBgStyle": {
-				"fill": "#009688",
-				"color": "#ffffff",
-				"fillOpacity": 0.7
-			},
-			"labelShowBg": true,
-			"sourceHandle": "source_assignmentNode-35e0f6e4-cf98-4ba1-bd14-3c1189f50257"
 		}
 	],
 	"viewport": {
