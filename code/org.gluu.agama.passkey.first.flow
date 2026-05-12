@@ -24,8 +24,8 @@ Repeat 5 times max
                obj.errorTitle = "Passkey sign-in failed"
                obj.errorMessage = E.message
           When E is null
-               it_vutqk = {success:true, data: { userId: verifyResponse }}
-               Finish it_vutqk
+               it_wtnei = {success:true, data: { userId: verifyResponse }}
+               Finish it_wtnei
      //  Case 2: User clicked Continue with a username — go to password screen
      When firstForm.continueBtn is ""
           currentUsername = firstForm.username
@@ -53,9 +53,8 @@ Repeat 5 times max
                               When adoptConf.snoozeDays is ""
                                    adoptConf.snoozeDays = 7
                               trigger = Trigger org.gluu.agama.passkey.adopt userData adoptConf
-                         it_pjeyy = {success:true, data: { userId: currentUsername }}
-                         Finish it_pjeyy
-Log "@info " Create instance of EnrollmentHelper calls
+                         it_klzob = {success:true, data: { userId: currentUsername }}
+                         Finish it_klzob
                     When authOk is false
                          pwdObj.showError = true
                          pwdObj.errorTitle = "Sign-in failed"
@@ -64,12 +63,12 @@ Log "@info " Create instance of EnrollmentHelper calls
           // Trigger recovery flow
           recoveryResult | Er = Trigger org.gluu.agama.passkey.recovery 
           When recoveryResult.success is true
-               it_qrhsk = {success:true, data: { userId: recoveryResult.data.userId}}
-               Finish it_qrhsk
+               it_qzykn = {success:true, data: { userId: recoveryResult.data.userId}}
+               Finish it_qzykn
           Otherwise
                obj.showError = true
                obj.errorTitle = "Passkey recovery failed"
                obj.errorMessage = Er.message
 //  Exceeded max attempts
-it_racse = {success:false, error: "Login attempt exceeded"}
-Finish it_racse
+it_povgk = {success:false, error: "Login attempt exceeded"}
+Finish it_povgk
