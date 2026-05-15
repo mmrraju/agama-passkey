@@ -14,15 +14,8 @@ import java.util.Map;
 import java.util.Set;
 import java.util.StringJoiner;
 
-//
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.nimbusds.oauth2.sdk.http.HTTPRequest;
 
-import java.net.URL;
-
-//
-
-public class IdentityProcessor extends CasaWSBase {
+public class IdentityProcessor {
 
     private static final Logger log = LoggerFactory.getLogger(IdentityProcessor.class);
 
@@ -32,11 +25,6 @@ public class IdentityProcessor extends CasaWSBase {
     private static final String DISPLAY_NAME = "displayName";
     private static final String MAIL = "mail";
 
-    //
-    private static final String SCOPE_CONFIG = SCOPE_PREFIX + "casa.config";
-    private static final String SCOPE_2FA = SCOPE_PREFIX + "casa.2fa";
-
-    //
 
     public static Map<String, String> accountFromUid(String uid) throws InvalidClaimException {
         User user = getUser(UID, uid);
@@ -74,26 +62,5 @@ public class IdentityProcessor extends CasaWSBase {
         }
         return value == null ? null : value.toString();
     }
-
-    //
-    private static MFAUserInfo getMFAUserInfo(String personUid, Set<String> methods) throws IOException {
-        try {
-            HTTPRequest request = new HTTPRequest(HTTPRequest.Method.GET, new URL(apiBase + "/v2/2fa/user-info/" + encode(personUid)));
-            StringJoiner joiner = new StringJoiner("&");
-            methods.forEach(m -> joiner.add("m=" + m));
-            request.setQuery(joiner.toString());
-            Map<String, Object> response = sendRequest(request, true, true).getContentAsJSONObject();
-            ObjectMapper mapper = new ObjectMapper();
-            return mapper.convertValue(response, MFAUserInfo.class);
-
-        } catch (Exception e) {
-            throw new IOException("Unable to determine the amount of enrolled credentials", e);
-        }
-    }
-
-    private static MFAUserInfo getMFAUserInfoByFido2(String personUid) throws IOException {
-        return getMFAUserInfo(personUid, Collections.singleton("fido2"));
-    }
-    //
 
 }
