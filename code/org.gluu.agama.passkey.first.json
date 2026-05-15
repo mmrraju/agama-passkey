@@ -1800,7 +1800,7 @@
 					"javaMethodName": "getMFAUserInfoByFido2",
 					"javaVariableName": "mfaHelper",
 					"exceptionVariableField": "E4",
-					"callType": "Call static method",
+					"callType": "Call method on instance",
 					"arguments": [
 						"currentUsername"
 					],
@@ -2728,8 +2728,8 @@
 		}
 	],
 	"viewport": {
-		"x": -4745,
-		"y": -1424,
+		"x": -4274,
+		"y": -1067,
 		"zoom": 1
 	}
 }
