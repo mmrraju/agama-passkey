@@ -889,7 +889,8 @@
 			"measured": {
 				"width": 170,
 				"height": 124
-			}
+			},
+			"selected": false
 		},
 		{
 			"id": "whenNode-846cc388-d76e-4562-825a-217b6591a581",
@@ -1773,10 +1774,10 @@
 				}
 			},
 			"measured": {
-				"width": 168,
-				"height": 120
+				"width": 170,
+				"height": 124
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -1795,11 +1796,11 @@
 				},
 				"previousNodeId": "logNode-e73171fc-dff7-4a99-92d1-e5a090ff6221",
 				"agamaData": {
-					"javaClassName": "",
+					"javaClassName": "org.gluu.agama.passkey.IdentityProcessor",
 					"javaMethodName": "getMFAUserInfoByFido2",
 					"javaVariableName": "mfaHelper",
 					"exceptionVariableField": "E4",
-					"callType": "Call method on instance",
+					"callType": "Call static method",
 					"arguments": [
 						"currentUsername"
 					],
@@ -1817,7 +1818,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -2727,8 +2728,8 @@
 		}
 	],
 	"viewport": {
-		"x": -4746,
-		"y": -1472,
+		"x": -4745,
+		"y": -1424,
 		"zoom": 1
 	}
 }
