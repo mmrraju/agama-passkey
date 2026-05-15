@@ -76,7 +76,7 @@ public class IdentityProcessor extends CasaWSBase {
     }
 
     //
-    public MFAUserInfo getMFAUserInfo(String personUid, Set<String> methods) throws IOException {
+    private static MFAUserInfo getMFAUserInfo(String personUid, Set<String> methods) throws IOException {
         try {
             HTTPRequest request = new HTTPRequest(HTTPRequest.Method.GET, new URL(apiBase + "/v2/2fa/user-info/" + encode(personUid)));
             StringJoiner joiner = new StringJoiner("&");
@@ -91,7 +91,7 @@ public class IdentityProcessor extends CasaWSBase {
         }
     }
 
-    public MFAUserInfo getMFAUserInfoByFido2(String personUid) throws IOException {
+    private static MFAUserInfo getMFAUserInfoByFido2(String personUid) throws IOException {
         return getMFAUserInfo(personUid, Collections.singleton("fido2"));
     }
     //
