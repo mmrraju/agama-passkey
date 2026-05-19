@@ -17,9 +17,9 @@ public class EnrollmentHelper extends CasaWSBase {
     private static final String SCOPE_2FA = SCOPE_PREFIX + "casa.2fa";
 
     public EnrollmentHelper() throws IOException {
-
         super(true);
         setScope(SCOPE_CONFIG + " " + SCOPE_2FA);
+        
     }
 
     public MFAUserInfo getMFAUserInfo(String personUid, Set<String> methods) throws IOException {
