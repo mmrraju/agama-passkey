@@ -17,7 +17,7 @@ public class EnrollmentHelper extends CasaWSBase {
     private static final String SCOPE_2FA = SCOPE_PREFIX + "casa.2fa";
 
     public EnrollmentHelper() throws IOException {
-        LogUtils.log("Enrollment helper...");
+
         super(true);
         setScope(SCOPE_CONFIG + " " + SCOPE_2FA);
     }
