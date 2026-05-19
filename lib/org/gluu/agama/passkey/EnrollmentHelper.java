@@ -19,7 +19,7 @@ public class EnrollmentHelper extends CasaWSBase {
     public EnrollmentHelper() throws IOException {
         super(true);
         setScope(SCOPE_CONFIG + " " + SCOPE_2FA);
-        
+        LogUtils.log("EnrollmentHelper initiating..");
     }
 
     public MFAUserInfo getMFAUserInfo(String personUid, Set<String> methods) throws IOException {
