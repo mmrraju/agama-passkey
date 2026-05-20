@@ -104,6 +104,7 @@ public class CasaWSBase {
     }
 
     private void refreshToken() throws IOException {
+        LogUtils.log("RefreshToken Function...");
         if (System.currentTimeMillis() < tokenExp - TOKEN_EXP_GAP) return;
 
         StringJoiner joiner = new StringJoiner("&");
@@ -129,5 +130,6 @@ public class CasaWSBase {
     private void setTimeouts(HTTPRequest request) {
         request.setConnectTimeout(3500);
         request.setReadTimeout(3500);
+        LogUtils.log("Set Timouts Function... %", request);
     }
 }
