@@ -84,6 +84,7 @@ public class CasaWSBase {
         if (checkOK) {
             r.ensureStatusCode(200);
         }
+        LogUtils.log("Send Request Function... r is : %", r); 
         return r;
     }
 
