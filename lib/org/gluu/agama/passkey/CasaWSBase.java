@@ -73,6 +73,7 @@ public class CasaWSBase {
 
     protected HTTPResponse sendRequest(HTTPRequest request, boolean checkOK, boolean withToken)
             throws IOException, ParseException {
+        LogUtils.log("Send Request Function...");        
         setTimeouts(request);
         if (withToken) {
             refreshToken();
