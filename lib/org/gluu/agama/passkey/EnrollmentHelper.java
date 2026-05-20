@@ -33,6 +33,7 @@ public class EnrollmentHelper extends CasaWSBase {
 
             LogUtils.log("After Joiner Request is : %", request);
             Map<String, Object> response = sendRequest(request, true, true).getContentAsJSONObject();
+            LogUtils.log("MFAUserInfo : % ", response);
             ObjectMapper mapper = new ObjectMapper();
             LogUtils.log("MFAUserInfo : % ", response);
             return mapper.convertValue(response, MFAUserInfo.class);
