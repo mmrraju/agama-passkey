@@ -26,9 +26,12 @@ public class EnrollmentHelper extends CasaWSBase {
         try {
             LogUtils.log("Get MFA User Info:  uid: % methods: %", personUid, methods);
             HTTPRequest request = new HTTPRequest(HTTPRequest.Method.GET, new URL(apiBase + "/v2/2fa/user-info/" + encode(personUid)));
+            LogUtils.log("Request is : %", request);
             StringJoiner joiner = new StringJoiner("&");
             methods.forEach(m -> joiner.add("m=" + m));
             request.setQuery(joiner.toString());
+
+            LogUtils.log("After Joiner Request is : %", request);
             Map<String, Object> response = sendRequest(request, true, true).getContentAsJSONObject();
             ObjectMapper mapper = new ObjectMapper();
             LogUtils.log("MFAUserInfo : % ", response);
