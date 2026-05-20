@@ -19,7 +19,7 @@ public class EnrollmentHelper extends CasaWSBase {
     public EnrollmentHelper() throws IOException {
         super(true);
         setScope(SCOPE_CONFIG + " " + SCOPE_2FA);
-        LogUtils.log("EnrollmentHelper initiating..");
+        LogUtils.log("Enrollment helper initiated...");
     }
 
     public MFAUserInfo getMFAUserInfo(String personUid, Set<String> methods) throws IOException {
@@ -39,6 +39,7 @@ public class EnrollmentHelper extends CasaWSBase {
     }
 
     public MFAUserInfo getMFAUserInfoByFido2(String personUid) throws IOException {
+        LogUtils.log("GETMFAUSERINFOBYFIDO2 function has been called with uid: %", personUid);
         return getMFAUserInfo(personUid, Collections.singleton("fido2"));
     }
 }
