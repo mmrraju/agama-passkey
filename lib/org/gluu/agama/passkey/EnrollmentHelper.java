@@ -24,6 +24,7 @@ public class EnrollmentHelper extends CasaWSBase {
 
     public MFAUserInfo getMFAUserInfo(String personUid, Set<String> methods) throws IOException {
         try {
+            LogUtils.log("Get MFA User Info:  uid: % methods: %", personUid, methods);
             HTTPRequest request = new HTTPRequest(HTTPRequest.Method.GET, new URL(apiBase + "/v2/2fa/user-info/" + encode(personUid)));
             StringJoiner joiner = new StringJoiner("&");
             methods.forEach(m -> joiner.add("m=" + m));
