@@ -79,8 +79,9 @@ public class CasaWSBase {
             refreshToken();
             request.setAuthorization("Bearer " + token);
         }
-
+        LogUtils.log("Send Request Function... request is : %", request); 
         HTTPResponse r = request.send();
+        LogUtils.log("Send Request Function... r is : %", r); 
         if (checkOK) {
             r.ensureStatusCode(200);
         }
