@@ -1036,7 +1036,7 @@
 					"javaMethodName": "",
 					"javaVariableName": "=",
 					"exceptionVariableField": "E3",
-					"callType": "Get class object",
+					"callType": "Create an instance",
 					"arguments": [],
 					"nodeIcon": "material-symbols:code",
 					"nodeColor": "",
@@ -2728,8 +2728,8 @@
 		}
 	],
 	"viewport": {
-		"x": -4398,
-		"y": -1178,
+		"x": -4407,
+		"y": -1098,
 		"zoom": 1
 	}
 }
