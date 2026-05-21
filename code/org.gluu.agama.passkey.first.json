@@ -1762,7 +1762,7 @@
 				},
 				"previousNodeId": "callNode-fcefb2ba-3470-41f3-ae7b-291aa1bfc2c6",
 				"agamaData": {
-					"logMessage": "\"MFADATA is : % and error : %\" mfaData, E4",
+					"logMessage": "\"MFADATA is : % and error : %\" mfaData E4",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16",
 					"nodeColor": "",
