@@ -1052,7 +1052,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -1762,7 +1762,7 @@
 				},
 				"previousNodeId": "callNode-fcefb2ba-3470-41f3-ae7b-291aa1bfc2c6",
 				"agamaData": {
-					"logMessage": "\"MFADATA is : %\" mfaData",
+					"logMessage": "\"MFADATA is : % and error : %\" mfaData E4",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16",
 					"nodeColor": "",
@@ -1777,7 +1777,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -2728,8 +2728,8 @@
 		}
 	],
 	"viewport": {
-		"x": -4407,
-		"y": -1098,
+		"x": -4528,
+		"y": -1450,
 		"zoom": 1
 	}
 }
