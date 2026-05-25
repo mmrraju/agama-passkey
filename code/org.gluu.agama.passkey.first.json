@@ -1032,7 +1032,7 @@
 				},
 				"previousNodeId": "assignmentNode-35e0f6e4-cf98-4ba1-bd14-3c1189f50257",
 				"agamaData": {
-					"javaClassName": "org.gluu.agama.passkey.EnrollmentHelper",
+					"javaClassName": "org.gluu.agama.passkey.ScimFido2Helper",
 					"javaMethodName": "",
 					"javaVariableName": "=",
 					"exceptionVariableField": "E3",
@@ -1797,7 +1797,7 @@
 				"previousNodeId": "logNode-e73171fc-dff7-4a99-92d1-e5a090ff6221",
 				"agamaData": {
 					"javaClassName": "org.gluu.agama.passkey.IdentityProcessor",
-					"javaMethodName": "getMFAUserInfoByFido2",
+					"javaMethodName": "getFidoDeviceByUser",
 					"javaVariableName": "mfaHelper",
 					"exceptionVariableField": "E4",
 					"callType": "Call method on instance",
@@ -2728,8 +2728,8 @@
 		}
 	],
 	"viewport": {
-		"x": -4504,
-		"y": -1251,
+		"x": -4427,
+		"y": -1235,
 		"zoom": 1
 	}
 }
