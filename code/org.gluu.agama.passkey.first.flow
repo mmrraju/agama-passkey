@@ -24,8 +24,8 @@ Repeat 5 times max
                obj.errorTitle = "Passkey sign-in failed"
                obj.errorMessage = E.message
           When E is null
-               it_nfqvb = {success:true, data: { userId: verifyResponse }}
-               Finish it_nfqvb
+               it_juybu = {success:true, data: { userId: verifyResponse }}
+               Finish it_juybu
      //  Case 2: User clicked Continue with a username — go to password screen
      When firstForm.continueBtn is ""
           currentUsername = firstForm.username
@@ -44,7 +44,7 @@ Repeat 5 times max
                          mfaHelper | E3 = Call org.gluu.agama.passkey.EnrollmentHelper#new 
                          When E3 is null
                               Log "@info Call Enrollment helper function"
-                              mfaData | E4 = Call mfaHelper getMFAUserInfoByFido2 currentUsername
+                              mfaData | E4 = Call mfaHelper getMFAUserInfoByFido2 userData.inum
                               Log "@info MFADATA is : % and error : %" mfaData E4
                               When E4 is null
                                    passkeyCount = mfaData.count
@@ -54,8 +54,8 @@ Repeat 5 times max
                               When adoptConf.snoozeDays is ""
                                    adoptConf.snoozeDays = 7
                               trigger = Trigger org.gluu.agama.passkey.adopt userData adoptConf
-                         it_vyjwe = {success:true, data: { userId: currentUsername }}
-                         Finish it_vyjwe
+                         it_egyib = {success:true, data: { userId: currentUsername }}
+                         Finish it_egyib
                     When authOk is false
                          pwdObj.showError = true
                          pwdObj.errorTitle = "Sign-in failed"
@@ -64,12 +64,12 @@ Repeat 5 times max
           // Trigger recovery flow
           recoveryResult | Er = Trigger org.gluu.agama.passkey.recovery 
           When recoveryResult.success is true
-               it_xozdg = {success:true, data: { userId: recoveryResult.data.userId}}
-               Finish it_xozdg
+               it_svard = {success:true, data: { userId: recoveryResult.data.userId}}
+               Finish it_svard
           Otherwise
                obj.showError = true
                obj.errorTitle = "Passkey recovery failed"
                obj.errorMessage = Er.message
 //  Exceeded max attempts
-it_ggtxa = {success:false, error: "Login attempt exceeded"}
-Finish it_ggtxa
+it_qpxxg = {success:false, error: "Login attempt exceeded"}
+Finish it_qpxxg
