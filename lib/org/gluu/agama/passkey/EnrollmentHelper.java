@@ -22,44 +22,44 @@ public class EnrollmentHelper extends CasaWSBase {
         LogUtils.log("Enrollment helper initiated...");
     }
 
-    // public MFAUserInfo getMFAUserInfo(String personUid, Set<String> methods) throws IOException {
-    //     try {
-    //         LogUtils.log("Get MFA User Info:  uid: % methods: %", personUid, methods);
-    //         HTTPRequest request = new HTTPRequest(HTTPRequest.Method.GET, new URL(apiBase + "/v2/2fa/user-info/" + encode(personUid)));
-    //         LogUtils.log("Request is : %", request);
-    //         StringJoiner joiner = new StringJoiner("&");
-    //         methods.forEach(m -> joiner.add("m=" + m));
-    //         request.setQuery(joiner.toString());
-
-    //         LogUtils.log("After Joiner Request is : %", request);
-    //         Map<String, Object> response = sendRequest(request, true, true).getContentAsJSONObject();
-    //         LogUtils.log("MFAUserInfo : % ", response);
-    //         ObjectMapper mapper = new ObjectMapper();
-    //         LogUtils.log("MFAUserInfo : % ", response);
-    //         return mapper.convertValue(response, MFAUserInfo.class);
-
-    //     } catch (Exception e) {
-    //         throw new IOException("Unable to determine the amount of enrolled credentials", e);
-    //     }
-    // }
-
     public MFAUserInfo getMFAUserInfo(String personUid, Set<String> methods) throws IOException {
         try {
             LogUtils.log("Get MFA User Info:  uid: % methods: %", personUid, methods);
-            HTTPRequest request = new HTTPRequest(HTTPRequest.Method.GET, new URL(apiBase + "/v2/2fa/user-info/" + personUid));
+            HTTPRequest request = new HTTPRequest(HTTPRequest.Method.GET, new URL(apiBase + "/v2/2fa/user-info/" + encode(personUid)));
+            LogUtils.log("Request is : %", request);
             StringJoiner joiner = new StringJoiner("&");
             methods.forEach(m -> joiner.add("m=" + m));
             request.setQuery(joiner.toString());
+
+            LogUtils.log("After Joiner Request is : %", request);
             Map<String, Object> response = sendRequest(request, true, true).getContentAsJSONObject();
-            if (response == null) {
-                throw new IOException("Empty or non-JSON response from Casa API for user: " + personUid);
-            }
+            LogUtils.log("MFAUserInfo : % ", response);
             ObjectMapper mapper = new ObjectMapper();
+            LogUtils.log("MFAUserInfo : % ", response);
             return mapper.convertValue(response, MFAUserInfo.class);
+
         } catch (Exception e) {
             throw new IOException("Unable to determine the amount of enrolled credentials", e);
         }
-    }    
+    }
+
+    // public MFAUserInfo getMFAUserInfo(String personUid, Set<String> methods) throws IOException {
+    //     try {
+    //         LogUtils.log("Get MFA User Info:  uid: % methods: %", personUid, methods);
+    //         HTTPRequest request = new HTTPRequest(HTTPRequest.Method.GET, new URL(apiBase + "/v2/2fa/user-info/" + personUid));
+    //         StringJoiner joiner = new StringJoiner("&");
+    //         methods.forEach(m -> joiner.add("m=" + m));
+    //         request.setQuery(joiner.toString());
+    //         Map<String, Object> response = sendRequest(request, true, true).getContentAsJSONObject();
+    //         if (response == null) {
+    //             throw new IOException("Empty or non-JSON response from Casa API for user: " + personUid);
+    //         }
+    //         ObjectMapper mapper = new ObjectMapper();
+    //         return mapper.convertValue(response, MFAUserInfo.class);
+    //     } catch (Exception e) {
+    //         throw new IOException("Unable to determine the amount of enrolled credentials", e);
+    //     }
+    // }    
 
     public MFAUserInfo getMFAUserInfoByFido2(String personUid) throws IOException {
         LogUtils.log("GETMFAUSERINFOBYFIDO2 function has been called with uid: %", personUid);
