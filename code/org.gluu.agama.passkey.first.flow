@@ -24,8 +24,8 @@ Repeat 5 times max
                obj.errorTitle = "Passkey sign-in failed"
                obj.errorMessage = E.message
           When E is null
-               it_juybu = {success:true, data: { userId: verifyResponse }}
-               Finish it_juybu
+               it_fwfof = {success:true, data: { userId: verifyResponse }}
+               Finish it_fwfof
      //  Case 2: User clicked Continue with a username — go to password screen
      When firstForm.continueBtn is ""
           currentUsername = firstForm.username
@@ -41,10 +41,10 @@ Repeat 5 times max
                          //  Password auth succeeded — check passkey count
                          userData = Call org.gluu.agama.passkey.IdentityProcessor#accountFromUid currentUsername
                          passkeyCount = 0
-                         mfaHelper | E3 = Call org.gluu.agama.passkey.EnrollmentHelper#new 
+                         mfaHelper | E3 = Call org.gluu.agama.passkey.ScimFido2Helper#new 
                          When E3 is null
                               Log "@info Call Enrollment helper function"
-                              mfaData | E4 = Call mfaHelper getMFAUserInfoByFido2 userData.inum
+                              mfaData | E4 = Call mfaHelper getFidoDeviceByUser userData.inum
                               Log "@info MFADATA is : % and error : %" mfaData E4
                               When E4 is null
                                    passkeyCount = mfaData.count
@@ -54,8 +54,8 @@ Repeat 5 times max
                               When adoptConf.snoozeDays is ""
                                    adoptConf.snoozeDays = 7
                               trigger = Trigger org.gluu.agama.passkey.adopt userData adoptConf
-                         it_egyib = {success:true, data: { userId: currentUsername }}
-                         Finish it_egyib
+                         it_gfoel = {success:true, data: { userId: currentUsername }}
+                         Finish it_gfoel
                     When authOk is false
                          pwdObj.showError = true
                          pwdObj.errorTitle = "Sign-in failed"
@@ -64,12 +64,12 @@ Repeat 5 times max
           // Trigger recovery flow
           recoveryResult | Er = Trigger org.gluu.agama.passkey.recovery 
           When recoveryResult.success is true
-               it_svard = {success:true, data: { userId: recoveryResult.data.userId}}
-               Finish it_svard
+               it_rfgjn = {success:true, data: { userId: recoveryResult.data.userId}}
+               Finish it_rfgjn
           Otherwise
                obj.showError = true
                obj.errorTitle = "Passkey recovery failed"
                obj.errorMessage = Er.message
 //  Exceeded max attempts
-it_qpxxg = {success:false, error: "Login attempt exceeded"}
-Finish it_qpxxg
+it_oitkn = {success:false, error: "Login attempt exceeded"}
+Finish it_oitkn
