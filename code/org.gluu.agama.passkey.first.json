@@ -19,7 +19,10 @@
 				"agamaData": {
 					"isTopLevelFlow": true,
 					"basepath": "",
-					"configParams": "{}",
+					"configParams": {
+						"scimClientId": "PUT_YOUR_SCIM_CLIENT_ID_HERE",
+						"scimClientSecret": "PUT_YOUR_SCIM_CLIENT_SECRET"
+					},
 					"nodeIcon": "material-symbols:line-start-square",
 					"timeout": "",
 					"inputs": "",
@@ -34,7 +37,8 @@
 			"measured": {
 				"width": 170,
 				"height": 124
-			}
+			},
+			"selected": true
 		},
 		{
 			"id": "callNode-33df5117-0017-46ac-985c-d0e606d383c6",
@@ -1818,7 +1822,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -2728,8 +2732,8 @@
 		}
 	],
 	"viewport": {
-		"x": -4427,
-		"y": -1235,
+		"x": 0,
+		"y": 0,
 		"zoom": 1
 	}
 }
