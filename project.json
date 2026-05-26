@@ -23,7 +23,10 @@
         "org.gluu.agama.passkey.main": {},
         "org.gluu.agama.passkey.adopt": {},
         "code": {},
-        "org.gluu.agama.passkey.first": {},
+        "org.gluu.agama.passkey.first": {
+            "scimClientId": "PUT_YOUR_SCIM_CLIENT_ID_HERE",
+            "scimClientSecret": "PUT_YOUR_SCIM_CLIENT_SECRET"
+        },
         "org.gluu.agama.passkey.recovery": {},
         "org.gluu.agama.passkey.stepup": {}
     },
