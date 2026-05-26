@@ -7,6 +7,7 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.net.URL;
 import java.util.*;
+import io.jans.agama.engine.script.LogUtils;
 
 import static jakarta.ws.rs.core.MediaType.APPLICATION_JSON;
 
@@ -26,6 +27,7 @@ public class ScimFido2Helper extends ScimWSBase {
 
     public Map<String, Object> getFidoDeviceByUser(String userInum) throws IOException {
         try {
+            LogUtils.log("GetFidoDeviceByUser inum: %", userInum);
             URL url = new URL(apiBase + "/v2/Fido2Devices");
             HTTPRequest request = new HTTPRequest(HTTPRequest.Method.GET, url);
             request.setAccept("application/json");
@@ -33,8 +35,8 @@ public class ScimFido2Helper extends ScimWSBase {
             StringJoiner joiner = new StringJoiner("&");
             Map.of("userId", userInum).forEach((k, v) -> joiner.add(k + "=" + v));
             request.setQuery(joiner.toString());
-            log.info("userId:"+userInum)
-            log.info("request:"+request)
+            log.info("userId:"+userInum);
+            log.info("request:"+request);
             
             String response = sendRequest(request, true, true).getContentAsJSONObject().toJSONString();
             log.info("Response scim fido2 devices: {}", response);
@@ -47,7 +49,7 @@ public class ScimFido2Helper extends ScimWSBase {
                 while (i < jsonArray.length()) {
                     JSONObject item = jsonArray.getJSONObject(i);
                     Map<String, String> result = new HashMap<>();
-                    result.put("id", item.getString("id"));
+                    result.put("id", item.getString("id"));n 
                     result.put("displayName", item.has("displayName") ? item.getString("displayName") : "Registered without name");
                     result.put("creationDate", item.getString("creationDate"));
                     if (item.has("lastAccessTime")) result.put("lastAccessTime", item.getString("lastAccessTime"));
