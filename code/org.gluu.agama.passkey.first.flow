@@ -24,8 +24,8 @@ Repeat 5 times max
                obj.errorTitle = "Passkey sign-in failed"
                obj.errorMessage = E.message
           When E is null
-               it_nweck = {success:true, data: { userId: verifyResponse }}
-               Finish it_nweck
+               it_vblys = {success:true, data: { userId: verifyResponse }}
+               Finish it_vblys
      //  Case 2: User clicked Continue with a username — go to password screen
      When firstForm.continueBtn is ""
           currentUsername = firstForm.username
@@ -54,8 +54,8 @@ Repeat 5 times max
                               When adoptConf.snoozeDays is ""
                                    adoptConf.snoozeDays = 7
                               trigger = Trigger org.gluu.agama.passkey.adopt userData adoptConf
-                         it_uxbyj = {success:true, data: { userId: currentUsername }}
-                         Finish it_uxbyj
+                         it_ktxlz = {success:true, data: { userId: currentUsername }}
+                         Finish it_ktxlz
                     When authOk is false
                          pwdObj.showError = true
                          pwdObj.errorTitle = "Sign-in failed"
@@ -64,12 +64,12 @@ Repeat 5 times max
           // Trigger recovery flow
           recoveryResult | Er = Trigger org.gluu.agama.passkey.recovery 
           When recoveryResult.success is true
-               it_pvwgz = {success:true, data: { userId: recoveryResult.data.userId}}
-               Finish it_pvwgz
+               it_pinfp = {success:true, data: { userId: recoveryResult.data.userId}}
+               Finish it_pinfp
           Otherwise
                obj.showError = true
                obj.errorTitle = "Passkey recovery failed"
                obj.errorMessage = Er.message
 //  Exceeded max attempts
-it_wevzm = {success:false, error: "Login attempt exceeded"}
-Finish it_wevzm
+it_ypjfv = {success:false, error: "Login attempt exceeded"}
+Finish it_ypjfv
