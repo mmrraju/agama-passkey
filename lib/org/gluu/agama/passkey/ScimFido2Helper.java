@@ -35,11 +35,11 @@ public class ScimFido2Helper extends ScimWSBase {
             StringJoiner joiner = new StringJoiner("&");
             Map.of("userId", userInum).forEach((k, v) -> joiner.add(k + "=" + v));
             request.setQuery(joiner.toString());
-            log.info("userId:"+userInum);
-            log.info("request:"+request);
+            LogUtils.log("userId: %", userInum);
+            LogUtils.log("request: %%", request);
             
             String response = sendRequest(request, true, true).getContentAsJSONObject().toJSONString();
-            log.info("Response scim fido2 devices: {}", response);
+            LogUtils.log("Response scim fido2 devices: %", response);
             JSONObject resObject = new JSONObject(response);
             int count = resObject.getInt("totalResults");
             List<Map<String, String>> mapList = new ArrayList<>();
