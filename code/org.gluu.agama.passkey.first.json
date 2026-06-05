@@ -1059,7 +1059,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -1251,7 +1251,7 @@
 					"assignments": [
 						{
 							"variableTypeCheck": false,
-							"assignmentExpression": "{ snoozeDays: conf.snoozeDays }",
+							"assignmentExpression": "conf",
 							"assignedVariableName": "adoptConf"
 						}
 					],
@@ -1269,7 +1269,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"id": "whenNode-d9c862a1-9f61-45d7-98d4-368c4fc93b60",
@@ -2735,8 +2735,8 @@
 		}
 	],
 	"viewport": {
-		"x": -4325,
-		"y": -1209,
+		"x": -5011,
+		"y": -1019,
 		"zoom": 1
 	}
 }
