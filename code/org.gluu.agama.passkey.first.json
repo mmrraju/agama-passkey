@@ -21,7 +21,8 @@
 					"basepath": "",
 					"configParams": {
 						"scimClientId": "PUT_YOUR_SCIM_CLIENT_ID_HERE",
-						"scimClientSecret": "PUT_YOUR_SCIM_CLIENT_SECRET"
+						"scimClientSecret": "PUT_YOUR_SCIM_CLIENT_SECRET",
+						"snoozeDays": 7
 					},
 					"nodeIcon": "material-symbols:line-start-square",
 					"timeout": "",
@@ -38,7 +39,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"id": "callNode-33df5117-0017-46ac-985c-d0e606d383c6",
@@ -1058,7 +1059,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -2734,8 +2735,8 @@
 		}
 	],
 	"viewport": {
-		"x": -4223,
-		"y": -1079,
+		"x": 0,
+		"y": 0,
 		"zoom": 1
 	}
 }
