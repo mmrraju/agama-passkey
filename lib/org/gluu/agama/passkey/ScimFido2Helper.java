@@ -64,6 +64,7 @@ public class ScimFido2Helper extends ScimWSBase {
                     i++;
                 }
             }
+            LogUtils.log("Final %", count);
             return Map.of("count", count, "devices", mapList);
 
         } catch (Exception e) {
