@@ -25,7 +25,8 @@
         "code": {},
         "org.gluu.agama.passkey.first": {
             "scimClientId": "PUT_YOUR_SCIM_CLIENT_ID_HERE",
-            "scimClientSecret": "PUT_YOUR_SCIM_CLIENT_SECRET"
+            "scimClientSecret": "PUT_YOUR_SCIM_CLIENT_SECRET",
+            "snoozeDays": 7
         },
         "org.gluu.agama.passkey.recovery": {},
         "org.gluu.agama.passkey.stepup": {}
