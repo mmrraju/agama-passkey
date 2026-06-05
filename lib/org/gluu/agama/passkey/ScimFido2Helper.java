@@ -41,15 +41,17 @@ public class ScimFido2Helper extends ScimWSBase {
             String response = sendRequest(request, true, true).getContentAsJSONObject().toJSONString();
             LogUtils.log("Response scim fido2 devices: %", response);
             JSONObject resObject = new JSONObject(response);
+            LogUtils.log("Response json object: %", resObject);
             int count = resObject.getInt("totalResults");
             List<Map<String, String>> mapList = new ArrayList<>();
             if (count > 0) {
                 JSONArray jsonArray = resObject.getJSONArray("Resources");
+                LogUtils.log("Response jsonarray: %", jsonArray);
                 int i = 0;
                 while (i < jsonArray.length()) {
                     JSONObject item = jsonArray.getJSONObject(i);
                     Map<String, String> result = new HashMap<>();
-                    result.put("id", item.getString("id"));n 
+                    result.put("id", item.getString("id")); 
                     result.put("displayName", item.has("displayName") ? item.getString("displayName") : "Registered without name");
                     result.put("creationDate", item.getString("creationDate"));
                     if (item.has("lastAccessTime")) result.put("lastAccessTime", item.getString("lastAccessTime"));
