@@ -79,7 +79,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -182,12 +182,14 @@
 				},
 				"previousNodeId": "assignmentNode-3e6f1c60-6a90-4d66-bbd8-71fcc2f2f7bc",
 				"agamaData": {
-					"javaClassName": "org.gluu.agama.passkey.EnrollmentHelper",
+					"javaClassName": "org.gluu.agama.passkey.ScimFido2Helper",
 					"javaMethodName": "Call",
 					"javaVariableName": "uid",
 					"exceptionVariableField": "E",
 					"callType": "Create an instance",
-					"arguments": [],
+					"arguments": [
+						"conf"
+					],
 					"nodeIcon": "material-symbols:code",
 					"nodeColor": "",
 					"titleColor": "",
@@ -203,7 +205,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -1937,8 +1939,8 @@
 		}
 	],
 	"viewport": {
-		"x": 605,
-		"y": 101,
+		"x": -772,
+		"y": 103,
 		"zoom": 1
 	}
 }
