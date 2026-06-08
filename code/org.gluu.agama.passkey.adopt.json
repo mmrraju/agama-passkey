@@ -205,7 +205,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -269,12 +269,12 @@
 				"branching": "success",
 				"agamaData": {
 					"javaClassName": "",
-					"javaMethodName": "getMFAUserInfoByFido2",
+					"javaMethodName": "getFidoDeviceByUser",
 					"javaVariableName": "mfaInfo",
 					"exceptionVariableField": "E2",
 					"callType": "Call method on instance",
 					"arguments": [
-						"uid"
+						"userData.inum"
 					],
 					"nodeIcon": "material-symbols:code",
 					"nodeColor": "",
@@ -291,7 +291,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -1939,8 +1939,8 @@
 		}
 	],
 	"viewport": {
-		"x": -772,
-		"y": 103,
+		"x": -1121,
+		"y": 93,
 		"zoom": 1
 	}
 }
