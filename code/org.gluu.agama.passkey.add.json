@@ -769,7 +769,7 @@
 				},
 				"previousNodeId": "startNode-c4aa69a5-2ac1-4d79-b721-e46cc6f3e753",
 				"agamaData": {
-					"logMessage": "\"This \"",
+					"logMessage": "\"Passkey add flow starting... \"",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16",
 					"nodeColor": "",
