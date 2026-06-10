@@ -44,6 +44,7 @@ public class FidoEnroller extends CasaWSBase {
             return responseContent;
 
         } catch (Exception e) {
+            LogUtils.log("Failed to build an attestation message %", e);
             throw new IOException("Failed to build an attestation message", e);
         }
     }
@@ -67,6 +68,7 @@ public class FidoEnroller extends CasaWSBase {
             return map.get("id").toString();
 
         } catch (Exception e) {
+            LogUtils.log("Failed to verify fido registration %", e);
             throw new IOException("Failed to verify fido registration", e);
         }
     }
@@ -85,9 +87,10 @@ public class FidoEnroller extends CasaWSBase {
             HTTPResponse response = sendRequest(request, false, true);
             int status = response.getStatusCode();
 
-            log.info("Response was ({}): {}", status, response.getContent());
+            LogUtils.log("Response was (%): %", status, response.getContent());
             return status == 200;
         } catch (Exception e) {
+            LogUtils.log("Failed to name fido credential %", e);
             throw new IOException("Failed to name fido credential", e);
         }
     }
