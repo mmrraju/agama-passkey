@@ -370,7 +370,7 @@
 				},
 				"previousNodeId": "startNode-59730288-5141-4df8-a66d-73534b01bc24",
 				"agamaData": {
-					"logMessage": "\"Agama Nickname flow starting...",
+					"logMessage": "\"Agama Nickname flow starting...\"",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16",
 					"nodeColor": "",
@@ -638,8 +638,8 @@
 		}
 	],
 	"viewport": {
-		"x": 49,
-		"y": -35,
+		"x": 0,
+		"y": 0,
 		"zoom": 1
 	}
 }
