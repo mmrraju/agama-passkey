@@ -81,7 +81,7 @@ public class CasaWSBase {
         }
         LogUtils.log("Send Request Function... request is : %", request); 
         HTTPResponse r = request.send();
-        LogUtils.log("Send Request Function... r is : %", r.getContentAsJSONObject()); 
+        // LogUtils.log("Send Request Function... r is : %", r.getContentAsJSONObject()); 
         if (checkOK) {
             r.ensureStatusCode(200);
         }
