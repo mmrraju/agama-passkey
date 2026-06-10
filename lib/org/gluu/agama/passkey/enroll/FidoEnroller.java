@@ -54,14 +54,14 @@ public class FidoEnroller extends CasaWSBase {
                     new URL(getApiBase() + "/enrollment/fido2/registration/" + encode(id)));
             request.setQuery(tokenResponse);
 
-            log.info("Verifying registration : "+id +":"+ tokenResponse);
+            LogUtils.log("Verifying registration : % : %",id, tokenResponse);
             HTTPResponse response = sendRequest(request, false, true);
             int status = response.getStatusCode();
-            log.info("Status : "+status)
+            LogUtils.log("Status : %",status);
             Map<String, Object> map = response.getContentAsJSONObject();
-            log.info("Map: "+map)
+            LogUtils.log("Map: %",map);
             if (status != 201) {
-                log.error("Verification response was: ({}) {}", status, response.getContent());
+                LogUtils.log("Verification response was: (%) %", status, response.getContent());
                 throw new Exception(map.get("code").toString());
             }
             return map.get("id").toString();
