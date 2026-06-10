@@ -55,12 +55,12 @@
 					"x": 300,
 					"y": 200
 				},
-				"previousNodeId": "startNode-59730288-5141-4df8-a66d-73534b01bc24"
+				"previousNodeId": "logNode-242daa96-10d8-47dd-9c7b-90fa7e2ef190"
 			},
 			"type": "assignmentNode",
 			"id": "assignmentNode-c75889fb-f593-41a6-8140-052aa292b182",
 			"position": {
-				"x": 300,
+				"x": 550,
 				"y": 200
 			},
 			"measured": {
@@ -89,7 +89,7 @@
 			"type": "rrfNode",
 			"id": "rrfNode-146669f4-3edd-4033-9e6f-dfd852fa70c2",
 			"position": {
-				"x": 550,
+				"x": 800,
 				"y": 200
 			},
 			"measured": {
@@ -244,7 +244,7 @@
 			"id": "assignmentNode-5f7fce61-dcaf-4be5-b9f3-675052eed4a5",
 			"type": "assignmentNode",
 			"position": {
-				"x": 326,
+				"x": 576,
 				"y": 540
 			},
 			"data": {
@@ -283,7 +283,7 @@
 			"id": "whenNode-8f2116ed-0a8f-4c12-9f1d-4d04a51058d9",
 			"type": "whenNode",
 			"position": {
-				"x": 576,
+				"x": 826,
 				"y": 598
 			},
 			"data": {
@@ -351,8 +351,41 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
+		},
+		{
+			"id": "logNode-242daa96-10d8-47dd-9c7b-90fa7e2ef190",
+			"type": "logNode",
+			"position": {
+				"x": 300,
+				"y": 200
+			},
+			"data": {
+				"id": "logNode-242daa96-10d8-47dd-9c7b-90fa7e2ef190",
+				"type": "logNode",
+				"position": {
+					"x": 300,
+					"y": 200
+				},
+				"previousNodeId": "startNode-59730288-5141-4df8-a66d-73534b01bc24",
+				"agamaData": {
+					"logMessage": "\"Agama Nickname flow starting...",
+					"logLevel": "info",
+					"nodeIcon": "octicon:log-16",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": ""
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
+			"selected": true
 		},
 		{
 			"id": "assignmentNode-51aa12c8-971b-498f-bf69-8d5be5daf25f",
@@ -395,25 +428,6 @@
 		}
 	],
 	"edges": [
-		{
-			"id": "startNode-59730288-5141-4df8-a66d-73534b01bc24-assignmentNode-c75889fb-f593-41a6-8140-052aa292b182",
-			"type": "default",
-			"source": "startNode-59730288-5141-4df8-a66d-73534b01bc24",
-			"target": "assignmentNode-c75889fb-f593-41a6-8140-052aa292b182",
-			"labelBgPadding": [
-				8,
-				4
-			],
-			"labelBgBorderRadius": 4,
-			"label": "",
-			"labelBgStyle": {
-				"fill": "#009688",
-				"color": "#ffffff",
-				"fillOpacity": 0.7
-			},
-			"labelShowBg": true,
-			"sourceHandle": "source_startNode-59730288-5141-4df8-a66d-73534b01bc24"
-		},
 		{
 			"id": "assignmentNode-c75889fb-f593-41a6-8140-052aa292b182-rrfNode-146669f4-3edd-4033-9e6f-dfd852fa70c2",
 			"type": "default",
@@ -583,11 +597,49 @@
 				"fillOpacity": 0.7
 			},
 			"id": "xy-edge__whenNode-8f2116ed-0a8f-4c12-9f1d-4d04a51058d9source_whenNode-8f2116ed-0a8f-4c12-9f1d-4d04a51058d9_continue-callNode-634312ec-f544-4da2-872c-38760ab58fb5target_callNode-634312ec-f544-4da2-872c-38760ab58fb5"
+		},
+		{
+			"id": "startNode-59730288-5141-4df8-a66d-73534b01bc24-logNode-242daa96-10d8-47dd-9c7b-90fa7e2ef190",
+			"type": "default",
+			"source": "startNode-59730288-5141-4df8-a66d-73534b01bc24",
+			"target": "logNode-242daa96-10d8-47dd-9c7b-90fa7e2ef190",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_startNode-59730288-5141-4df8-a66d-73534b01bc24"
+		},
+		{
+			"id": "logNode-242daa96-10d8-47dd-9c7b-90fa7e2ef190-assignmentNode-c75889fb-f593-41a6-8140-052aa292b182",
+			"type": "default",
+			"source": "logNode-242daa96-10d8-47dd-9c7b-90fa7e2ef190",
+			"target": "assignmentNode-c75889fb-f593-41a6-8140-052aa292b182",
+			"label": "",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"sourceHandle": "source_logNode-242daa96-10d8-47dd-9c7b-90fa7e2ef190",
+			"targetHandle": "target_assignmentNode-c75889fb-f593-41a6-8140-052aa292b182"
 		}
 	],
 	"viewport": {
-		"x": -334.38671875,
-		"y": -186.75,
+		"x": 49,
+		"y": -35,
 		"zoom": 1
 	}
 }
