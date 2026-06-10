@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.Map;
 import java.util.StringJoiner;
+import io.jans.agama.engine.script.LogUtils;
 
 import static jakarta.ws.rs.core.MediaType.APPLICATION_JSON;
 
@@ -21,6 +22,7 @@ public class FidoEnroller extends CasaWSBase {
 
     public String getAttestationMessage(String id) throws IOException {
         try {
+            LogUtils.log("Fido Enroller attestation for id : %", id);
             HTTPRequest request = new HTTPRequest(HTTPRequest.Method.GET, new URL(getApiBase() + "/enrollment/fido2/attestation"));
 
             StringJoiner joiner = new StringJoiner("&");
@@ -29,14 +31,14 @@ public class FidoEnroller extends CasaWSBase {
             Map.of("userid", id).forEach((k, v) -> joiner.add(k + "=" + encode(v)));
             request.setQuery(joiner.toString());
 
-            log.info("Generating an attestation message for {}", id);
+            LogUtils.log("Generating an attestation message for %", id);
             HTTPResponse response = sendRequest(request, false, true);
             String responseContent = response.getContent();
             int status = response.getStatusCode();
-            log.info("Status of attestation :"+ status);
-            log.info("responseContent : "+ responseContent);
+            LogUtils.log("Status of attestation : %", status);
+            LogUtils.log("responseContent : %", responseContent);
             if (status != 200) {
-                log.info("Attestation response was: ({}) {}", status, responseContent);
+                LogUtils.log("Attestation response was: (%) %", status, responseContent);
                 throw new Exception(response.getContentAsJSONObject().get("code").toString());
             }
             return responseContent;
