@@ -27,7 +27,6 @@ public class ScimFido2Helper extends ScimWSBase {
 
     public Map<String, Object> getFidoDeviceByUser(String userInum) throws IOException {
         try {
-            LogUtils.log("GetFidoDeviceByUser inum: %", userInum);
             URL url = new URL(apiBase + "/v2/Fido2Devices");
             HTTPRequest request = new HTTPRequest(HTTPRequest.Method.GET, url);
             request.setAccept("application/json");
@@ -35,13 +34,10 @@ public class ScimFido2Helper extends ScimWSBase {
             StringJoiner joiner = new StringJoiner("&");
             Map.of("userId", userInum).forEach((k, v) -> joiner.add(k + "=" + v));
             request.setQuery(joiner.toString());
-            LogUtils.log("userId: %", userInum);
-            LogUtils.log("request: %%", request);
             
             String response = sendRequest(request, true, true).getContentAsJSONObject().toJSONString();
             LogUtils.log("Response scim fido2 devices: %", response);
             JSONObject resObject = new JSONObject(response);
-            LogUtils.log("Response json object: %", resObject);
             int count = resObject.getInt("totalResults");
             List<Map<String, String>> mapList = new ArrayList<>();
             if (count > 0) {
@@ -66,7 +62,6 @@ public class ScimFido2Helper extends ScimWSBase {
             }else{
                 return Map.of("count", count);
             }
-            LogUtils.log("Final %", count);
             return Map.of("count", count, "devices", mapList);
 
         } catch (Exception e) {
