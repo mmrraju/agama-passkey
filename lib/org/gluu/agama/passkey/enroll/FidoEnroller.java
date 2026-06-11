@@ -1,97 +1,85 @@
-package org.gluu.agama.passkey.enroll;
+package org.gluu.agama.passkey.authn;
 
-import com.nimbusds.oauth2.sdk.http.HTTPRequest;
-import com.nimbusds.oauth2.sdk.http.HTTPResponse;
-import net.minidev.json.JSONObject;
-import org.gluu.agama.passkey.CasaWSBase;
+import io.jans.fido2.client.AssertionService;
+import io.jans.fido2.client.Fido2ClientFactory;
 
+import io.jans.fido2.model.assertion.AssertionOptions;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import jakarta.ws.rs.core.Response;
+import org.gluu.agama.passkey.NetworkUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import io.jans.fido2.model.assertion.AssertionResult;
 import java.io.IOException;
-import java.net.URL;
-import java.util.Map;
-import java.util.StringJoiner;
 import io.jans.agama.engine.script.LogUtils;
 
-import static jakarta.ws.rs.core.MediaType.APPLICATION_JSON;
+public class FidoValidator {
 
-public class FidoEnroller extends CasaWSBase {
+    private static final Logger logger = LoggerFactory.getLogger(FidoValidator.class);
+    private static ObjectMapper mapper = new ObjectMapper();
+    private final String metadataConfiguration;
 
-    public FidoEnroller() throws IOException {
-        super();
-        setScope(SCOPE_PREFIX + "casa.enroll");
-    }
+    public FidoValidator() throws IOException {
+        LogUtils.log("Inspecting fido2 configuration discovery URL");
+        String metadataUri = NetworkUtils.urlBeforeContextPath() + "/.well-known/fido2-configuration";
 
-    public String getAttestationMessage(String id) throws IOException {
-        try {
-            LogUtils.log("Fido Enroller attestation for id : %", id);
-            HTTPRequest request = new HTTPRequest(HTTPRequest.Method.GET, new URL(getApiBase() + "/enrollment/fido2/attestation"));
+        try (Response response = Fido2ClientFactory.instance().createMetaDataConfigurationService(metadataUri).getMetadataConfiguration()) {
+            metadataConfiguration = response.readEntity(String.class);
+            int status = response.getStatus();
 
-            StringJoiner joiner = new StringJoiner("&");
-            // Map.of("userid", id, "platformAuthn", "false").forEach((k, v) -> joiner.add(k + "=" + encode(v)));
-            
-            Map.of("userid", id).forEach((k, v) -> joiner.add(k + "=" + encode(v)));
-            request.setQuery(joiner.toString());
-
-            LogUtils.log("Generating an attestation message for %", id);
-            HTTPResponse response = sendRequest(request, false, true);
-            String responseContent = response.getContent();
-            int status = response.getStatusCode();
-            LogUtils.log("Status of attestation : %", status);
-            LogUtils.log("responseContent : %", responseContent);
-            if (status != 200) {
-                LogUtils.log("Attestation response was: (%) %", status, responseContent);
-                throw new Exception(response.getContentAsJSONObject().get("code").toString());
+            if (status != Response.Status.OK.getStatusCode()) {
+                String msg = "Problem retrieving fido metadata (code: " + status + ")";
+                LogUtils.log(msg + "; response was: %", metadataConfiguration);
+                throw new IOException(msg);
             }
-            return responseContent;
-
-        } catch (Exception e) {
-            LogUtils.log("Failed to build an attestation message %", e);
-            throw new IOException("Failed to build an attestation message", e);
         }
     }
 
-    public String verifyRegistration(String id, String tokenResponse) throws IOException {
-        try {
-            HTTPRequest request = new HTTPRequest(HTTPRequest.Method.POST,
-                    new URL(getApiBase() + "/enrollment/fido2/registration/" + encode(id)));
-            request.setQuery(tokenResponse);
+    public String assertionRequest(String uid) throws IOException {
+        // Using assertionService as a private class field gives serialization trouble...
+        AssertionService assertionService = Fido2ClientFactory.instance().createAssertionService(metadataConfiguration);
+        AssertionOptions assertionRequest = new AssertionOptions();
+        if (uid != null) {
+            assertionRequest.setUsername(uid);
+        }
 
-            LogUtils.log("Verifying registration : % : %",id, tokenResponse);
-            HTTPResponse response = sendRequest(request, false, true);
-            int status = response.getStatusCode();
-            LogUtils.log("Status : %",status);
-            Map<String, Object> map = response.getContentAsJSONObject();
-            LogUtils.log("Map: %",map);
-            if (status != 201) {
-                LogUtils.log("Verification response was: (%) %", status, response.getContent());
-                throw new Exception(map.get("code").toString());
+        try (Response response = assertionService.authenticate(assertionRequest)) {
+            String content = response.readEntity(String.class);
+            int status = response.getStatus();
+
+            if (status != Response.Status.OK.getStatusCode()) {
+                String msg = "Assertion request building failed (code: " + status + ")";
+                LogUtils.log(msg + "; response was: %", content);
+                throw new IOException(msg);
             }
-            return map.get("id").toString();
-
-        } catch (Exception e) {
-            LogUtils.log("Failed to verify fido registration %", e);
-            throw new IOException("Failed to verify fido registration", e);
+            return content;
         }
     }
 
-    public boolean nameIt(String id, String nickname, String key) throws IOException {
-        try {
-            String apiBase = getApiBase();
-            String body = JSONObject.toJSONString(Map.of("key", key, "nickName", nickname));
-
-            HTTPRequest request = new HTTPRequest(HTTPRequest.Method.POST,
-                    new URL(apiBase + "/enrollment/fido2/creds/" + encode(id)));
-            request.setContentType(APPLICATION_JSON);
-            request.setQuery(body);
-
-            log.info("Naming fido credential for {}", nickname);
-            HTTPResponse response = sendRequest(request, false, true);
-            int status = response.getStatusCode();
-
-            LogUtils.log("Response was (%): %", status, response.getContent());
-            return status == 200;
-        } catch (Exception e) {
-            LogUtils.log("Failed to name fido credential %", e);
-            throw new IOException("Failed to name fido credential", e);
+    public String verify(String tokenResponse) throws IOException {
+        AssertionService assertionService = Fido2ClientFactory.instance().createAssertionService(metadataConfiguration);
+        AssertionResult assertionResult = mapper.readValue(tokenResponse, AssertionResult.class);
+        Response response = assertionService.verify(assertionResult);
+        int status = response.getStatus();
+        if (status != Response.Status.OK.getStatusCode()) {
+            org.json.JSONObject jsonNode = new org.json.JSONObject(response.readEntity(String.class));
+            StringBuilder sb = new StringBuilder(String.format("Verification step failed, status: %s", status));
+            if (jsonNode.has("error_description")) {
+                sb.append(String.format(", description: %s", jsonNode.getString("error_description")));
+            }
+            LogUtils.log(sb.toString());
+            throw new IOException(sb.toString());
         }
+
+        String resString = response.readEntity(String.class);
+        LogUtils.log("Response : %",resString);
+        org.json.JSONObject jsonNode = new org.json.JSONObject(resString);
+        LogUtils.log("Status: %, Response: %", status, jsonNode);
+        if (jsonNode.has("username")) {
+            String user = jsonNode.getString("username");
+            LogUtils.log("User returned: %", user);
+            return user;
+        }
+        return "";
     }
 }
