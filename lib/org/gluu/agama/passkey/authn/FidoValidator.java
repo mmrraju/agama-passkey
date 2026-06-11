@@ -36,7 +36,6 @@ public class FidoValidator {
     }
 
     public String assertionRequest(String uid) throws IOException {
-        LogUtils.log("Building an assertion request for %", uid);
         // Using assertionService as a private class field gives serialization trouble...
         AssertionService assertionService = Fido2ClientFactory.instance().createAssertionService(metadataConfiguration);
         AssertionOptions assertionRequest = new AssertionOptions();
@@ -58,7 +57,6 @@ public class FidoValidator {
     }
 
     public String verify(String tokenResponse) throws IOException {
-        LogUtils.log("Verifying fido token response : %",tokenResponse);
         AssertionService assertionService = Fido2ClientFactory.instance().createAssertionService(metadataConfiguration);
         AssertionResult assertionResult = mapper.readValue(tokenResponse, AssertionResult.class);
         Response response = assertionService.verify(assertionResult);
