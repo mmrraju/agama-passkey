@@ -61,8 +61,22 @@ TUI (text-based UI). Refer to the [Agama project configuration page](https://doc
 
 ### Configure The Project
 
-The Agama project accepts configuration parameters in the JSON format. Every Agama
-project comes with a basic sample configuration file for reference.
+The Agama project accepts configuration parameters in the JSON format. Every Agama 
+project comes with a basic sample configuration file for reference. 
+
+Below is a typical configuration of the Agama-passkey project. As shown, it contains 
+configuration parameters for the [flows contained in it](#flows-in-the-project):
+
+Sample JSON:
+
+``` json
+{
+    "org.gluu.agama.passkey.first": {
+        "scimClientId": "PUT_YOUR_SCIM_CLIENT_ID_HERE",
+        "scimClientSecret": "PUT_YOUR_SCIM_CLIENT_SECRET"
+    }
+}
+```
 
 
 ### Test The Flow
