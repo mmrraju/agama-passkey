@@ -38,6 +38,14 @@ Deployment of an Agama project involves three steps.
 #### Pre-Requisites
 
 * To recover a passkey, we use [agama-smtp](https://github.com/GluuFederation/agama-smtp), which sends email messages. Please ensure that the Jans Auth Server has the [SMTP service](https://docs.jans.io/head/janssen-server/config-guide/smtp-configuration/) configured.
+* Register a client to integrate with SCIM and CASA (used to list passkeys and edit), minimum scopes:
+```
+https://jans.io/scim/fido2.read
+https://jans.io/scim/fido2.write
+https://jans.io/casa.2fa
+https://jans.io/casa.config
+https://jans.io/casa.enroll
+```
 
 ### Download The Project
 
