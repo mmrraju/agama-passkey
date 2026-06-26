@@ -70,22 +70,27 @@ TUI (text-based UI). Refer to the [Agama project configuration page](https://doc
 
 ### Configure The Project
 
-The Agama project accepts configuration parameters in the JSON format. Every Agama 
-project comes with a basic sample configuration file for reference. 
+The Agama project accepts configuration parameters in JSON format. Every Agama project comes with a sample configuration file for reference.
 
-Below is a typical configuration of the Agama-passkey project. As shown, it contains 
-configuration parameters for the [flows contained in it](#flows-in-the-project):
+Below is a typical configuration for the Agama-Passkey project:
 
-Sample JSON:
-
-``` json
+```json
 {
-    "org.gluu.agama.passkey.first": {
-        "scimClientId": "PUT_YOUR_SCIM_CLIENT_ID_HERE",
-        "scimClientSecret": "PUT_YOUR_SCIM_CLIENT_SECRET"
-    }
+  "org.gluu.agama.passkey.first": {
+    "scimClientId": "PUT_YOUR_SCIM_CLIENT_ID_HERE",
+    "scimClientSecret": "PUT_YOUR_SCIM_CLIENT_SECRET"
+  }
 }
 ```
+
+| Parameter          | Required | Description                                                                                                                    | Example                                     |
+| ------------------ | -------- | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------- |
+| `scimClientId`     | Yes      | The SCIM client ID used by the project to authenticate and communicate with the SCIM service.                                  | `3000.12345678-abcd-1234-abcd-1234567890ab` |
+| `scimClientSecret` | Yes      | The SCIM client secret associated with the configured SCIM client ID. Used for secure authentication when accessing SCIM APIs. | `your-scim-client-secret`                   |
+
+> **Note**
+>
+> The SCIM client credentials must belong to a client that has permission to access and manage the user resources required by the Passkey project. Store these credentials securely and avoid committing them to source control.
 
 
 ### Test The Flow
