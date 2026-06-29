@@ -47,6 +47,7 @@ https://jans.io/casa.2fa
 https://jans.io/casa.config
 https://jans.io/casa.enroll
 ```
+* [Let's Encrypt CA certificate](https://docs.jans.io/stable/janssen-server/install/vm-install/ubuntu/#lets-encrypt)
 
 ### Download The Project
 
